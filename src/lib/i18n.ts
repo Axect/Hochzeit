@@ -15,7 +15,25 @@ const messages: Record<Locale, unknown> = {
 export const isLocale = (v: unknown): v is Locale =>
   typeof v === 'string' && (LOCALES as readonly string[]).includes(v);
 
-/** Strip the leading locale segment from a URL pathname. */
+/**
+ * Astro's site base path (e.g. `/Hochzeit/` on GitHub Pages, `/` in dev).
+ * We normalise to a no-trailing-slash form for string-prefix arithmetic.
+ */
+const basePrefix = (): string => {
+  const raw = import.meta.env.BASE_URL || '/';
+  return raw.replace(/\/$/, '');
+};
+
+/** Strip the site base path off a pathname (if present). */
+const withoutBase = (pathname: string): string => {
+  const base = basePrefix();
+  if (!base) return pathname;
+  if (pathname === base) return '/';
+  if (pathname.startsWith(base + '/')) return pathname.slice(base.length);
+  return pathname;
+};
+
+/** Strip the leading locale segment from a *base-stripped* URL pathname. */
 export const stripLocale = (pathname: string): string => {
   for (const loc of LOCALES) {
     if (loc === DEFAULT_LOCALE) continue;
@@ -25,20 +43,26 @@ export const stripLocale = (pathname: string): string => {
   return pathname;
 };
 
-/** Build a URL pathname for the given locale, preserving the trailing path. */
+/**
+ * Build a URL pathname for the given locale, preserving the trailing path.
+ * Handles the site base (e.g. `/Hochzeit/`) so that switching locale on
+ * `/Hochzeit/` produces `/Hochzeit/en/`, not `/en/Hochzeit/`.
+ */
 export const localizedHref = (path: string, locale: Locale): string => {
-  const clean = stripLocale(path);
+  const inner = withoutBase(path);
+  const clean = stripLocale(inner);
   const tail = clean.startsWith('/') ? clean : `/${clean}`;
-  if (locale === DEFAULT_LOCALE) return tail;
-  // Avoid `/en//` if tail is `/`
-  return tail === '/' ? `/${locale}/` : `/${locale}${tail}`;
+  const localePath =
+    locale === DEFAULT_LOCALE ? tail : tail === '/' ? `/${locale}/` : `/${locale}${tail}`;
+  return basePrefix() + localePath;
 };
 
-/** Detect the active locale from a URL pathname. */
+/** Detect the active locale from a URL pathname (base-aware). */
 export const detectLocale = (pathname: string): Locale => {
+  const inner = withoutBase(pathname);
   for (const loc of LOCALES) {
     if (loc === DEFAULT_LOCALE) continue;
-    if (pathname === `/${loc}` || pathname === `/${loc}/` || pathname.startsWith(`/${loc}/`)) {
+    if (inner === `/${loc}` || inner === `/${loc}/` || inner.startsWith(`/${loc}/`)) {
       return loc;
     }
   }
