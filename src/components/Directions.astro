@@ -2,7 +2,7 @@
 import Section from '@components/Section.astro';
 import venue from '@config/venue.json';
 import travel from '@data/travel.json';
-import { t, tField, type Locale } from '@lib/i18n';
+import { localizedHref, t, tField, type Locale } from '@lib/i18n';
 
 interface Props {
   locale: Locale;
@@ -138,9 +138,17 @@ const googleEmbedSrc =
     }
   </ul>
 
-  <h3 class="mt-12 text-sm font-semibold text-[var(--color-fg)]">
-    {t('directions.airportTitle', locale)}
-  </h3>
+  <div class="mt-12 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+    <h3 class="text-sm font-semibold text-[var(--color-fg)]">
+      {t('directions.airportTitle', locale)}
+    </h3>
+    <a
+      href={localizedHref('/travel-guide/', locale)}
+      class="text-xs text-[var(--color-accent)] hover:underline"
+    >
+      {t('directions.fullGuideLink', locale)} →
+    </a>
+  </div>
   <p class="mt-1 text-xs text-[var(--color-muted)]">
     {t('directions.airportIntro', locale)}
   </p>

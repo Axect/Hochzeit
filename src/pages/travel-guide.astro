@@ -1,0 +1,13 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import TravelGuide from '@components/TravelGuide.astro';
+import { travelGuide } from '@data/travel-guide';
+---
+
+<BaseLayout
+  locale="ko"
+  title={travelGuide.meta.title.ko}
+  description={travelGuide.meta.description.ko}
+>
+  <TravelGuide locale="ko" />
+</BaseLayout>
