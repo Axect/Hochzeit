@@ -44,13 +44,30 @@ jobs:
         run: |
           if [ -z "$LETTERS_PRIVATE_JSON" ]; then
             echo "::error::LETTERS_PRIVATE_JSON secret is not set."
-            echo "::error::Add the contents of data/letters.private.json as a repository secret named LETTERS_PRIVATE_JSON."
+            echo "::error::Add the contents of data/codes.private.json (or legacy letters.private.json) as a repository secret named LETTERS_PRIVATE_JSON."
             exit 1
           fi
           mkdir -p data
-          printf '%s' "$LETTERS_PRIVATE_JSON" > data/letters.private.json
-          # Validate it's valid JSON before continuing.
-          node -e "JSON.parse(require('fs').readFileSync('data/letters.private.json','utf8'))"
+          # Detect the payload shape: codes.private.json is an object with
+          # `salt` and `guests`; the legacy letters.private.json is an array.
+          # Write to the matching path so scripts/build-letters.ts picks it up
+          # via the right code path.
+          printf '%s' "$LETTERS_PRIVATE_JSON" > /tmp/letters_secret.json
+          node -e "
+            const fs = require('fs');
+            const raw = fs.readFileSync('/tmp/letters_secret.json', 'utf8');
+            const parsed = JSON.parse(raw);  // throws on invalid JSON
+            if (Array.isArray(parsed)) {
+              fs.writeFileSync('data/letters.private.json', raw);
+              console.log('Wrote data/letters.private.json (legacy array form, ' + parsed.length + ' letter(s))');
+            } else if (parsed && typeof parsed === 'object' && parsed.salt && Array.isArray(parsed.guests)) {
+              fs.writeFileSync('data/codes.private.json', raw);
+              console.log('Wrote data/codes.private.json (codes+guests form, ' + parsed.guests.length + ' guest(s))');
+            } else {
+              console.error('::error::Secret JSON is neither an array nor a {salt, guests} object.');
+              process.exit(1);
+            }
+          "
 
       - name: Build
         run: npm run build
