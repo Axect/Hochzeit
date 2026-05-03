@@ -1,6 +1,7 @@
 ---
 import Section from '@components/Section.astro';
 import venue from '@config/venue.json';
+import travel from '@data/travel.json';
 import { t, tField, type Locale } from '@lib/i18n';
 
 interface Props {
@@ -134,6 +135,102 @@ const googleEmbedSrc =
           <span class="flex-1 text-[var(--color-fg)]">{parking}</span>
         </li>
       )
+    }
+  </ul>
+
+  <h3 class="mt-12 text-sm font-semibold text-[var(--color-fg)]">
+    {t('directions.airportTitle', locale)}
+  </h3>
+  <p class="mt-1 text-xs text-[var(--color-muted)]">
+    {t('directions.airportIntro', locale)}
+  </p>
+  <ul class="mt-4 space-y-3">
+    {
+      travel.fromAirport.map((opt) => (
+        <li class="rounded-md border border-[var(--color-line)] bg-white/40 p-4">
+          <div class="flex flex-wrap items-center gap-2">
+            <h4 class="text-sm font-semibold text-[var(--color-fg)]">
+              {tField(opt.title, locale)}
+            </h4>
+            {opt.recommended && (
+              <span class="rounded-full bg-[var(--color-accent)] px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-white">
+                {t('directions.recommendedTag', locale)}
+              </span>
+            )}
+          </div>
+          <p class="mt-2 text-sm leading-relaxed text-[var(--color-fg)]">
+            {tField(opt.summary, locale)}
+          </p>
+          <dl class="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs sm:grid-cols-3">
+            <div>
+              <dt class="text-[var(--color-muted)]">{t('directions.fareLabel', locale)}</dt>
+              <dd class="text-[var(--color-fg)]">{opt.fare}</dd>
+            </div>
+            <div>
+              <dt class="text-[var(--color-muted)]">{t('directions.durationLabel', locale)}</dt>
+              <dd class="text-[var(--color-fg)]">{tField(opt.duration, locale)}</dd>
+            </div>
+            {opt.boarding && (
+              <div class="col-span-2 sm:col-span-1">
+                <dt class="text-[var(--color-muted)]">{t('directions.boardingLabel', locale)}</dt>
+                <dd class="text-[var(--color-fg)]">{tField(opt.boarding, locale)}</dd>
+              </div>
+            )}
+          </dl>
+          {opt.url && (
+            <a
+              href={opt.url}
+              target="_blank"
+              rel="noopener"
+              class="mt-3 inline-block text-xs text-[var(--color-accent)] hover:underline"
+            >
+              {t('directions.moreInfo', locale)} ↗
+            </a>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+
+  <h3 class="mt-12 text-sm font-semibold text-[var(--color-fg)]">
+    {t('directions.stayTitle', locale)}
+  </h3>
+  <p class="mt-1 text-xs text-[var(--color-muted)]">
+    {t('directions.stayIntro', locale)}
+  </p>
+  <ul class="mt-4 space-y-3">
+    {
+      travel.hotels.map((h) => (
+        <li class="rounded-md border border-[var(--color-line)] bg-white/40 p-4">
+          <div class="flex flex-wrap items-baseline gap-x-2">
+            <h4 class="text-sm font-semibold text-[var(--color-fg)]">{h.name}</h4>
+            <span class="text-xs text-[var(--color-gold)]" aria-label={`${h.stars} stars`}>
+              {'★'.repeat(h.stars)}
+            </span>
+          </div>
+          <p class="text-xs text-[var(--color-muted)]">{h.nameLocal}</p>
+          <p class="mt-2 text-sm text-[var(--color-fg)]">{tField(h.distance, locale)}</p>
+          <p class="mt-1 text-sm font-medium text-[var(--color-fg)]">
+            {h.price}
+            <span class="ml-1 text-xs font-normal text-[var(--color-muted)]">
+              · {t('directions.priceLabel', locale)}
+            </span>
+          </p>
+          <p class="mt-2 text-xs leading-relaxed text-[var(--color-muted)]">
+            {tField(h.note, locale)}
+          </p>
+          {h.url && (
+            <a
+              href={h.url}
+              target="_blank"
+              rel="noopener"
+              class="mt-2 inline-block text-xs text-[var(--color-accent)] hover:underline"
+            >
+              {t('directions.moreInfo', locale)} ↗
+            </a>
+          )}
+        </li>
+      ))
     }
   </ul>
 </Section>

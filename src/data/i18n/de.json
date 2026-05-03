@@ -105,7 +105,17 @@
     "kakaoButton": "In KakaoMap öffnen",
     "naverButton": "In Naver Map öffnen",
     "googleButton": "In Google Maps öffnen",
-    "fallbackNote": "Falls die Karte nicht lädt, nutze bitte die Buttons oben."
+    "fallbackNote": "Falls die Karte nicht lädt, nutze bitte die Buttons oben.",
+    "airportTitle": "Vom Flughafen Incheon",
+    "airportIntro": "Für unsere Gäste aus dem Ausland.",
+    "stayTitle": "Hotelempfehlungen",
+    "stayIntro": "Business-Hotels mit 10–15 Minuten U-Bahn-Fahrt vom Venuevian. Die Preise variieren je nach Datum — bitte vor der Buchung prüfen.",
+    "fareLabel": "Preis",
+    "durationLabel": "Dauer",
+    "boardingLabel": "Einstieg",
+    "priceLabel": "pro Nacht",
+    "recommendedTag": "Empfohlen",
+    "moreInfo": "Buchen & Info"
   },
   "accounts": {
     "title": "Geschenk an die Brautleute",

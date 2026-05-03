@@ -105,7 +105,17 @@
     "kakaoButton": "카카오맵 길찾기",
     "naverButton": "네이버지도 길찾기",
     "googleButton": "Google Maps",
-    "fallbackNote": "지도가 보이지 않으시면, 위 버튼으로 외부 앱을 이용해 주세요."
+    "fallbackNote": "지도가 보이지 않으시면, 위 버튼으로 외부 앱을 이용해 주세요.",
+    "airportTitle": "인천공항에서 오시는 길",
+    "airportIntro": "외국에서 오시는 손님을 위한 안내입니다.",
+    "stayTitle": "추천 숙소",
+    "stayIntro": "베뉴비안에서 지하철로 10~15분 거리의 비즈니스호텔입니다. 가격은 시기에 따라 변동되니 예약 전 확인해 주세요.",
+    "fareLabel": "운임",
+    "durationLabel": "소요시간",
+    "boardingLabel": "탑승",
+    "priceLabel": "1박",
+    "recommendedTag": "추천",
+    "moreInfo": "예약 · 정보"
   },
   "accounts": {
     "title": "마음 전하실 곳",

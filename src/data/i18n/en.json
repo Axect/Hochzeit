@@ -105,7 +105,17 @@
     "kakaoButton": "Open in KakaoMap",
     "naverButton": "Open in Naver Map",
     "googleButton": "Open in Google Maps",
-    "fallbackNote": "If the map doesn't load, please use the buttons above."
+    "fallbackNote": "If the map doesn't load, please use the buttons above.",
+    "airportTitle": "From Incheon Airport",
+    "airportIntro": "For guests travelling from abroad.",
+    "stayTitle": "Where to stay",
+    "stayIntro": "Business hotels within a 10–15 min subway ride of Venuevian. Rates vary by date — please verify before booking.",
+    "fareLabel": "Fare",
+    "durationLabel": "Time",
+    "boardingLabel": "Boarding",
+    "priceLabel": "per night",
+    "recommendedTag": "Recommended",
+    "moreInfo": "Book & info"
   },
   "accounts": {
     "title": "Sending your gift",

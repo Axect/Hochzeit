@@ -1,0 +1,144 @@
+{
+  "fromAirport": [
+    {
+      "id": "bus-6008",
+      "title": {
+        "ko": "공항 리무진버스 6008번",
+        "en": "Airport Limousine Bus #6008",
+        "de": "Flughafenbus #6008"
+      },
+      "recommended": true,
+      "summary": {
+        "ko": "환승 없이 베뉴비안 코앞 신풍역까지 한 번에 도착합니다. 짐칸이 있어 캐리어를 들고 타기 편해요.",
+        "en": "One seat all the way to Sinpung Station — right at the venue. Luggage hold under the bus.",
+        "de": "Eine Sitzplatz-Verbindung direkt bis zur Sinpung-Station — am Veranstaltungsort. Gepäckfach unter dem Bus."
+      },
+      "fare": "₩17,000",
+      "duration": {
+        "ko": "약 60~75분",
+        "en": "~60–75 min",
+        "de": "ca. 60–75 min"
+      },
+      "boarding": {
+        "ko": "T1 6번 게이트 · T2 27번 게이트",
+        "en": "T1 Gate 6 · T2 Gate 27",
+        "de": "T1 Steig 6 · T2 Steig 27"
+      },
+      "url": "https://www.airportlimousine.co.kr/sub/sub01.php?cat_no=68"
+    },
+    {
+      "id": "intl-taxi",
+      "title": {
+        "ko": "국제택시 (정액제)",
+        "en": "International Taxi (fixed rate)",
+        "de": "International Taxi (Festpreis)"
+      },
+      "summary": {
+        "ko": "영등포구는 정액 ₩55,000입니다. 영문 가능 기사가 운전하고 통행료가 포함되어 있어 편하게 이용할 수 있어요.",
+        "en": "Flat ₩55,000 to Yeongdeungpo (Zone A). English-speaking driver, all tolls included — no surprises.",
+        "de": "Pauschal 55.000 ₩ nach Yeongdeungpo (Zone A). Englischsprachiger Fahrer, Mautgebühren inklusive — keine Überraschungen."
+      },
+      "fare": "₩55,000",
+      "duration": {
+        "ko": "약 50~80분",
+        "en": "~50–80 min",
+        "de": "ca. 50–80 min"
+      },
+      "url": "https://www.intltaxi.co.kr/en/main.html"
+    },
+    {
+      "id": "arex-subway",
+      "title": {
+        "ko": "공항철도 + 지하철",
+        "en": "AREX + subway",
+        "de": "Flughafenbahn + U-Bahn"
+      },
+      "summary": {
+        "ko": "공항철도 일반열차로 서울역까지 → 1호선 신도림 → 2호선 대림 → 7호선 신풍역. 가장 저렴하지만 환승이 세 번입니다.",
+        "en": "AREX (all-stop) → Seoul Station → Line 1 to Sindorim → Line 2 to Daerim → Line 7 to Sinpung. Cheapest, but three transfers.",
+        "de": "AREX (alle Stationen) → Seoul Station → Linie 1 nach Sindorim → Linie 2 nach Daerim → Linie 7 nach Sinpung. Am günstigsten, aber drei Umstiege."
+      },
+      "fare": "₩6,500",
+      "duration": {
+        "ko": "약 80~95분",
+        "en": "~80–95 min",
+        "de": "ca. 80–95 min"
+      },
+      "url": "https://www.arex.or.kr/main.do"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "ramada-sindorim",
+      "name": "Ramada by Wyndham Seoul Sindorim",
+      "nameLocal": "라마다 바이 윈덤 서울 신도림",
+      "stars": 4,
+      "distance": {
+        "ko": "신풍역에서 지하철 약 10분 (7호선 → 2호선 환승)",
+        "en": "About 10 min by subway from Sinpung (Line 7 → Line 2)",
+        "de": "ca. 10 min mit der U-Bahn von Sinpung (Linie 7 → Linie 2)"
+      },
+      "price": "₩140,000~170,000",
+      "note": {
+        "ko": "윈덤 브랜드 4성 호텔. 영문 응대 가능, 비즈니스 센터·피트니스 시설 보유.",
+        "en": "Wyndham brand. English-speaking front desk, business center, fitness.",
+        "de": "Wyndham-Marke. Englischsprachiger Empfang, Businesscenter, Fitness."
+      },
+      "url": "https://www.wyndhamhotels.com/ramada/seoul-south-korea/ramada-seoul-sindorim-hotel/overview"
+    },
+    {
+      "id": "fairfield-mullae",
+      "name": "Fairfield by Marriott Seoul",
+      "nameLocal": "페어필드 바이 메리어트 서울",
+      "stars": 4,
+      "distance": {
+        "ko": "신풍역에서 지하철 약 10분 (문래역 인근, 7호선 → 2호선 환승)",
+        "en": "About 10 min by subway from Sinpung (near Mullae Stn, Line 2)",
+        "de": "ca. 10 min mit der U-Bahn von Sinpung (Mullae-Station, Linie 2)"
+      },
+      "price": "₩120,000~160,000",
+      "note": {
+        "ko": "메리어트 브랜드 4성 호텔. 무료 조식과 Wi-Fi, 모던한 객실.",
+        "en": "Marriott brand. Free breakfast, free Wi-Fi, contemporary rooms.",
+        "de": "Marriott-Marke. Frühstück und WLAN inklusive, moderne Zimmer."
+      },
+      "url": "https://www.marriott.com/en-us/hotels/selfi-fairfield-seoul/overview/"
+    },
+    {
+      "id": "courtyard-times-square",
+      "name": "Courtyard by Marriott Seoul Times Square",
+      "nameLocal": "코트야드 메리어트 서울 타임스퀘어",
+      "stars": 4,
+      "distance": {
+        "ko": "신풍역에서 약 1km. 영등포역(1호선) 도보 5분, 타임스퀘어몰과 직결.",
+        "en": "About 1 km from Sinpung. 5-min walk from Yeongdeungpo Stn (Line 1). Connected to Times Square Mall.",
+        "de": "ca. 1 km von Sinpung. 5 Minuten zu Fuß von Yeongdeungpo (Linie 1). Direkt mit Times Square Mall verbunden."
+      },
+      "price": "₩180,000~220,000",
+      "note": {
+        "ko": "메리어트 브랜드 4성 호텔. 쇼핑·식당가가 직결되어 외국인 친화적.",
+        "en": "Marriott brand. Mall and dining attached — easy for international guests.",
+        "de": "Marriott-Marke. Direkt am Einkaufszentrum mit Restaurants — bequem für internationale Gäste."
+      },
+      "url": "https://www.marriott.com/en-us/hotels/selcy-courtyard-seoul-times-square/overview/"
+    },
+    {
+      "id": "toyoko-inn-yeongdeungpo",
+      "name": "Toyoko Inn Seoul Yeongdeungpo",
+      "nameLocal": "토요코인 서울 영등포",
+      "stars": 3,
+      "distance": {
+        "ko": "신풍역에서 지하철 약 10~15분 (영등포역 도보 5분).",
+        "en": "About 10–15 min by subway from Sinpung. 5-min walk from Yeongdeungpo Stn (Line 1).",
+        "de": "ca. 10–15 min mit der U-Bahn von Sinpung. 5 Minuten zu Fuß von Yeongdeungpo (Linie 1)."
+      },
+      "price": "₩70,000~95,000",
+      "note": {
+        "ko": "일본계 비즈니스호텔 체인. 무료 조식 제공, 가성비 좋음.",
+        "en": "Reliable Japanese business-hotel chain. Free breakfast, great value.",
+        "de": "Zuverlässige japanische Business-Hotel-Kette. Frühstück inklusive, gutes Preis-Leistungs-Verhältnis."
+      },
+      "url": "https://www.toyoko-inn.com/eng/search/detail/00311/"
+    }
+  ]
+}
