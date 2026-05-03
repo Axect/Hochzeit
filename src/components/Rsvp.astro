@@ -15,27 +15,8 @@ const newWindowHint = t('rsvp.newWindowHint', locale);
 
 const cfg = forms.rsvp[locale];
 const baseUrl = cfg.formUrl;
-const langEntry = cfg.langEntryId;
-
-// Each language form's "preferred language" radio uses display labels
-// (한국어 / English / Deutsch). Map locale codes to those exact strings so
-// the prefilled radio actually matches whatever option the form has.
-const LANG_DISPLAY: Record<Locale, string> = {
-  ko: '한국어',
-  en: 'English',
-  de: 'Deutsch',
-};
-
-const url = (() => {
-  if (!baseUrl || baseUrl.includes('PLACEHOLDER')) return baseUrl;
-  const sep = baseUrl.includes('?') ? '&' : '?';
-  if (langEntry && !langEntry.includes('PLACEHOLDER')) {
-    return `${baseUrl}${sep}usp=pp_url&${encodeURIComponent(langEntry)}=${encodeURIComponent(LANG_DISPLAY[locale])}`;
-  }
-  return baseUrl;
-})();
-
 const isPlaceholder = !baseUrl || baseUrl.includes('PLACEHOLDER');
+const url = baseUrl;
 ---
 
 <Section id="rsvp" title={title}>
