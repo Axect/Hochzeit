@@ -27,19 +27,19 @@
     "scrollHint": "Nach unten scrollen"
   },
   "greeting": {
-    "title": "Wir öffnen ein neues Kapitel",
-    "body": "Was als Brieffreundschaft begann, ist zur schönsten Reise unseres Lebens geworden. Die Erlebnisse, die wir auf unseren gemeinsamen Reisen durch Korea, Deutschland, China, Hongkong und Japan gesammelt haben, läuten nun ein neues Kapitel ein.\nWir würden uns von Herzen freuen, wenn Ihr unsere Hochzeit in Seoul mit uns teilt und diesen besonderen Tag mit uns feiert.",
+    "title": "Wir beginnen ein neues Kapitel",
+    "body": "Was als Brieffreundschaft begann, ist zur schönsten Reise unseres Lebens geworden. Die Erlebnisse, die wir auf unseren gemeinsamen Reisen durch Korea, Deutschland, China, Hongkong und Japan gesammelt haben, beginnen nun ein neues Kapitel.\nWir würden uns von Herzen freuen, wenn Ihr unsere Hochzeit in Seoul mit uns teilt und diesen besonderen Tag mit uns feiert.",
     "parents": {
       "groom": {
         "father": "Il Ha Kim",
         "mother": "Kyuri Kim",
-        "relation": " — ältester Sohn von",
+        "relation": "ältester Sohn:",
         "name": "Tae-Geun"
       },
       "bride": {
         "father": "Manfred Josef Morgen",
         "mother": "Sigrid Morgen",
-        "relation": " — älteste Tochter von",
+        "relation": "älteste Tochter:",
         "name": "Andrea"
       }
     }
