@@ -38,8 +38,19 @@ const lines = body.split('\n');
           <span class="text-[var(--color-fg)]">{groomMother}</span>
         </p>
         <p class="text-[var(--color-muted)]">
-          <span>{groomRelation}</span>
-          <span class="font-medium text-[var(--color-fg)]"> {groomName}</span>
+          {
+            locale === 'de' ? (
+              <>
+                <span class="font-medium text-[var(--color-fg)]">{groomName}</span>
+                <span> ({groomRelation})</span>
+              </>
+            ) : (
+              <>
+                <span>{groomRelation}</span>
+                <span class="font-medium text-[var(--color-fg)]"> {groomName}</span>
+              </>
+            )
+          }
         </p>
       </dd>
     </div>
@@ -55,8 +66,19 @@ const lines = body.split('\n');
           <span class="text-[var(--color-fg)]">{brideMother}</span>
         </p>
         <p class="text-[var(--color-muted)]">
-          <span>{brideRelation}</span>
-          <span class="font-medium text-[var(--color-fg)]"> {brideName}</span>
+          {
+            locale === 'de' ? (
+              <>
+                <span class="font-medium text-[var(--color-fg)]">{brideName}</span>
+                <span> ({brideRelation})</span>
+              </>
+            ) : (
+              <>
+                <span>{brideRelation}</span>
+                <span class="font-medium text-[var(--color-fg)]"> {brideName}</span>
+              </>
+            )
+          }
         </p>
       </dd>
     </div>
