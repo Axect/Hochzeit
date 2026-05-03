@@ -168,9 +168,9 @@ export const travelGuide: TravelGuideData = {
               de: 'Du steigst etwa 50 m vom Ausgang 1 der Sinpung-Station aus. Das Venuevian ist von dort 5 Minuten zu Fuß.',
             },
             {
-              ko: '실수로 한 정류장 더 가셔도 괜찮아요 — 다음 정류장(도림사거리)에서 내려 7호선 신풍역 방향으로 도보 10분.',
-              en: 'If you accidentally miss the stop, get off at the next one (Dorim Sageori) and walk back about 10 minutes towards Sinpung Station.',
-              de: 'Wenn du die Haltestelle verpasst, steige an der nächsten (Dorim Sageori) aus und gehe ca. 10 Minuten zurück Richtung Sinpung-Station.',
+              ko: '실수로 한 정류장 더 가셔도 괜찮아요 — 다음 정류장(래미안에스티움)에서 내려 신풍역 방향으로 도보 약 5분.',
+              en: 'If you accidentally miss the stop, get off at the next one (Raemian Estium) and walk back about 5 minutes towards Sinpung Station.',
+              de: 'Wenn du die Haltestelle verpasst, steige an der nächsten (Raemian Estium) aus und gehe ca. 5 Minuten zurück Richtung Sinpung-Station.',
             },
           ],
         },
@@ -186,14 +186,14 @@ export const travelGuide: TravelGuideData = {
           type: 'ul',
           items: [
             {
-              ko: 'T1 첫차 06:44, 막차 22:39 (T2는 약 5분 빠름)',
-              en: 'First bus from T1 at 06:44, last at 22:39 (T2 about 5 min earlier).',
-              de: 'Erster Bus ab T1 um 06:44 Uhr, letzter um 22:39 Uhr (T2 ca. 5 Min. früher).',
+              ko: '운행 시간: 대략 06:40~22:40 (T2 → T1 순으로 정차하므로 T2가 몇 분 빠릅니다). 정확한 시각은 airportlimousine.co.kr에서 확인.',
+              en: 'Operating hours: roughly 06:40–22:40 (T2 picks up a few minutes before T1). Verify the exact times on airportlimousine.co.kr.',
+              de: 'Betriebszeit: etwa 06:40–22:40 Uhr (T2 wird ein paar Minuten vor T1 bedient). Genaue Zeiten auf airportlimousine.co.kr prüfen.',
             },
             {
-              ko: '배차 간격: 30~40분',
-              en: 'Frequency: every 30–40 minutes.',
-              de: 'Taktung: alle 30–40 Minuten.',
+              ko: '배차 간격: 시간대에 따라 약 40~80분 (출발 시각은 사전 확인 권장)',
+              en: 'Frequency: roughly every 40–80 min depending on time of day — worth checking the timetable in advance.',
+              de: 'Taktung: je nach Tageszeit etwa alle 40–80 Min. — Fahrplan vorher prüfen empfohlen.',
             },
             {
               ko: '신풍역까지 약 60~75분 (교통상황에 따라 다름)',
@@ -275,14 +275,14 @@ export const travelGuide: TravelGuideData = {
           type: 'ul',
           items: [
             {
-              ko: 'T1: 1층 도착층, 4번 또는 8번 게이트 근처. "International Taxi" 영문 표지판을 따라가세요.',
-              en: 'Terminal 1: Arrivals floor (1F), near Gate 4 or Gate 8. Follow the "International Taxi" signs.',
-              de: 'Terminal 1: Ankunftsebene (1. OG), nahe Tor 4 oder Tor 8. Den Schildern „International Taxi" folgen.',
+              ko: 'T1: 1층 도착층 4번 게이트 근처 부스. 차량 승차는 4C 라인. "International Taxi" 영문 표지판을 따라가세요.',
+              en: 'Terminal 1: Arrivals floor (1F), booth near Gate 4 — pickup at lane 4C. Follow the "International Taxi" signs.',
+              de: 'Terminal 1: Ankunftsebene (1. OG), Schalter nahe Tor 4 — Abfahrt an Spur 4C. Den Schildern „International Taxi" folgen.',
             },
             {
-              ko: 'T2: 1층 도착층, 4번과 9번 게이트 사이.',
-              en: 'Terminal 2: Arrivals floor (1F), between Gate 4 and Gate 9.',
-              de: 'Terminal 2: Ankunftsebene (1. OG), zwischen Tor 4 und Tor 9.',
+              ko: 'T2: 1층 도착층, 부스 표지판을 따라가시면 차량 승차는 3C 라인.',
+              en: 'Terminal 2: Arrivals floor (1F); follow booth signage — pickup at lane 3C.',
+              de: 'Terminal 2: Ankunftsebene (1. OG); der Beschilderung folgen — Abfahrt an Spur 3C.',
             },
           ],
         },
@@ -402,9 +402,9 @@ export const travelGuide: TravelGuideData = {
               de: 'In jedem Flughafen-Kiosk (GS25, CU, 7-Eleven) oder am Automaten erhältlich.',
             },
             {
-              ko: '카드 가격: ₩4,000 (보증금 개념, 환불 시 ₩500 수수료)',
-              en: 'Card costs ₩4,000 (a deposit; ₩500 fee at refund).',
-              de: 'Kartenkosten: 4.000 ₩ (eine Art Pfand; bei Rückerstattung 500 ₩ Gebühr).',
+              ko: '카드 가격: 일반 T-money ₩2,500 / 인천공항에서 파는 "Korea Tour Card"는 ₩4,000 (카드 자체 비용, 환불 불가). 잔액 환불 시 ₩500 수수료.',
+              en: 'Card costs ₩2,500 for the standard T-money or ₩4,000 for the airport-sold "Korea Tour Card" (non-refundable card cost). ₩500 fee on balance refund.',
+              de: 'Kartenkosten: 2.500 ₩ für die normale T-money oder 4.000 ₩ für die am Flughafen erhältliche „Korea Tour Card" (nicht erstattungsfähig). 500 ₩ Gebühr bei Restguthaben-Rückerstattung.',
             },
             {
               ko: '처음 ₩10,000 정도 충전 권장 — 모든 지하철·버스에서 사용',
@@ -440,9 +440,9 @@ export const travelGuide: TravelGuideData = {
               de: 'Den „All-stop"-Zug nehmen: 4.750 ₩, 53–66 Min., Takt alle 5–8 Min.',
             },
             {
-              ko: '직통열차(₩9,500, 43분)도 있지만 가격 차이가 커서 일반열차가 더 가성비 좋음',
-              en: 'There is also an Express train (₩9,500, 43 min) but the all-stop train is the better value.',
-              de: 'Es gibt auch einen Expresszug (9.500 ₩, 43 Min.), aber der Bummelzug bietet das bessere Preis-Leistungs-Verhältnis.',
+              ko: '직통열차(₩9,500, T1 약 43분 / T2 약 51분)도 있지만 가격 차이가 커서 일반열차가 더 가성비 좋음',
+              en: 'There is also an Express train (₩9,500, ~43 min from T1 / ~51 min from T2) but the all-stop train is the better value.',
+              de: 'Es gibt auch einen Expresszug (9.500 ₩, ca. 43 Min. ab T1 / ca. 51 Min. ab T2), aber der Bummelzug bietet das bessere Preis-Leistungs-Verhältnis.',
             },
             {
               ko: '서울역에서 하차',
@@ -454,9 +454,9 @@ export const travelGuide: TravelGuideData = {
         {
           type: 'h3',
           text: {
-            ko: '3단계: 1호선 → 신도림 (6정거장)',
-            en: 'Step 3: Line 1 → Sindorim (6 stops)',
-            de: 'Schritt 3: Linie 1 → Sindorim (6 Stationen)',
+            ko: '3단계: 1호선 → 신도림 (7정거장)',
+            en: 'Step 3: Line 1 → Sindorim (7 stops)',
+            de: 'Schritt 3: Linie 1 → Sindorim (7 Stationen)',
           },
         },
         {
@@ -478,9 +478,9 @@ export const travelGuide: TravelGuideData = {
               de: 'Auf den Bahnsteig Richtung Süden (nach Cheonan, Sinchang oder Incheon).',
             },
             {
-              ko: '6정거장 후 "신도림 / Sindorim" 하차',
-              en: 'Ride 6 stops to "신도림 / Sindorim".',
-              de: 'Nach 6 Stationen an „신도림 / Sindorim" aussteigen.',
+              ko: '7정거장 후 "신도림 / Sindorim" 하차 (남영 → 용산 → 노량진 → 대방 → 신길 → 영등포 → 신도림)',
+              en: 'Ride 7 stops to "신도림 / Sindorim" (Namyeong → Yongsan → Noryangjin → Daebang → Singil → Yeongdeungpo → Sindorim).',
+              de: 'Nach 7 Stationen an „신도림 / Sindorim" aussteigen (Namyeong → Yongsan → Noryangjin → Daebang → Singil → Yeongdeungpo → Sindorim).',
             },
           ],
         },
@@ -567,9 +567,9 @@ export const travelGuide: TravelGuideData = {
           type: 'callout',
           tone: 'tip',
           text: {
-            ko: '요금 합계: 카드 ₩4,000 + 운임 약 ₩6,500 = 약 ₩10,500. 전체 소요 시간 약 80~95분.',
-            en: 'Total cost: ₩4,000 card + ~₩6,500 fares = about ₩10,500. Door-to-door time roughly 80–95 minutes.',
-            de: 'Gesamtkosten: 4.000 ₩ Karte + ca. 6.500 ₩ Tarife = rund 10.500 ₩. Reisezeit etwa 80–95 Min.',
+            ko: '요금 합계: 카드 ₩2,500~₩4,000 + 운임 약 ₩6,500 = 약 ₩9,000~₩10,500. 전체 소요 시간 약 80~95분.',
+            en: 'Total cost: ₩2,500–₩4,000 card + ~₩6,500 fares = about ₩9,000–₩10,500. Door-to-door time roughly 80–95 minutes.',
+            de: 'Gesamtkosten: 2.500–4.000 ₩ Karte + ca. 6.500 ₩ Tarife = rund 9.000–10.500 ₩. Reisezeit etwa 80–95 Min.',
           },
         },
       ],
@@ -609,9 +609,9 @@ export const travelGuide: TravelGuideData = {
               de: 'KakaoMap (카카오맵): alternative Karten-App mit englischer Oberfläche — besonders gut für Restaurants und Cafés.',
             },
             {
-              ko: 'Kakao T: 택시 호출 앱. 신용카드 등록 후 한 번에 결제. 영문 UI 지원.',
-              en: 'Kakao T: the local Uber equivalent. Register your card once and ride. English UI available.',
-              de: 'Kakao T: das lokale Uber-Pendant. Karte einmal registrieren, dann fahren. Englische Oberfläche verfügbar.',
+              ko: 'Kakao T: 택시 호출 앱, 영문 UI 지원. 자동 결제는 한국 휴대폰 번호 등록이 필요해서, 외국 손님은 차량에서 카드/현금 직접 결제가 더 간단합니다. 외국인 전용 "k.ride" 앱은 한국 번호 없이도 해외카드 등록 가능.',
+              en: 'Kakao T: the local Uber equivalent, English UI available. Auto-pay requires a Korean phone number, so foreign guests usually choose "pay the driver" and pay in cash or card on arrival. Alternative: "k.ride" — a foreigner-focused app that accepts overseas cards without a Korean phone number.',
+              de: 'Kakao T: das lokale Uber-Pendant, englische Oberfläche. Auto-Zahlung erfordert eine koreanische Mobilnummer; Gäste aus dem Ausland wählen daher meist „Bei Fahrer zahlen" und begleichen bar oder mit Karte beim Aussteigen. Alternativ: „k.ride" — eine App speziell für Ausländer, die Auslandskarten ohne koreanische Nummer akzeptiert.',
             },
             {
               ko: 'Papago (파파고): 한국어 ↔ 영어/독일어 번역. 음성·이미지 번역도 가능합니다.',
@@ -699,14 +699,14 @@ export const travelGuide: TravelGuideData = {
       de: '112 — Polizei',
     },
     {
-      ko: '1330 — 한국관광공사 24시간 통역 안내 (영어·일본어·중국어·러시아어 가능, 무료)',
-      en: '1330 — Korea Travel Hotline. 24/7 multilingual support (English, Japanese, Chinese, Russian) — free.',
-      de: '1330 — Korea Travel Hotline. Rund um die Uhr mehrsprachig (Englisch, Japanisch, Chinesisch, Russisch) — kostenlos.',
+      ko: '1330 — 한국관광공사 24시간 통역 안내 (한국어·영어·중국어·일본어 등 다국어 지원, 무료)',
+      en: '1330 — Korea Travel Hotline. 24/7 multilingual support (Korean, English, Chinese, Japanese, and more) — free.',
+      de: '1330 — Korea Travel Hotline. Rund um die Uhr mehrsprachig (Koreanisch, Englisch, Chinesisch, Japanisch u. a.) — kostenlos.',
     },
     {
-      ko: '02-1345 — 외국인종합안내센터 (출입국·체류 관련 문의)',
-      en: '02-1345 — Hi Korea hotline (immigration and visa questions).',
-      de: '02-1345 — Hi-Korea-Hotline (Einreise- und Visumsfragen).',
+      ko: '1345 — 외국인종합안내센터 (출입국·체류 관련 문의, 평일 09:00~22:00, 무료)',
+      en: '1345 — Immigration Contact Center (immigration and visa questions; weekdays 09:00–22:00; free).',
+      de: '1345 — Einwanderungs-Kontaktzentrum (Einreise- und Visumsfragen; werktags 09:00–22:00 Uhr; kostenlos).',
     },
   ],
   miscHeading: {
@@ -716,9 +716,9 @@ export const travelGuide: TravelGuideData = {
   },
   miscItems: [
     {
-      ko: '전압: 220V, 50Hz. 독일·유럽 어댑터 그대로 사용 가능. 미국에서 오시는 분은 변환 어댑터 필요.',
-      en: 'Power: 220 V, 50 Hz. The same plug shape as Germany — Europeans can plug right in. Travelers from the US need an adapter.',
-      de: 'Strom: 220 V, 50 Hz. Gleicher Steckdosentyp wie in Deutschland — funktioniert direkt. Aus den USA Anreisende brauchen einen Adapter.',
+      ko: '전압: 220V, 60Hz. 독일·유럽 플러그(Type C/F) 그대로 사용 가능. 미국에서 오시는 분은 변환 어댑터 필요.',
+      en: 'Power: 220 V, 60 Hz. The plug shape (Type C/F) is the same as in Germany — Europeans can plug straight in. Travelers from the US need a plug adapter.',
+      de: 'Strom: 220 V, 60 Hz. Steckdosentyp (Typ C/F) wie in Deutschland — passt direkt. Aus den USA Anreisende brauchen einen Adapter.',
     },
     {
       ko: '시차: 서울은 독일보다 8시간 빠름 (독일 서머타임 적용 시 7시간)',
