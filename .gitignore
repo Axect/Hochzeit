@@ -1,0 +1,43 @@
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor / agent tooling
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+.claude/
+.codex/
+.forge/
+
+# Personal scratchpad / answer notes (contains private info)
+ans.md
+
+# Secrets / private content (codes/letters with real recipient names + bodies)
+data/letters.private.json
+data/codes.private.json
+!data/codes.private.example.json
+
+# OS
+Thumbs.db
+
+# Lockfiles from other package managers (we use npm)
+yarn.lock
+pnpm-lock.yaml
+public/journey/_originals/

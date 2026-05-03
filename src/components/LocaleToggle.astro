@@ -1,0 +1,42 @@
+---
+import { LOCALES, localizedHref, t, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  pathname: string;
+}
+
+const { locale, pathname } = Astro.props;
+---
+
+<nav
+  aria-label={t('locales.ko', locale) + ' / ' + t('locales.en', locale) + ' / ' + t('locales.de', locale)}
+  class="flex items-center gap-0.5 rounded-full border border-[var(--color-line)] bg-white/80 p-0.5 text-xs font-medium tracking-[var(--tracking-wedding)] uppercase shadow-sm backdrop-blur-md"
+>
+  {
+    LOCALES.map((loc) => {
+      const isActive = loc === locale;
+      const href = localizedHref(pathname, loc);
+      const label = loc === 'ko' ? '한' : loc === 'en' ? 'EN' : 'DE';
+      const fullName = t(`locales.${loc}`, locale);
+      return isActive ? (
+        <span
+          aria-current="true"
+          class="tap-target flex items-center justify-center rounded-full bg-[var(--color-accent)] px-3 py-1.5 text-white"
+          title={fullName}
+        >
+          {label}
+        </span>
+      ) : (
+        <a
+          href={href}
+          hreflang={loc}
+          class="tap-target flex items-center justify-center rounded-full px-3 py-1.5 text-[var(--color-muted)] transition-colors hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-fg)]"
+          title={fullName}
+        >
+          {label}
+        </a>
+      );
+    })
+  }
+</nav>

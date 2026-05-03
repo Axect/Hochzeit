@@ -1,0 +1,70 @@
+---
+import journey from '@data/journey.json';
+import { t, tField, formatDate, fmt, type Locale } from '@lib/i18n';
+import JourneyMap from '@components/JourneyMap.tsx';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('journey.title', locale);
+const intro = t('journey.intro', locale);
+const previewHint = t('journey.previewHint', locale);
+const openButton = t('journey.openButton', locale);
+const closeButton = t('journey.closeButton', locale);
+const momentCount = fmt(t('journey.momentCount', locale), { count: journey.events.length });
+
+interface RawPhoto {
+  src: string;
+  width: number;
+  height: number;
+  alt?: string;
+}
+
+interface RawEvent {
+  photos?: RawPhoto[];
+  from?: { lat: number; lon: number };
+}
+
+const events = journey.events.map((ev) => {
+  const raw = ev as unknown as RawEvent;
+  return {
+    id: ev.id,
+    kind: ev.kind as 'letter' | 'visit' | 'trip' | 'wedding',
+    date: ev.date,
+    lat: ev.lat,
+    lon: ev.lon,
+    from: raw.from,
+    title: tField(ev.title, locale) ?? '',
+    body: tField(ev.body, locale) ?? '',
+    dateFormatted: formatDate(ev.date, locale, { year: 'numeric', month: 'short', day: 'numeric' }),
+    photos: raw.photos ?? [],
+  };
+});
+
+const labels = {
+  prev: t('journey.prev', locale),
+  next: t('journey.next', locale),
+  reducedMotionNote: t('journey.reducedMotionNote', locale),
+  open: openButton,
+  close: closeButton,
+  hint: previewHint,
+  momentCount,
+  viewPhoto: t('journey.viewPhoto', locale),
+  kindLabel: {
+    letter: t('journey.kindLabel.letter', locale),
+    visit: t('journey.kindLabel.visit', locale),
+    trip: t('journey.kindLabel.trip', locale),
+    wedding: t('journey.kindLabel.wedding', locale),
+  },
+};
+---
+
+<section
+  id="journey"
+  aria-label={title}
+  class="relative flex min-h-[100svh] w-full flex-col bg-[oklch(0.16_0.04_150)] text-white"
+>
+  <JourneyMap client:visible events={events} labels={labels} title={title} intro={intro} />
+</section>

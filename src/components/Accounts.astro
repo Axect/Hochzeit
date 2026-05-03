@@ -1,0 +1,203 @@
+---
+import Section from '@components/Section.astro';
+import venue from '@config/venue.json';
+import { t, tField, fmt, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('accounts.title', locale);
+const intro = t('accounts.intro', locale);
+const groomLabel = t('accounts.groomSide', locale);
+const brideLabel = t('accounts.brideSide', locale);
+const copiedMsg = t('accounts.copied', locale);
+const copyFailedMsg = t('accounts.copyFailed', locale);
+
+type Account = {
+  id: string;
+  role: { ko: string; en: string; de: string };
+  holder: string;
+  bank: { ko: string; en: string; de: string };
+  number: string;
+  iban?: string;
+  bic?: string;
+  kakaopay?: string;
+};
+
+const groomAccounts = (venue.accounts.groom as Account[]) ?? [];
+const brideAccounts = (venue.accounts.bride as Account[]) ?? [];
+const comingSoonMsg = t('accounts.comingSoon', locale);
+
+const renderRow = (acc: Account) => ({
+  id: acc.id,
+  role: tField(acc.role, locale) ?? '',
+  bank: tField(acc.bank, locale) ?? '',
+  holder: acc.holder,
+  number: acc.number,
+  iban: acc.iban,
+  bic: acc.bic,
+  copyAria: fmt(t('accounts.copyAria', locale), { holder: acc.holder }),
+});
+---
+
+<Section id="accounts" title={title}>
+  <p class="mb-8 text-center text-sm text-[var(--color-muted)]">{intro}</p>
+
+  <div class="space-y-8">
+    <div>
+      <h3 class="mb-3 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+        {groomLabel}
+      </h3>
+      <ul class="space-y-2">
+        {
+          groomAccounts.map(renderRow).map((row) => (
+            <li class="flex items-center justify-between gap-3 rounded-md border border-[var(--color-line)] bg-white/40 px-4 py-3">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 text-sm">
+                  <span class="text-[var(--color-muted)]">{row.role}</span>
+                  <span class="text-[var(--color-fg)]">{row.holder}</span>
+                </div>
+                <div class="mt-0.5 truncate font-mono text-sm text-[var(--color-fg)]">
+                  {row.bank} {row.number}
+                </div>
+              </div>
+              <button
+                type="button"
+                class="tap-target shrink-0 rounded-md bg-[var(--color-accent-soft)] px-3 py-1.5 text-xs font-medium text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white"
+                aria-label={row.copyAria}
+                data-account-copy
+                data-value={row.number}
+              >
+                {locale === 'ko' ? '복사' : locale === 'en' ? 'Copy' : 'Kopieren'}
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="mb-3 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+        {brideLabel}
+      </h3>
+      {
+        brideAccounts.length === 0 ? (
+          <div class="rounded-md border border-dashed border-[var(--color-line)] bg-white/30 px-4 py-5 text-center text-sm text-[var(--color-muted)]">
+            {comingSoonMsg}
+          </div>
+        ) : (
+      <ul class="space-y-2">
+        {
+          brideAccounts.map(renderRow).map((row) => (
+            <li class="rounded-md border border-[var(--color-line)] bg-white/40 px-4 py-3">
+              <div class="flex items-center justify-between gap-3">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 text-sm">
+                    <span class="text-[var(--color-muted)]">{row.role}</span>
+                    <span class="text-[var(--color-fg)]">{row.holder}</span>
+                  </div>
+                  <div class="mt-0.5 truncate font-mono text-sm text-[var(--color-fg)]">
+                    {row.bank} {row.number}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="tap-target shrink-0 rounded-md bg-[var(--color-accent-soft)] px-3 py-1.5 text-xs font-medium text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white"
+                  aria-label={row.copyAria}
+                  data-account-copy
+                  data-value={row.number}
+                >
+                  {locale === 'ko' ? '복사' : locale === 'en' ? 'Copy' : 'Kopieren'}
+                </button>
+              </div>
+              {row.iban && (
+                <div class="mt-2 border-t border-[var(--color-line)] pt-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <div class="flex-1 min-w-0 font-mono text-xs text-[var(--color-muted)]">
+                      IBAN {row.iban}
+                      {row.bic && <span class="ml-2">· BIC {row.bic}</span>}
+                    </div>
+                    <button
+                      type="button"
+                      class="tap-target shrink-0 rounded-md bg-[var(--color-accent-soft)] px-3 py-1.5 text-xs font-medium text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white"
+                      aria-label={`Copy IBAN ${row.iban}`}
+                      data-account-copy
+                      data-value={row.iban}
+                    >
+                      {locale === 'ko' ? '복사' : locale === 'en' ? 'Copy' : 'Kopieren'}
+                    </button>
+                  </div>
+                </div>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+        )
+      }
+    </div>
+  </div>
+
+  <div
+    id="account-toast"
+    role="status"
+    aria-live="polite"
+    class="pointer-events-none fixed inset-x-0 bottom-8 z-40 mx-auto w-fit max-w-[90vw] rounded-full bg-[var(--color-fg)] px-4 py-2 text-sm text-white opacity-0 shadow-lg transition-opacity duration-300"
+  >
+  </div>
+</Section>
+
+<script is:inline define:vars={{ copiedMsg, copyFailedMsg }}>
+  (function () {
+    const toast = document.getElementById('account-toast');
+    let toastTimer = null;
+    const showToast = (msg) => {
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.style.opacity = '0';
+      }, 1800);
+    };
+
+    const fallbackCopy = (text) => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try {
+        ok = document.execCommand('copy');
+      } catch (_) {
+        ok = false;
+      }
+      ta.remove();
+      return ok;
+    };
+
+    document.querySelectorAll('[data-account-copy]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const value = btn.getAttribute('data-value') ?? '';
+        if (!value) return;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(value);
+            showToast(copiedMsg);
+            return;
+          }
+          if (fallbackCopy(value)) showToast(copiedMsg);
+          else showToast(copyFailedMsg);
+        } catch (_) {
+          if (fallbackCopy(value)) showToast(copiedMsg);
+          else showToast(copyFailedMsg);
+        }
+      });
+    });
+  })();
+</script>

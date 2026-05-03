@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "id": "placeholder-1",
+      "src": "/gallery/placeholder-1.jpg",
+      "width": 1600,
+      "height": 1200,
+      "alt": {
+        "ko": "스튜디오 사진 1 (예시)",
+        "en": "Studio photo 1 (placeholder)",
+        "de": "Studiofoto 1 (Platzhalter)"
+      }
+    },
+    {
+      "id": "placeholder-2",
+      "src": "/gallery/placeholder-2.jpg",
+      "width": 1200,
+      "height": 1600,
+      "alt": {
+        "ko": "스튜디오 사진 2 (예시)",
+        "en": "Studio photo 2 (placeholder)",
+        "de": "Studiofoto 2 (Platzhalter)"
+      }
+    },
+    {
+      "id": "placeholder-3",
+      "src": "/gallery/placeholder-3.jpg",
+      "width": 1600,
+      "height": 1200,
+      "alt": {
+        "ko": "스튜디오 사진 3 (예시)",
+        "en": "Studio photo 3 (placeholder)",
+        "de": "Studiofoto 3 (Platzhalter)"
+      }
+    }
+  ]
+}

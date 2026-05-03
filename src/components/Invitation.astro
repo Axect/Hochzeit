@@ -1,0 +1,32 @@
+---
+import Cover from '@components/Cover.astro';
+import Greeting from '@components/Greeting.astro';
+import Schedule from '@components/Schedule.astro';
+import Journey from '@components/Journey.astro';
+import WeddingPhoto from '@components/WeddingPhoto.astro';
+import SecretLetter from '@components/SecretLetter.astro';
+import Directions from '@components/Directions.astro';
+import Accounts from '@components/Accounts.astro';
+import Rsvp from '@components/Rsvp.astro';
+import Guestbook from '@components/Guestbook.astro';
+import ShareButtons from '@components/ShareButtons.astro';
+import type { Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<Cover locale={locale} />
+<Greeting locale={locale} />
+<Schedule locale={locale} />
+<Journey locale={locale} />
+<WeddingPhoto locale={locale} />
+<Directions locale={locale} />
+<Accounts locale={locale} />
+<Rsvp locale={locale} />
+<Guestbook locale={locale} />
+<ShareButtons locale={locale} />
+<SecretLetter locale={locale} />

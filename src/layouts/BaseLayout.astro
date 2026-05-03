@@ -1,0 +1,96 @@
+---
+import '@/styles/global.css';
+// Lora Variable — humanist Latin serif (400–700) whose stroke weight matches
+// Korean myeongjo families well, so a mixed Korean/English paragraph reads at
+// a single optical density. Covers Latin Extended (German ä ö ü ß).
+import '@fontsource-variable/lora';
+// Gowun Batang — soft, modern Korean myeongjo. Used wherever Hangul glyphs
+// appear; the browser falls through automatically since Lora has no Hangul
+// coverage.
+import '@fontsource/gowun-batang/400.css';
+import '@fontsource/gowun-batang/700.css';
+
+import LocaleToggle from '@components/LocaleToggle.astro';
+import { LOCALES, htmlLang, localizedHref, t, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { locale, title, description, ogImage } = Astro.props;
+const pathname = Astro.url.pathname;
+const siteOrigin = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+const resolvedTitle = title ?? t('meta.siteTitle', locale);
+const resolvedDescription = description ?? t('meta.siteDescription', locale);
+const resolvedOgImage = ogImage ?? '/og-image.jpg';
+const canonical = new URL(pathname, Astro.site ?? Astro.url).toString();
+---
+
+<!doctype html>
+<html lang={htmlLang(locale)} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#fef9f4" />
+    <title>{resolvedTitle}</title>
+    <meta name="description" content={resolvedDescription} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    {
+      LOCALES.map((loc) => (
+        <link
+          rel="alternate"
+          hreflang={loc}
+          href={`${siteOrigin}${localizedHref(pathname, loc)}`}
+        />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={`${siteOrigin}${localizedHref(pathname, 'ko')}`} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={resolvedTitle} />
+    <meta property="og:description" content={resolvedDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(resolvedOgImage, Astro.site ?? Astro.url).toString()} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:alt" content={t('meta.ogImageAlt', locale)} />
+    <meta property="og:locale" content={htmlLang(locale).replace('-', '_')} />
+    {
+      LOCALES.filter((l) => l !== locale).map((l) => (
+        <meta property="og:locale:alternate" content={htmlLang(l).replace('-', '_')} />
+      ))
+    }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={resolvedTitle} />
+    <meta name="twitter:description" content={resolvedDescription} />
+    <meta name="twitter:image" content={new URL(resolvedOgImage, Astro.site ?? Astro.url).toString()} />
+  </head>
+  <body class="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)]">
+    <a
+      href="#main-content"
+      class="absolute left-2 top-2 z-50 -translate-y-20 rounded-md bg-[var(--color-accent)] px-3 py-2 text-sm text-white focus:translate-y-0"
+    >
+      {t('ui.skipToContent', locale)}
+    </a>
+
+    <header class="fixed inset-x-0 top-0 z-30 flex items-center justify-end px-4 pt-3 sm:px-6">
+      <LocaleToggle locale={locale} pathname={pathname} />
+    </header>
+
+    <main id="main-content" class="pt-0">
+      <slot />
+    </main>
+
+    <footer class="px-4 pb-10 pt-16 text-center text-sm text-[var(--color-muted)] safe-bottom">
+      <p>{t('footer.thanks', locale)}</p>
+    </footer>
+  </body>
+</html>

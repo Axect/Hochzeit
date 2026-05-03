@@ -1,0 +1,82 @@
+{
+  "name": {
+    "ko": "베뉴비안",
+    "en": "Venuevian",
+    "de": "Venuevian"
+  },
+  "hall": {
+    "ko": "3층 사파이어홀",
+    "en": "3F, Sapphire Hall",
+    "de": "3. Etage, Saphirsaal"
+  },
+  "address": {
+    "ko": "서울특별시 영등포구 신길로 89",
+    "en": "89, Singil-ro, Yeongdeungpo-gu, Seoul, Republic of Korea",
+    "de": "89, Singil-ro, Yeongdeungpo-gu, Seoul, Republik Korea"
+  },
+  "lat": 37.500731,
+  "lon": 126.905953,
+  "kakaoPlaceId": "0",
+  "kakaoRoughmap": {
+    "timestamp": "1777786540868",
+    "key": "mr3s3na4bqh"
+  },
+  "googleEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3046874664365!2d126.90595347587062!3d37.50073137205581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9e52f67703df%3A0xbe9a4e5b64cb59df!2z67Kg64m067mE7JWI!5e0!3m2!1sko!2sjp!4v1777786590418!5m2!1sko!2sjp",
+  "transit": {
+    "subway": {
+      "ko": "7호선 신풍역 4번 출구로 나와 바로 우측에 위치합니다.",
+      "en": "Sinpung Station (Line 7), Exit 4 — the venue is immediately to the right.",
+      "de": "U-Bahn-Linie 7, Station Sinpung, Ausgang 4 — die Location liegt direkt rechts."
+    },
+    "bus": {
+      "ko": "지선버스(초록) 5713 · 5616 · 6411 · 5620 · 6512 · 5625 / 마을버스 영등포01 · 영등포07 · 영등포13",
+      "en": "Local buses (green): 5713, 5616, 6411, 5620, 6512, 5625 / Community buses: Yeongdeungpo 01, 07, 13.",
+      "de": "Stadtbusse (grün): 5713, 5616, 6411, 5620, 6512, 5625 / Stadtteilbusse: Yeongdeungpo 01, 07, 13."
+    },
+    "car": {
+      "ko": "내비게이션에 \"신풍역\", \"베뉴비안\", 또는 도로명 주소(신길로 89)를 검색해 주세요.",
+      "en": "Navigate to \"Sinpung Station\", \"Venuevian\", or the road address (89 Singil-ro).",
+      "de": "Im Navi „Sinpung-Station\", „Venuevian\" oder die Straßenadresse (Singil-ro 89) eingeben."
+    },
+    "parking": {
+      "ko": "지상 · 지하 주차장 이용 가능. 1시간 30분 무료, 이후 10분당 500원.",
+      "en": "Surface and underground parking. Free for 1 h 30 min; 500 KRW per additional 10 min.",
+      "de": "Park­plätze oberirdisch und in der Tiefgarage. 1 h 30 min kostenlos; danach 500 KRW pro 10 Minuten."
+    }
+  },
+  "accounts": {
+    "groom": [
+      {
+        "id": "groom-self",
+        "role": {
+          "ko": "신랑",
+          "en": "Groom",
+          "de": "Bräutigam"
+        },
+        "holder": "김태근",
+        "bank": {
+          "ko": "국민은행",
+          "en": "Kookmin Bank",
+          "de": "Kookmin Bank"
+        },
+        "number": "650302-04-039579"
+      },
+      {
+        "id": "groom-mother",
+        "role": {
+          "ko": "신랑 어머니",
+          "en": "Groom's mother",
+          "de": "Mutter des Bräutigams"
+        },
+        "holder": "김규리",
+        "bank": {
+          "ko": "신한은행",
+          "en": "Shinhan Bank",
+          "de": "Shinhan Bank"
+        },
+        "number": "110-411-532199"
+      }
+    ],
+    "bride": []
+  }
+}

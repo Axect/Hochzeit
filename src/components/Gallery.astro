@@ -1,0 +1,32 @@
+---
+import Section from '@components/Section.astro';
+import gallery from '@data/gallery.json';
+import { t, tField, type Locale } from '@lib/i18n';
+import GalleryLightbox from '@components/GalleryLightbox.tsx';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('gallery.title', locale);
+
+const items = gallery.items.map((item) => ({
+  id: item.id,
+  src: item.src,
+  width: item.width,
+  height: item.height,
+  alt: tField(item.alt, locale) ?? '',
+}));
+
+const labels = {
+  open: t('gallery.openLightbox', locale),
+  close: t('gallery.closeLightbox', locale),
+  prev: t('gallery.previousImage', locale),
+  next: t('gallery.nextImage', locale),
+};
+---
+
+<Section id="gallery" title={title}>
+  <GalleryLightbox client:visible items={items} labels={labels} />
+</Section>

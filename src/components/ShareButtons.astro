@@ -1,0 +1,84 @@
+---
+import Section from '@components/Section.astro';
+import { t, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('share.title', locale);
+const intro = t('share.intro', locale);
+const copyLinkLabel = t('share.copyLinkButton', locale);
+const linkCopiedMsg = t('share.linkCopied', locale);
+---
+
+<Section id="share" title={title}>
+  <p class="mb-6 text-center text-sm text-[var(--color-muted)]">{intro}</p>
+
+  <div class="flex justify-center">
+    <button
+      type="button"
+      id="share-copy"
+      class="tap-target inline-flex items-center justify-center gap-2 rounded-md border border-[var(--color-line)] bg-white/60 px-5 py-3 text-sm text-[var(--color-fg)] hover:bg-[var(--color-accent-soft)]"
+    >
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      {copyLinkLabel}
+    </button>
+  </div>
+
+  <div
+    id="share-toast"
+    role="status"
+    aria-live="polite"
+    class="pointer-events-none fixed inset-x-0 bottom-8 z-40 mx-auto w-fit max-w-[90vw] rounded-full bg-[var(--color-fg)] px-4 py-2 text-sm text-white opacity-0 shadow-lg transition-opacity duration-300"
+  >
+  </div>
+</Section>
+
+<script is:inline define:vars={{ linkCopiedMsg }}>
+  (function () {
+    const toast = document.getElementById('share-toast');
+    let toastTimer = null;
+    const showToast = (msg) => {
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => (toast.style.opacity = '0'), 1800);
+    };
+
+    const copyBtn = document.getElementById('share-copy');
+    if (!copyBtn) return;
+
+    const url = window.location.href;
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(url);
+          showToast(linkCopiedMsg);
+          return;
+        }
+      } catch (_) {
+        /* fall through to execCommand */
+      }
+      const ta = document.createElement('textarea');
+      ta.value = url;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(linkCopiedMsg);
+      } finally {
+        ta.remove();
+      }
+    });
+  })();
+</script>

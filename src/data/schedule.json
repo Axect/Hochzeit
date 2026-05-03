@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": "ceremony",
+      "time": "17:30",
+      "title": {
+        "ko": "예식 시작",
+        "en": "Wedding ceremony begins",
+        "de": "Trauung beginnt"
+      }
+    },
+    {
+      "id": "reception",
+      "time": "~19:30",
+      "title": {
+        "ko": "피로연 (단독층)",
+        "en": "Reception · private floor",
+        "de": "Empfang · eigene Etage"
+      }
+    },
+    {
+      "id": "after-party",
+      "time": "20:00",
+      "title": {
+        "ko": "뒷풀이 파티",
+        "en": "After-party",
+        "de": "After-Party"
+      }
+    }
+  ]
+}

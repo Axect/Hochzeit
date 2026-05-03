@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+@theme {
+  /*
+   * Elegant pairing: Lora (Latin, humanist serif with stroke weight close to
+   * Korean myeongjo) + Gowun Batang (Hangul). Lora's body weight matches
+   * Gowun Batang's optical density so Latin and Hangul read at the same
+   * gravity in mixed paragraphs (no more "wispy English next to solid Korean").
+   * The html[lang^="ko"] override below still puts Gowun Batang first on
+   * Korean pages so digits and Latin letters stay in the same family as Hangul.
+   */
+  --font-sans: 'Lora Variable', 'Lora', 'Gowun Batang', 'Noto Serif KR',
+    ui-serif, Georgia, serif;
+  --font-serif: 'Lora Variable', 'Lora', 'Gowun Batang', 'Noto Serif KR',
+    ui-serif, Georgia, serif;
+
+  --color-bg: oklch(0.97 0.012 95);
+  --color-fg: oklch(0.22 0.03 150);
+  --color-muted: oklch(0.50 0.03 150);
+  --color-accent: oklch(0.40 0.11 150);
+  --color-accent-soft: oklch(0.94 0.04 150);
+  --color-line: oklch(0.88 0.02 150);
+  --color-gold: oklch(0.78 0.13 80);
+
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+
+  --tracking-wedding: 0.08em;
+}
+
+:root {
+  color-scheme: light;
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+/*
+ * Korean pages: put Gowun Batang first so digits and Latin letters render
+ * in the same family as Hangul. This stops numbers from "floating" with
+ * mismatched baseline/width when sitting next to Korean glyphs.
+ */
+html[lang^="ko"] {
+  --font-sans: 'Gowun Batang', 'Lora Variable', 'Lora', 'Noto Serif KR',
+    ui-serif, Georgia, serif;
+  --font-serif: 'Gowun Batang', 'Lora Variable', 'Lora', 'Noto Serif KR',
+    ui-serif, Georgia, serif;
+}
+
+/*
+ * Astro wraps every React island in a `<astro-island>` custom element. By
+ * default custom elements are inline, which collapses to zero height when
+ * placed as a flex-column child (e.g. our Journey section). `display: contents`
+ * makes the wrapper layout-transparent so the React subtree behaves as if it
+ * were a direct child of the surrounding section.
+ */
+astro-island {
+  display: contents;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-feature-settings: 'liga', 'kern';
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  min-height: 100svh;
+  /* Calligraphic serifs read better with slightly looser line-height. */
+  line-height: 1.55;
+}
+
+/* Headings stay fine (light) by default — that's where Cormorant looks most elegant. */
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .tap-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@keyframes journey-card-fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.journey-card-fade {
+  animation: journey-card-fade 0.85s cubic-bezier(0.22, 0.61, 0.36, 1);
+}

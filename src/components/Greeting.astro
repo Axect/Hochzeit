@@ -1,0 +1,64 @@
+---
+import Section from '@components/Section.astro';
+import { t, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('greeting.title', locale);
+const body = t('greeting.body', locale);
+const groomFather = t('greeting.parents.groom.father', locale);
+const groomMother = t('greeting.parents.groom.mother', locale);
+const groomRelation = t('greeting.parents.groom.relation', locale);
+const groomName = t('greeting.parents.groom.name', locale);
+const brideFather = t('greeting.parents.bride.father', locale);
+const brideMother = t('greeting.parents.bride.mother', locale);
+const brideRelation = t('greeting.parents.bride.relation', locale);
+const brideName = t('greeting.parents.bride.name', locale);
+
+const lines = body.split('\n');
+---
+
+<Section id="greeting" title={title}>
+  <div class="space-y-5 text-center text-base leading-relaxed text-[var(--color-fg)]">
+    {lines.map((line) => <p>{line}</p>)}
+  </div>
+
+  <dl class="mt-12 grid grid-cols-1 gap-6 text-sm sm:grid-cols-2">
+    <div class="rounded-lg border border-[var(--color-line)] bg-white/40 p-5 text-center">
+      <dt class="mb-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+        {locale === 'ko' ? '신랑측' : locale === 'en' ? "Groom's family" : 'Familie des Bräutigams'}
+      </dt>
+      <dd class="space-y-0.5">
+        <p>
+          <span class="text-[var(--color-fg)]">{groomFather}</span>
+          <span class="mx-1 text-[var(--color-muted)]">·</span>
+          <span class="text-[var(--color-fg)]">{groomMother}</span>
+        </p>
+        <p class="text-[var(--color-muted)]">
+          <span>{groomRelation}</span>
+          <span class="font-medium text-[var(--color-fg)]"> {groomName}</span>
+        </p>
+      </dd>
+    </div>
+
+    <div class="rounded-lg border border-[var(--color-line)] bg-white/40 p-5 text-center">
+      <dt class="mb-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+        {locale === 'ko' ? '신부측' : locale === 'en' ? "Bride's family" : 'Familie der Braut'}
+      </dt>
+      <dd class="space-y-0.5">
+        <p>
+          <span class="text-[var(--color-fg)]">{brideFather}</span>
+          <span class="mx-1 text-[var(--color-muted)]">·</span>
+          <span class="text-[var(--color-fg)]">{brideMother}</span>
+        </p>
+        <p class="text-[var(--color-muted)]">
+          <span>{brideRelation}</span>
+          <span class="font-medium text-[var(--color-fg)]"> {brideName}</span>
+        </p>
+      </dd>
+    </div>
+  </dl>
+</Section>

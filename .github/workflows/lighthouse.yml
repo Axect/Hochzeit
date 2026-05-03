@@ -1,0 +1,48 @@
+name: Lighthouse (advisory)
+
+# Runs Lighthouse against the built site for /, /en/, /de/.
+# Currently advisory — failures don't block. Promote thresholds to blocking
+# once the deployed site is stable (task 7.7).
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    env:
+      CI: 'true'
+      PUBLIC_SITE_URL: 'http://localhost:4321/'
+      BASE_PATH: '/'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Inject letters secret (or use empty)
+        env:
+          LETTERS_PRIVATE_JSON: ${{ secrets.LETTERS_PRIVATE_JSON }}
+        run: |
+          if [ -n "$LETTERS_PRIVATE_JSON" ]; then
+            mkdir -p data
+            printf '%s' "$LETTERS_PRIVATE_JSON" > data/letters.private.json
+          fi
+
+      - run: CI=false npm run build
+
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./.github/lighthouse/lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+        continue-on-error: true

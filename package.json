@@ -1,0 +1,62 @@
+{
+  "name": "hochzeit",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mobile wedding invitation site for a Korean groom and German bride. Astro + Tailwind, ko/en/de.",
+  "scripts": {
+    "dev": "astro dev --host",
+    "dev:lan": "astro dev --host",
+    "start": "astro dev --host",
+    "build:letters": "tsx scripts/build-letters.ts",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "prebuild": "npm run validate:content && npm run build:letters",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint . --ext .js,.mjs,.ts,.tsx,.astro",
+    "format": "prettier --write \"**/*.{js,mjs,ts,tsx,astro,md,json,css}\"",
+    "format:check": "prettier --check \"**/*.{js,mjs,ts,tsx,astro,md,json,css}\"",
+    "typecheck": "tsc --noEmit",
+    "generate:codes": "tsx scripts/generate-codes.ts",
+    "derive:code": "tsx scripts/derive-codes.ts",
+    "derive:codes": "tsx scripts/derive-codes.ts",
+    "verify:no-plaintext": "tsx scripts/verify-no-plaintext.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/cormorant-garamond": "^5.2.6",
+    "@fontsource-variable/hahmlet": "^5.2.9",
+    "@fontsource-variable/lora": "^5.2.8",
+    "@fontsource/gowun-batang": "^5.2.8",
+    "@fontsource/inter": "^5.1.0",
+    "@noble/hashes": "^1.8.0",
+    "astro": "^5.0.0",
+    "d3-geo": "^3.1.1",
+    "pretendard": "^1.3.9",
+    "tailwindcss": "^4.0.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/d3-geo": "^3.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@types/topojson-client": "^3.1.5",
+    "eslint": "^9.0.0",
+    "eslint-plugin-astro": "^1.3.0",
+    "prettier": "^3.3.0",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-tailwindcss": "^0.6.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

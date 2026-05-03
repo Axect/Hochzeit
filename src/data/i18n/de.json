@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "siteTitle": "Hochzeit · Tae-Geun ♥ Andrea",
+    "siteDescription": "Wir laden Euch herzlich zur Hochzeit von Tae-Geun Kim und Andrea Karin Morgen ein.",
+    "ogImageAlt": "Hochzeitseinladung von Tae-Geun Kim und Andrea Karin Morgen"
+  },
+  "locales": {
+    "ko": "한국어",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "ui": {
+    "skipToContent": "Zum Inhalt springen",
+    "loading": "Wird geladen…",
+    "retry": "Erneut versuchen",
+    "close": "Schließen",
+    "prev": "Zurück",
+    "next": "Weiter"
+  },
+  "cover": {
+    "groomName": "Tae-Geun Kim",
+    "brideName": "Andrea Karin Morgen",
+    "separator": "❦",
+    "dateLine": "Samstag, 17. Oktober 2026",
+    "timeLine": "17:30 Uhr",
+    "venueLine": "Venuevian · 3. Etage, Saphirsaal",
+    "scrollHint": "Nach unten scrollen"
+  },
+  "greeting": {
+    "title": "Wir öffnen ein neues Kapitel",
+    "body": "Was als Brieffreundschaft begann, ist zur schönsten Reise unseres Lebens geworden. Die Erlebnisse, die wir auf unseren gemeinsamen Reisen durch Korea, Deutschland, China, Hongkong und Japan gesammelt haben, läuten nun ein neues Kapitel ein.\nWir würden uns von Herzen freuen, wenn Ihr unsere Hochzeit in Seoul mit uns teilt und diesen besonderen Tag mit uns feiert.",
+    "parents": {
+      "groom": {
+        "father": "Il Ha Kim",
+        "mother": "Kyuri Kim",
+        "relation": " — ältester Sohn von",
+        "name": "Tae-Geun"
+      },
+      "bride": {
+        "father": "Manfred Josef Morgen",
+        "mother": "Sigrid Morgen",
+        "relation": " — älteste Tochter von",
+        "name": "Andrea"
+      }
+    }
+  },
+  "schedule": {
+    "title": "Am Tag",
+    "footnote": "* Trauung und Empfang finden ab Beginn der Trauung etwa zwei Stunden lang (bis ca. 19:30) auf einer eigenen Etage statt. Bitte sagt uns in der Antwort auch Bescheid, ob Ihr zur After-Party kommen möchtet."
+  },
+  "gallery": {
+    "title": "Gemeinsame Momente",
+    "openLightbox": "Größer ansehen",
+    "closeLightbox": "Schließen",
+    "previousImage": "Vorheriges Bild",
+    "nextImage": "Nächstes Bild"
+  },
+  "weddingPhoto": {
+    "title": "Wedding Photo",
+    "subtitle": "Studio-Porträts",
+    "comingSoon": "Bald verfügbar",
+    "releaseDate": "Verfügbar ab Juli 2026"
+  },
+  "journey": {
+    "title": "Wie wir uns fanden",
+    "intro": "Ein einziger Brief war der Anfang, und daraus wurde ein Weg, der Seoul und Mannheim verbindet.",
+    "previewHint": "Öffne die Karte, um jede Szene zu durchwandern.",
+    "openButton": "Karte öffnen",
+    "closeButton": "Schließen",
+    "momentCount": "{count} Momente",
+    "viewPhoto": "Foto öffnen",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "kindLabel": {
+      "letter": "Brief",
+      "visit": "Wiedersehen",
+      "trip": "Reise",
+      "wedding": "Hochzeit"
+    },
+    "reducedMotionNote": "Animationen sind reduziert. Wir zeigen Dir alle Momente auf einmal.",
+    "missingCoords": "Für dieses Ereignis liegen keine Koordinaten vor."
+  },
+  "secretLetter": {
+    "title": "Ein Brief für Dich",
+    "discloseTrigger": "Hast Du einen Code bekommen?",
+    "intro": "Gib den 12-stelligen Code ein, den wir Dir geschickt haben, um Deinen persönlichen Brief zu öffnen.",
+    "placeholder": "z. B. a3kp9z2x7m4n",
+    "submit": "Brief öffnen",
+    "loading": "Dein Brief wird geöffnet…",
+    "invalid": "Wir konnten diesen Code nicht finden. Bitte prüfe ihn noch einmal.",
+    "lockedTitle": "Bitte einen Moment Geduld",
+    "lockedBody": "Du kannst es in {seconds} Sekunden erneut versuchen.",
+    "missingTranslation": "Wir zeigen den koreanischen Originaltext. Eine Übersetzung folgt in Kürze.",
+    "letterPrefix": "Liebe(r) ",
+    "close": "Brief schließen"
+  },
+  "directions": {
+    "title": "Anfahrt",
+    "addressLabel": "Adresse",
+    "transitTitle": "So findest Du uns",
+    "subwayLabel": "U-Bahn",
+    "busLabel": "Bus",
+    "carLabel": "Mit dem Auto",
+    "parkingLabel": "Parken",
+    "kakaoButton": "In KakaoMap öffnen",
+    "naverButton": "In Naver Map öffnen",
+    "googleButton": "In Google Maps öffnen",
+    "fallbackNote": "Falls die Karte nicht lädt, nutze bitte die Buttons oben."
+  },
+  "accounts": {
+    "title": "Geschenk an die Brautleute",
+    "intro": "Für alle, die nicht persönlich da sein können — Eure Gedanken bedeuten uns viel.",
+    "groomSide": "Familie des Bräutigams",
+    "brideSide": "Familie der Braut",
+    "comingSoon": "Bankdaten der Brautseite folgen in Kürze.",
+    "copyAria": "Kontonummer von {holder} kopieren",
+    "copied": "Kontonummer kopiert",
+    "copyFailed": "Kopieren fehlgeschlagen. Bitte lange drücken und manuell kopieren."
+  },
+  "share": {
+    "title": "Einladung teilen",
+    "intro": "Gib diese Einladung gerne an Familie und Freunde weiter.",
+    "copyLinkButton": "Link kopieren",
+    "linkCopied": "Link kopiert"
+  },
+  "rsvp": {
+    "title": "Zu- oder Absage",
+    "intro": "Damit wir gut planen können, sag uns bitte Bescheid, ob Du zur Trauung — und auch zur After-Party — kommen kannst.",
+    "openFormButton": "Antwort senden",
+    "newWindowHint": "Ein Google-Formular öffnet sich in einem neuen Tab."
+  },
+  "guestbook": {
+    "title": "Gästebuch",
+    "intro": "Hinterlasst uns ein paar warme Worte.",
+    "leaveMessageButton": "Eintrag verfassen",
+    "loading": "Einträge werden geladen…",
+    "empty": "Sei die erste Person, die etwas schreibt.",
+    "errorTitle": "Gästebuch konnte nicht geladen werden",
+    "errorBody": "Bitte versuche es gleich noch einmal.",
+    "retryButton": "Neu laden",
+    "fromLocale": "{flag} Sprache"
+  },
+  "footer": {
+    "thanks": "Danke, dass Du Teil unseres Tages bist."
+  }
+}

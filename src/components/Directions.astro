@@ -1,0 +1,183 @@
+---
+import Section from '@components/Section.astro';
+import venue from '@config/venue.json';
+import { t, tField, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('directions.title', locale);
+const venueName = tField(venue.name, locale) ?? '';
+const venueHall = tField(venue.hall, locale) ?? '';
+const address = tField(venue.address, locale) ?? '';
+const subway = tField(venue.transit.subway, locale) ?? '';
+const bus = tField(venue.transit.bus, locale) ?? '';
+const car = tField(venue.transit.car, locale) ?? '';
+const parking = tField(venue.transit.parking, locale) ?? '';
+
+const { lat, lon } = venue;
+const venueQuery = encodeURIComponent(venueName);
+
+const kakaoMapUrl = `https://map.kakao.com/link/to/${venueQuery},${lat},${lon}`;
+const naverMapUrl = `https://map.naver.com/v5/search/${venueQuery}`;
+const googleMapUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+
+// Korean speakers see KakaoMap (familiar to them); everyone else gets Google
+// Maps embedded directly so they don't need a Korean app installed.
+// Kakao uses the "지도 퍼가기" (roughmap) embed — no SDK key or domain
+// registration required. Google uses the official `/maps/embed?pb=...` URL
+// from "Share → Embed a map" — that includes the venue's place ID, so the
+// pin and label are correct without us composing query params.
+const useKakaoEmbed = locale === 'ko';
+const kakaoRoughmap = (venue as { kakaoRoughmap?: { timestamp: string; key: string } })
+  .kakaoRoughmap;
+const googleEmbedSrc =
+  (venue as { googleEmbed?: string }).googleEmbed ??
+  `https://maps.google.com/maps?q=${lat},${lon}&hl=${locale === 'de' ? 'de' : 'en'}&z=16&output=embed`;
+---
+
+<Section id="directions" title={title}>
+  {
+    useKakaoEmbed && kakaoRoughmap ? (
+      <div class="kakao-roughmap-wrap w-full overflow-hidden rounded-md border border-[var(--color-line)]">
+        <div
+          id={`daumRoughmapContainer${kakaoRoughmap.timestamp}`}
+          class="root_daum_roughmap root_daum_roughmap_landing mx-auto"
+        >
+          <noscript>
+            <p class="p-4 text-sm text-[var(--color-muted)]">{t('directions.fallbackNote', locale)}</p>
+          </noscript>
+        </div>
+      </div>
+    ) : (
+      <iframe
+        title={`${venueName} on Google Maps`}
+        src={googleEmbedSrc}
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="aspect-[4/3] w-full overflow-hidden rounded-md border border-[var(--color-line)] bg-[var(--color-accent-soft)]"
+      />
+    )
+  }
+
+  <dl class="mt-6 space-y-3 text-sm">
+    <div>
+      <dt class="text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+        {t('directions.addressLabel', locale)}
+      </dt>
+      <dd class="mt-1 text-[var(--color-fg)]">{venueName} · {venueHall}</dd>
+      <dd class="text-[var(--color-muted)]">{address}</dd>
+    </div>
+  </dl>
+
+  <div class="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-3">
+    <a
+      href={kakaoMapUrl}
+      target="_blank"
+      rel="noopener"
+      class="tap-target flex items-center justify-center rounded-md border border-[var(--color-line)] bg-white/60 px-3 py-2.5 text-sm text-[var(--color-fg)] hover:bg-[var(--color-accent-soft)]"
+    >
+      {t('directions.kakaoButton', locale)}
+    </a>
+    <a
+      href={naverMapUrl}
+      target="_blank"
+      rel="noopener"
+      class="tap-target flex items-center justify-center rounded-md border border-[var(--color-line)] bg-white/60 px-3 py-2.5 text-sm text-[var(--color-fg)] hover:bg-[var(--color-accent-soft)]"
+    >
+      {t('directions.naverButton', locale)}
+    </a>
+    <a
+      href={googleMapUrl}
+      target="_blank"
+      rel="noopener"
+      class="tap-target flex items-center justify-center rounded-md border border-[var(--color-line)] bg-white/60 px-3 py-2.5 text-sm text-[var(--color-fg)] hover:bg-[var(--color-accent-soft)]"
+    >
+      {t('directions.googleButton', locale)}
+    </a>
+  </div>
+
+  <h3 class="mt-10 text-sm font-semibold text-[var(--color-fg)]">
+    {t('directions.transitTitle', locale)}
+  </h3>
+  <ul class="mt-3 space-y-3 text-sm">
+    {
+      subway && (
+        <li class="flex gap-3">
+          <span class="w-16 shrink-0 text-[var(--color-muted)]">{t('directions.subwayLabel', locale)}</span>
+          <span class="flex-1 text-[var(--color-fg)]">{subway}</span>
+        </li>
+      )
+    }
+    {
+      bus && (
+        <li class="flex gap-3">
+          <span class="w-16 shrink-0 text-[var(--color-muted)]">{t('directions.busLabel', locale)}</span>
+          <span class="flex-1 text-[var(--color-fg)]">{bus}</span>
+        </li>
+      )
+    }
+    {
+      car && (
+        <li class="flex gap-3">
+          <span class="w-16 shrink-0 text-[var(--color-muted)]">{t('directions.carLabel', locale)}</span>
+          <span class="flex-1 text-[var(--color-fg)]">{car}</span>
+        </li>
+      )
+    }
+    {
+      parking && (
+        <li class="flex gap-3">
+          <span class="w-16 shrink-0 text-[var(--color-muted)]">{t('directions.parkingLabel', locale)}</span>
+          <span class="flex-1 text-[var(--color-fg)]">{parking}</span>
+        </li>
+      )
+    }
+  </ul>
+</Section>
+
+{
+  /*
+   * Kakao "지도 퍼가기" (roughmap) embed scripts. The loader script defines
+   * `daum.roughmap.Lander` synchronously; the inline script then renders.
+   * We size the map dynamically so it never overflows narrow phone screens.
+   */
+  useKakaoEmbed && kakaoRoughmap && (
+    <>
+      <script
+        is:inline
+        charset="UTF-8"
+        class="daum_roughmap_loader_script"
+        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+      />
+      <script
+        is:inline
+        charset="UTF-8"
+        define:vars={{ ts: kakaoRoughmap.timestamp, key: kakaoRoughmap.key }}
+      >
+        (function () {
+          var maxW = 640;
+          var available = document.documentElement.clientWidth - 48;
+          var w = Math.max(280, Math.min(maxW, available));
+          var h = Math.round((w * 9) / 16);
+          new daum.roughmap.Lander({
+            timestamp: ts,
+            key: key,
+            mapWidth: String(w),
+            mapHeight: String(h),
+          }).render();
+        })();
+      </script>
+    </>
+  )
+}
+
+<style is:global>
+  /* Make Kakao's fixed-size embed fit our mobile-first card cleanly. */
+  .kakao-roughmap-wrap .root_daum_roughmap {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+</style>

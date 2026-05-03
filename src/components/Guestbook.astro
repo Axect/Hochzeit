@@ -1,0 +1,77 @@
+---
+import Section from '@components/Section.astro';
+import forms from '@config/forms.json';
+import GuestbookList from '@components/GuestbookList.tsx';
+import { t, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('guestbook.title', locale);
+const intro = t('guestbook.intro', locale);
+const leaveLabel = t('guestbook.leaveMessageButton', locale);
+
+const cfg = forms.guestbook[locale];
+const formBase = cfg.formUrl;
+const langEntry = cfg.langEntryId;
+
+// Each language form's "language" radio uses display labels (한국어 / English /
+// Deutsch). Map locale codes to those exact strings for the prefill to match.
+const LANG_DISPLAY: Record<Locale, string> = {
+  ko: '한국어',
+  en: 'English',
+  de: 'Deutsch',
+};
+
+const formUrl = (() => {
+  if (!formBase || formBase.includes('PLACEHOLDER')) return formBase;
+  const sep = formBase.includes('?') ? '&' : '?';
+  if (langEntry && !langEntry.includes('PLACEHOLDER')) {
+    return `${formBase}${sep}usp=pp_url&${encodeURIComponent(langEntry)}=${encodeURIComponent(LANG_DISPLAY[locale])}`;
+  }
+  return formBase;
+})();
+const isPlaceholder = !formBase || formBase.includes('PLACEHOLDER');
+
+const labels = {
+  loading: t('guestbook.loading', locale),
+  empty: t('guestbook.empty', locale),
+  errorTitle: t('guestbook.errorTitle', locale),
+  errorBody: t('guestbook.errorBody', locale),
+  retry: t('guestbook.retryButton', locale),
+};
+---
+
+<Section id="guestbook" title={title}>
+  <p class="mb-6 text-center text-sm text-[var(--color-muted)]">{intro}</p>
+
+  <div class="mb-8 flex justify-center">
+    <a
+      href={isPlaceholder ? '#' : formUrl}
+      target="_blank"
+      rel="noopener"
+      aria-disabled={isPlaceholder}
+      class:list={[
+        'tap-target inline-flex items-center gap-2 rounded-md border border-[var(--color-accent)] px-4 py-2.5 text-sm font-medium text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white',
+        isPlaceholder && 'pointer-events-none opacity-50',
+      ]}
+    >
+      {leaveLabel}
+    </a>
+  </div>
+
+  <GuestbookList
+    client:visible
+    locale={locale}
+    sheetId={cfg.sheetId}
+    sheetGid={cfg.sheetGid}
+    columns={cfg.columns}
+    approvedColumn={forms.guestbook.approvedColumn}
+    approvedValue={forms.guestbook.approvedValue}
+    displayLimit={forms.guestbook.displayLimit}
+    cacheTtlSeconds={forms.guestbook.cacheTtlSeconds}
+    labels={labels}
+  />
+</Section>

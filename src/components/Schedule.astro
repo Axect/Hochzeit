@@ -1,0 +1,35 @@
+---
+import Section from '@components/Section.astro';
+import schedule from '@data/schedule.json';
+import { t, tField, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('schedule.title', locale);
+const footnote = t('schedule.footnote', locale);
+---
+
+<Section id="schedule" title={title}>
+  <ol class="relative space-y-3 border-l border-[var(--color-line)] pl-6">
+    {
+      schedule.items.map((item) => (
+        <li class="relative">
+          <span
+            aria-hidden="true"
+            class="absolute -left-[27px] top-2 block h-2 w-2 rounded-full bg-[var(--color-accent)]"
+          />
+          <div class="flex items-baseline justify-between gap-4">
+            <time class="font-mono text-sm text-[var(--color-muted)]">{item.time}</time>
+            <span class="flex-1 text-right text-base text-[var(--color-fg)]">
+              {tField(item.title, locale)}
+            </span>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+  <p class="mt-8 text-center text-xs text-[var(--color-muted)]">{footnote}</p>
+</Section>

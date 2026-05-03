@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "siteTitle": "Hochzeit · Tae-Geun ♥ Andrea",
+    "siteDescription": "We warmly invite you to the wedding of Tae-Geun Kim and Andrea Karin Morgen.",
+    "ogImageAlt": "Wedding invitation for Tae-Geun Kim and Andrea Karin Morgen"
+  },
+  "locales": {
+    "ko": "한국어",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "ui": {
+    "skipToContent": "Skip to content",
+    "loading": "Loading…",
+    "retry": "Try again",
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "cover": {
+    "groomName": "Tae-Geun Kim",
+    "brideName": "Andrea Karin Morgen",
+    "separator": "❦",
+    "dateLine": "Saturday, 17 October 2026",
+    "timeLine": "5:30 PM",
+    "venueLine": "Venuevian · 3F, Sapphire Hall",
+    "scrollHint": "Scroll to enter"
+  },
+  "greeting": {
+    "title": "Two of us, opening a new chapter",
+    "body": "What began as a pen-pal correspondence has grown into the most beautiful journey of our lives. The memories we have gathered together through Korea, Germany, China, Hong Kong, and Japan are now opening a new chapter.\nWe would be deeply honoured if you would join us at our wedding in Seoul and share in our joy on this special day.",
+    "parents": {
+      "groom": {
+        "father": "Il Ha Kim",
+        "mother": "Kyuri Kim",
+        "relation": "'s eldest son",
+        "name": "Tae-Geun"
+      },
+      "bride": {
+        "father": "Manfred Josef Morgen",
+        "mother": "Sigrid Morgen",
+        "relation": "'s eldest daughter",
+        "name": "Andrea"
+      }
+    }
+  },
+  "schedule": {
+    "title": "On the day",
+    "footnote": "* Ceremony and reception run on a private floor for about two hours from the start (until ~19:30). Please let us know whether you can join the after-party in your RSVP."
+  },
+  "gallery": {
+    "title": "Moments together",
+    "openLightbox": "View larger",
+    "closeLightbox": "Close",
+    "previousImage": "Previous image",
+    "nextImage": "Next image"
+  },
+  "weddingPhoto": {
+    "title": "Wedding Photo",
+    "subtitle": "Studio portraits",
+    "comingSoon": "Coming Soon",
+    "releaseDate": "Available in July 2026"
+  },
+  "journey": {
+    "title": "How we met",
+    "intro": "It started with a single letter, and grew into a road that connects Seoul and Mannheim.",
+    "previewHint": "Open the map to walk through every scene.",
+    "openButton": "Open the map",
+    "closeButton": "Close",
+    "momentCount": "{count} moments",
+    "viewPhoto": "View photo",
+    "prev": "Previous",
+    "next": "Next",
+    "kindLabel": {
+      "letter": "Letter",
+      "visit": "Reunion",
+      "trip": "Journey",
+      "wedding": "Wedding"
+    },
+    "reducedMotionNote": "Animations are reduced. Showing every moment at once.",
+    "missingCoords": "This event has no coordinates."
+  },
+  "secretLetter": {
+    "title": "A letter for you",
+    "discloseTrigger": "Did you receive a code?",
+    "intro": "Enter the 12-character code we sent you to unfold a personal note.",
+    "placeholder": "e.g. a3kp9z2x7m4n",
+    "submit": "Open the letter",
+    "loading": "Unfolding your letter…",
+    "invalid": "We couldn't find that code. Please double-check it.",
+    "lockedTitle": "Please wait a moment",
+    "lockedBody": "You can try again in {seconds} seconds.",
+    "missingTranslation": "Showing the original Korean text. An English version is on the way.",
+    "letterPrefix": "Dear ",
+    "close": "Close letter"
+  },
+  "directions": {
+    "title": "Getting there",
+    "addressLabel": "Address",
+    "transitTitle": "How to arrive",
+    "subwayLabel": "Subway",
+    "busLabel": "Bus",
+    "carLabel": "By car",
+    "parkingLabel": "Parking",
+    "kakaoButton": "Open in KakaoMap",
+    "naverButton": "Open in Naver Map",
+    "googleButton": "Open in Google Maps",
+    "fallbackNote": "If the map doesn't load, please use the buttons above."
+  },
+  "accounts": {
+    "title": "Sending your gift",
+    "intro": "For those who can't be there in person — your kindness means a lot.",
+    "groomSide": "Groom's family",
+    "brideSide": "Bride's family",
+    "comingSoon": "Bride-side bank details will be added soon.",
+    "copyAria": "Copy {holder}'s account number",
+    "copied": "Account number copied",
+    "copyFailed": "Copy failed. Please long-press to copy manually."
+  },
+  "share": {
+    "title": "Share the invitation",
+    "intro": "Pass this invitation along to family and friends.",
+    "copyLinkButton": "Copy link",
+    "linkCopied": "Link copied"
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "intro": "So we can prepare warmly, please let us know whether you can join the ceremony — and the after-party.",
+    "openFormButton": "Send your RSVP",
+    "newWindowHint": "A Google Form will open in a new tab."
+  },
+  "guestbook": {
+    "title": "Guestbook",
+    "intro": "Leave a kind word for the two of us.",
+    "leaveMessageButton": "Leave a message",
+    "loading": "Loading messages…",
+    "empty": "Be the first to leave a note.",
+    "errorTitle": "We couldn't load the guestbook",
+    "errorBody": "Please try again in a moment.",
+    "retryButton": "Reload",
+    "fromLocale": "{flag} language"
+  },
+  "footer": {
+    "thanks": "Thank you for being part of our day."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_comment": "Copy this file to data/codes.private.json (gitignored), set a real salt, and add real guests. Run `npm run build:letters` afterwards to produce src/data/letters.encrypted.json.",
+  "salt": "replace-me-with-a-random-32+-character-secret",
+  "guests": [
+    {
+      "order": 1,
+      "name": "민수형",
+      "recipient": "민수 형",
+      "body": {
+        "ko": "민수 형 — 함께 걸어온 길, 오늘도 옆에 있어 줘서 고마워요.",
+        "en": "Minsu — thanks for walking this road with me, and for being here today too."
+      }
+    },
+    {
+      "order": 2,
+      "name": "Alice Beispielhain",
+      "recipient": "Alice",
+      "body": {
+        "ko": "Alice — 우리 결혼식에 와 줘서 정말 고마워요.",
+        "en": "Dear Alice — thank you for being part of our day.",
+        "de": "Liebe Alice — danke, dass Du Teil unseres Tages bist."
+      }
+    }
+  ]
+}

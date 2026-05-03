@@ -1,0 +1,31 @@
+---
+import Section from '@components/Section.astro';
+import { t, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('weddingPhoto.title', locale);
+const subtitle = t('weddingPhoto.subtitle', locale);
+const comingSoon = t('weddingPhoto.comingSoon', locale);
+const releaseDate = t('weddingPhoto.releaseDate', locale);
+---
+
+<Section id="wedding-photo" title={title}>
+  <div
+    class="relative mx-auto flex aspect-[4/5] w-full max-w-sm flex-col items-center justify-center gap-3 overflow-hidden rounded-md border border-[var(--color-line)] bg-gradient-to-br from-[oklch(0.94_0.04_150)] via-white/40 to-[var(--color-accent-soft)] text-center"
+  >
+    {/* Decorative star/spark dots, hand-placed for an asymmetric, hand-drawn feel */}
+    <span aria-hidden="true" class="absolute left-[18%] top-[22%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-60"></span>
+    <span aria-hidden="true" class="absolute left-[78%] top-[34%] block h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] opacity-40"></span>
+    <span aria-hidden="true" class="absolute left-[28%] top-[78%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-50"></span>
+    <span aria-hidden="true" class="absolute left-[68%] top-[68%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-30"></span>
+
+    <p class="text-[10px] uppercase tracking-[0.32em] text-[var(--color-muted)]">{subtitle}</p>
+    <p class="font-serif text-3xl text-[var(--color-fg)]">{comingSoon}</p>
+    <span aria-hidden="true" class="my-1 block h-px w-10 bg-[var(--color-accent)]"></span>
+    <p class="text-sm text-[var(--color-muted)]">{releaseDate}</p>
+  </div>
+</Section>

@@ -1,0 +1,360 @@
+{
+  "events": [
+    {
+      "id": "first-letter",
+      "kind": "letter",
+      "date": "2025-05-06",
+      "lat": 49.4875,
+      "lon": 8.466,
+      "from": {
+        "lat": 37.5665,
+        "lon": 126.978
+      },
+      "title": {
+        "ko": "첫 편지",
+        "en": "The first letter",
+        "de": "Der erste Brief"
+      },
+      "body": {
+        "ko": "태근이 서울에서 띄운 편지가 만하임의 안드레아 책상에 도착했습니다.",
+        "en": "A letter that Tae-Geun sent from Seoul arrived on Andrea's desk in Mannheim.",
+        "de": "Ein Brief, den Tae-Geun aus Seoul geschickt hatte, lag auf Andreas Schreibtisch in Mannheim."
+      },
+      "photos": [
+        {
+          "src": "/journey/first-letter.png",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "id": "first-visit-korea",
+      "kind": "visit",
+      "date": "2025-08-24",
+      "lat": 35.5384,
+      "lon": 129.3114,
+      "title": {
+        "ko": "한국 첫 방문",
+        "en": "First visit to Korea",
+        "de": "Erster Besuch in Korea"
+      },
+      "body": {
+        "ko": "서울에서 하루를 보낸 뒤 울산과 부산까지. 편지로만 알던 사람과 처음 같은 공기를 마셨습니다.",
+        "en": "A day in Seoul, then on to Ulsan and Busan. We breathed the same air for the first time.",
+        "de": "Ein Tag in Seoul, dann weiter nach Ulsan und Busan. Zum ersten Mal atmeten wir dieselbe Luft."
+      },
+      "photos": [
+        { "src": "/journey/first-visit-korea-1.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/first-visit-korea-2.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/first-visit-korea-3.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/first-visit-korea-4.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/first-visit-korea-5.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/first-visit-korea-6.jpg", "width": 1200, "height": 1600 }
+      ]
+    },
+    {
+      "id": "phd-graduation",
+      "kind": "visit",
+      "date": "2025-08-29",
+      "lat": 37.5665,
+      "lon": 126.978,
+      "title": {
+        "ko": "박사 학위 수여식",
+        "en": "PhD graduation",
+        "de": "Promotionsfeier"
+      },
+      "body": {
+        "ko": "태근의 박사 졸업식. 가장 긴 길의 끝에서 안드레아가 곁에 있어 주었습니다.",
+        "en": "Tae-Geun's PhD ceremony. At the end of the longest road, Andrea was beside him.",
+        "de": "Tae-Geuns Promotionsfeier. Am Ende des längsten Weges stand Andrea an seiner Seite."
+      },
+      "photos": [
+        { "src": "/journey/phd-graduation-1.jpg", "width": 1257, "height": 1600 },
+        { "src": "/journey/phd-graduation-2.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/phd-graduation-3.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/phd-graduation-4.jpg", "width": 1200, "height": 1600 }
+      ]
+    },
+    {
+      "id": "germany-tour",
+      "kind": "trip",
+      "date": "2025-09-02",
+      "lat": 50.1109,
+      "lon": 8.6821,
+      "title": {
+        "ko": "독일 종단 여행",
+        "en": "Across Germany",
+        "de": "Quer durch Deutschland"
+      },
+      "body": {
+        "ko": "프랑크푸르트에서 시작해 뮌헨, 트리어, 그리고 벤스하임까지. 한 달 가까이 함께한 첫 긴 여정이었습니다.",
+        "en": "From Frankfurt through Munich, Trier, and Bensheim. Almost a month, our first long road together.",
+        "de": "Von Frankfurt über München, Trier und Bensheim. Fast einen Monat lang, unsere erste lange Reise zu zweit."
+      },
+      "photos": [
+        { "src": "/journey/germany-tour-1.jpg", "width": 1600, "height": 1200, "alt": "München" },
+        { "src": "/journey/germany-tour-2.jpg", "width": 1600, "height": 1200, "alt": "Trier" },
+        { "src": "/journey/germany-tour-3.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-4.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-5.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-6.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/germany-tour-7.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/germany-tour-8.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/germany-tour-9.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/germany-tour-10.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-11.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-12.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-13.jpg", "width": 1600, "height": 1200 }
+      ]
+    },
+    {
+      "id": "chuseok",
+      "kind": "visit",
+      "date": "2025-10-06",
+      "lat": 38.207,
+      "lon": 128.5918,
+      "title": {
+        "ko": "함께한 추석",
+        "en": "Our first Chuseok",
+        "de": "Unser erstes Chuseok"
+      },
+      "body": {
+        "ko": "서울에서 대전, 설악산, 전주, 그리고 화성까지. 한국의 가을을 함께 걸었습니다.",
+        "en": "Seoul to Daejeon, Seoraksan, Jeonju, and Hwaseong. We walked through a Korean autumn together.",
+        "de": "Von Seoul über Daejeon, Seoraksan und Jeonju bis Hwaseong. Gemeinsam durch einen koreanischen Herbst."
+      },
+      "photos": [
+        {
+          "src": "/journey/chuseok-1.jpg",
+          "width": 1600,
+          "height": 1200,
+          "alt": "대전"
+        },
+        {
+          "src": "/journey/chuseok-2.jpg",
+          "width": 1200,
+          "height": 1600,
+          "alt": "설악산"
+        },
+        {
+          "src": "/journey/chuseok-3.jpg",
+          "width": 1200,
+          "height": 1600,
+          "alt": "전주"
+        }
+      ]
+    },
+    {
+      "id": "shanghai-move",
+      "kind": "visit",
+      "date": "2025-10-29",
+      "lat": 31.2304,
+      "lon": 121.4737,
+      "title": {
+        "ko": "상하이로의 새 시작",
+        "en": "A new chapter in Shanghai",
+        "de": "Neuanfang in Shanghai"
+      },
+      "body": {
+        "ko": "두 사람의 새 도시. 함께 짐을 풀고, 처음으로 같은 주소를 갖게 되었습니다.",
+        "en": "Our new city. We unpacked together and shared a single address for the first time.",
+        "de": "Unsere neue Stadt. Wir packten gemeinsam aus und teilten zum ersten Mal eine Adresse."
+      },
+      "photos": [
+        {
+          "src": "/journey/shanghai-move-1.jpg",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/journey/shanghai-move-2.jpg",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/journey/shanghai-move-3.jpg",
+          "width": 1600,
+          "height": 1200,
+          "alt": "Fudan University"
+        },
+        {
+          "src": "/journey/shanghai-move-4.jpg",
+          "width": 1600,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "id": "guilin",
+      "kind": "trip",
+      "date": "2026-01-07",
+      "lat": 25.2736,
+      "lon": 110.29,
+      "title": {
+        "ko": "구이린",
+        "en": "Guilin",
+        "de": "Guilin"
+      },
+      "body": {
+        "ko": "수묵화 같은 산수 사이에서 보낸 며칠.",
+        "en": "A few days among landscapes that look like ink paintings.",
+        "de": "Ein paar Tage inmitten Landschaften wie Tuschezeichnungen."
+      },
+      "photos": [
+        {
+          "src": "/journey/guilin-1.jpg",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/journey/guilin-2.jpg",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/journey/guilin-3.jpg",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/journey/guilin-4.jpg",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/journey/guilin-5.jpg",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/journey/guilin-6.jpg",
+          "width": 1200,
+          "height": 1600
+        }
+      ]
+    },
+    {
+      "id": "hongkong",
+      "kind": "trip",
+      "date": "2026-01-12",
+      "lat": 22.3193,
+      "lon": 114.1694,
+      "title": {
+        "ko": "홍콩",
+        "en": "Hong Kong",
+        "de": "Hongkong"
+      },
+      "body": {
+        "ko": "야경, 골목, 그리고 차 한 잔.",
+        "en": "Skylines, alleys, and a cup of tea.",
+        "de": "Skyline, enge Gassen und eine Tasse Tee."
+      },
+      "photos": [
+        { "src": "/journey/hongkong-1.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/hongkong-2.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/hongkong-3.jpg", "width": 1200, "height": 1600 }
+      ]
+    },
+    {
+      "id": "tsukuba",
+      "kind": "trip",
+      "date": "2026-01-18",
+      "lat": 36.0838,
+      "lon": 140.0764,
+      "title": {
+        "ko": "츠쿠바",
+        "en": "Tsukuba",
+        "de": "Tsukuba"
+      },
+      "body": {
+        "ko": "태근의 학회로 떠난 츠쿠바. 발표가 끝나는 저녁이면 연구원 친구들과 한자리에 모였습니다.",
+        "en": "A trip for one of Tae-Geun's conferences. Each evening, when the talks were over, we joined his research friends at the dinner table.",
+        "de": "Eine Reise zu einer von Tae-Geuns Konferenzen. Jeden Abend, wenn die Vorträge zu Ende waren, saßen wir mit seinen Forschungsfreunden beim Essen zusammen."
+      },
+      "photos": [
+        { "src": "/journey/tsukuba-1.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/tsukuba-2.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/tsukuba-3.jpg", "width": 1600, "height": 1200 }
+      ]
+    },
+    {
+      "id": "seollal",
+      "kind": "visit",
+      "date": "2026-02-17",
+      "lat": 37.1995,
+      "lon": 126.8311,
+      "title": {
+        "ko": "함께 맞은 설날",
+        "en": "Our first Seollal together",
+        "de": "Unser erstes Seollal zusammen"
+      },
+      "body": {
+        "ko": "화성에서 함께 맞은 첫 한국 설날. 이틀 뒤 동탄에서 안드레아의 생일도 함께 축하했습니다.",
+        "en": "Our first Korean Lunar New Year together in Hwaseong. Two days later, we celebrated Andrea's birthday in Dongtan.",
+        "de": "Unser erstes koreanisches Neujahr (Seollal) gemeinsam in Hwaseong. Zwei Tage später feierten wir Andreas Geburtstag in Dongtan."
+      },
+      "photos": [
+        { "src": "/journey/seollal-5.jpg", "width": 1600, "height": 1200, "alt": "Seoul" },
+        { "src": "/journey/seollal-1.jpg", "width": 1600, "height": 1200, "alt": "Hwaseong" },
+        { "src": "/journey/seollal-3.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/seollal-4.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/seollal-2.jpg", "width": 1600, "height": 1200, "alt": "Dongtan" }
+      ]
+    },
+    {
+      "id": "korea-with-parents",
+      "kind": "visit",
+      "date": "2026-05-18",
+      "lat": 35.8562,
+      "lon": 129.2247,
+      "title": {
+        "ko": "Andrea 부모님과 한국",
+        "en": "Andrea's parents in Korea",
+        "de": "Andreas Eltern in Korea"
+      },
+      "body": {
+        "ko": "서울, 경주, 울산. 두 가족이 처음으로 같은 길을 함께 걸었습니다.",
+        "en": "Seoul, Gyeongju, Ulsan. The first roads our two families walked together.",
+        "de": "Seoul, Gyeongju, Ulsan. Die ersten Wege, die unsere beiden Familien gemeinsam gingen."
+      },
+      "photos": []
+    },
+    {
+      "id": "wedding-trier",
+      "kind": "wedding",
+      "date": "2026-10-09",
+      "lat": 49.7592,
+      "lon": 6.6437,
+      "title": {
+        "ko": "트리어 결혼식",
+        "en": "Wedding in Trier",
+        "de": "Hochzeit in Trier"
+      },
+      "body": {
+        "ko": "독일에서 가장 오래된 도시, 트리어. 모젤 강이 굽이치는 옛 골목에서 우리의 첫 예식이 열립니다.",
+        "en": "Trier, the oldest city in Germany. Our first ceremony, in the old lanes where the Moselle bends.",
+        "de": "Trier, die älteste Stadt Deutschlands. Unsere erste Trauung, in den alten Gassen, durch die sich die Mosel windet."
+      },
+      "photos": []
+    },
+    {
+      "id": "wedding-seoul",
+      "kind": "wedding",
+      "date": "2026-10-17",
+      "lat": 37.5099,
+      "lon": 126.9094,
+      "title": {
+        "ko": "서울 결혼식",
+        "en": "Wedding in Seoul",
+        "de": "Hochzeit in Seoul"
+      },
+      "body": {
+        "ko": "그리고, 오늘. 여러분과 함께.",
+        "en": "And today, together with all of you.",
+        "de": "Und heute, gemeinsam mit Euch."
+      },
+      "photos": []
+    }
+  ]
+}

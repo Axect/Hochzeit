@@ -1,0 +1,68 @@
+---
+import Section from '@components/Section.astro';
+import forms from '@config/forms.json';
+import { t, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const title = t('rsvp.title', locale);
+const intro = t('rsvp.intro', locale);
+const buttonLabel = t('rsvp.openFormButton', locale);
+const newWindowHint = t('rsvp.newWindowHint', locale);
+
+const cfg = forms.rsvp[locale];
+const baseUrl = cfg.formUrl;
+const langEntry = cfg.langEntryId;
+
+// Each language form's "preferred language" radio uses display labels
+// (한국어 / English / Deutsch). Map locale codes to those exact strings so
+// the prefilled radio actually matches whatever option the form has.
+const LANG_DISPLAY: Record<Locale, string> = {
+  ko: '한국어',
+  en: 'English',
+  de: 'Deutsch',
+};
+
+const url = (() => {
+  if (!baseUrl || baseUrl.includes('PLACEHOLDER')) return baseUrl;
+  const sep = baseUrl.includes('?') ? '&' : '?';
+  if (langEntry && !langEntry.includes('PLACEHOLDER')) {
+    return `${baseUrl}${sep}usp=pp_url&${encodeURIComponent(langEntry)}=${encodeURIComponent(LANG_DISPLAY[locale])}`;
+  }
+  return baseUrl;
+})();
+
+const isPlaceholder = !baseUrl || baseUrl.includes('PLACEHOLDER');
+---
+
+<Section id="rsvp" title={title}>
+  <p class="mb-6 text-center text-sm text-[var(--color-muted)]">{intro}</p>
+
+  <a
+    href={isPlaceholder ? '#' : url}
+    target="_blank"
+    rel="noopener"
+    aria-disabled={isPlaceholder}
+    class:list={[
+      'tap-target mx-auto flex max-w-xs items-center justify-center gap-2 rounded-md bg-[var(--color-accent)] px-5 py-3 text-base font-medium text-white shadow-sm hover:opacity-90',
+      isPlaceholder && 'pointer-events-none opacity-50',
+    ]}
+  >
+    {buttonLabel}
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M14 4h6v6M20 4l-9 9M5 5h6v2H7v10h10v-4h2v6H5z" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  </a>
+  <p class="mt-3 text-center text-xs text-[var(--color-muted)]">{newWindowHint}</p>
+
+  {
+    isPlaceholder && (
+      <p class="mt-4 text-center text-xs text-[var(--color-accent)]">
+        ⚠ Configure <code>src/config/forms.json</code> with the real Google Form URL.
+      </p>
+    )
+  }
+</Section>

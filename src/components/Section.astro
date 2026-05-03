@@ -1,0 +1,31 @@
+---
+interface Props {
+  id: string;
+  title?: string;
+  eyebrow?: string;
+  class?: string;
+}
+
+const { id, title, eyebrow, class: extra = '' } = Astro.props;
+---
+
+<section id={id} class:list={['mx-auto w-full max-w-md px-6 py-20', extra]} aria-labelledby={title ? `${id}-title` : undefined}>
+  {
+    (title || eyebrow) && (
+      <header class="mb-10 text-center">
+        {eyebrow && (
+          <p class="mb-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+            {eyebrow}
+          </p>
+        )}
+        {title && (
+          <h2 id={`${id}-title`} class="font-serif text-2xl text-[var(--color-fg)] sm:text-3xl">
+            {title}
+          </h2>
+        )}
+        <span aria-hidden="true" class="mx-auto mt-4 block h-px w-12 bg-[var(--color-accent)]" />
+      </header>
+    )
+  }
+  <slot />
+</section>

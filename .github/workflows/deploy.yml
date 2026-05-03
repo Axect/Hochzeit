@@ -1,0 +1,77 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Pages deploy needs these permissions; the build-only PR job inherits them
+# but does not invoke `actions/deploy-pages`.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Cancel in-flight deploys when a new push lands; PR builds do not touch pages.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name != 'push' }}
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    env:
+      CI: 'true'
+      PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+      BASE_PATH: ${{ vars.BASE_PATH || format('/{0}/', github.event.repository.name) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Inject letters secret
+        env:
+          LETTERS_PRIVATE_JSON: ${{ secrets.LETTERS_PRIVATE_JSON }}
+        run: |
+          if [ -z "$LETTERS_PRIVATE_JSON" ]; then
+            echo "::error::LETTERS_PRIVATE_JSON secret is not set."
+            echo "::error::Add the contents of data/letters.private.json as a repository secret named LETTERS_PRIVATE_JSON."
+            exit 1
+          fi
+          mkdir -p data
+          printf '%s' "$LETTERS_PRIVATE_JSON" > data/letters.private.json
+          # Validate it's valid JSON before continuing.
+          node -e "JSON.parse(require('fs').readFileSync('data/letters.private.json','utf8'))"
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify no plaintext leaks
+        run: npm run verify:no-plaintext
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
