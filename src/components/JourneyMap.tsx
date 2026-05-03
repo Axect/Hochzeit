@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { withBase } from '@lib/i18n';
 
 interface Photo {
   src: string;
@@ -566,7 +567,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                     fill="oklch(0.18 0.05 150)"
                   />
                   <image
-                    href="/journey/profile-tg.png"
+                    href={withBase('/journey/profile-tg.png')}
                     x={activeOrigin[0] - 10}
                     y={activeOrigin[1] - 10}
                     width={20}
@@ -592,7 +593,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                     fill="oklch(0.18 0.05 150)"
                   />
                   <image
-                    href="/journey/profile-andrea.png"
+                    href={withBase('/journey/profile-andrea.png')}
                     x={activePoint[0] - 10}
                     y={activePoint[1] - 10}
                     width={20}
@@ -626,7 +627,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                       vectorEffect="non-scaling-stroke"
                     />
                     <image
-                      href="/journey/first-letter.png"
+                      href={withBase('/journey/first-letter.png')}
                       x={-18}
                       y={-12.5}
                       width={36}
@@ -700,7 +701,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                           className="tap-target group relative block h-20 w-20 overflow-hidden rounded-md border border-white/15 bg-white/5 focus:outline-none focus:ring-2 focus:ring-[oklch(0.84_0.13_80)] sm:h-24 sm:w-24"
                         >
                           <img
-                            src={p.src}
+                            src={withBase(p.src)}
                             alt={p.alt ?? activeEvent.title}
                             width={p.width}
                             height={p.height}
@@ -825,7 +826,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
               )}
               <figure className="max-h-[90vh] max-w-[95vw]">
                 <img
-                  src={photo.src}
+                  src={withBase(photo.src)}
                   alt={photo.alt ?? ev?.title ?? ''}
                   width={photo.width}
                   height={photo.height}

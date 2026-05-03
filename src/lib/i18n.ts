@@ -127,3 +127,15 @@ export const fmt = (template: string, vars: Record<string, string | number>): st
 /** Map locale → BCP-47 tag for `<html lang>` and Intl APIs. */
 export const htmlLang = (locale: Locale): string =>
   locale === 'ko' ? 'ko-KR' : locale === 'en' ? 'en-GB' : 'de-DE';
+
+/**
+ * Prepend the site's base path (`import.meta.env.BASE_URL`, e.g. `/Hochzeit/`
+ * in production or `/` in dev) to a root-relative asset path so things like
+ * `/journey/foo.jpg` resolve correctly when the site is served under a
+ * sub-directory on GitHub Pages.
+ */
+export const withBase = (path: string): string => {
+  const base = import.meta.env.BASE_URL || '/';
+  const stripped = path.startsWith('/') ? path.slice(1) : path;
+  return base + stripped;
+};

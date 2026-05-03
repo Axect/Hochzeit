@@ -11,7 +11,7 @@ import '@fontsource/gowun-batang/400.css';
 import '@fontsource/gowun-batang/700.css';
 
 import LocaleToggle from '@components/LocaleToggle.astro';
-import { LOCALES, htmlLang, localizedHref, t, type Locale } from '@lib/i18n';
+import { LOCALES, htmlLang, localizedHref, t, withBase, type Locale } from '@lib/i18n';
 
 interface Props {
   locale: Locale;
@@ -27,7 +27,9 @@ const siteOrigin = Astro.site?.toString().replace(/\/$/, '') ?? '';
 const resolvedTitle = title ?? t('meta.siteTitle', locale);
 const resolvedDescription = description ?? t('meta.siteDescription', locale);
 const resolvedOgImage = ogImage ?? '/og-image.jpg';
+const ogImageHref = withBase(resolvedOgImage);
 const canonical = new URL(pathname, Astro.site ?? Astro.url).toString();
+const ogImageFullUrl = new URL(ogImageHref, Astro.site ?? Astro.url).toString();
 ---
 
 <!doctype html>
@@ -40,7 +42,7 @@ const canonical = new URL(pathname, Astro.site ?? Astro.url).toString();
     <title>{resolvedTitle}</title>
     <meta name="description" content={resolvedDescription} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
 
     {
       LOCALES.map((loc) => (
@@ -57,7 +59,7 @@ const canonical = new URL(pathname, Astro.site ?? Astro.url).toString();
     <meta property="og:title" content={resolvedTitle} />
     <meta property="og:description" content={resolvedDescription} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(resolvedOgImage, Astro.site ?? Astro.url).toString()} />
+    <meta property="og:image" content={ogImageFullUrl} />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="900" />
@@ -71,7 +73,7 @@ const canonical = new URL(pathname, Astro.site ?? Astro.url).toString();
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={resolvedTitle} />
     <meta name="twitter:description" content={resolvedDescription} />
-    <meta name="twitter:image" content={new URL(resolvedOgImage, Astro.site ?? Astro.url).toString()} />
+    <meta name="twitter:image" content={ogImageFullUrl} />
   </head>
   <body class="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)]">
     <a
