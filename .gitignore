@@ -28,6 +28,7 @@ pnpm-debug.log*
 
 # Personal scratchpad / answer notes (contains private info)
 ans.md
+CLAUDE.md
 
 # Secrets / private content (codes/letters with real recipient names + bodies)
 data/letters.private.json
