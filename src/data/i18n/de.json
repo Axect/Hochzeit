@@ -61,6 +61,16 @@
     "comingSoon": "Bald verfügbar",
     "releaseDate": "Verfügbar ab Juli 2026"
   },
+  "prologue": {
+    "eyebrow": "Prolog",
+    "title": "Einst kannten sie einander nicht",
+    "tgLocation": "Ulsan · Korea",
+    "andreaLocation": "Trier · Deutschland",
+    "tgAlt": "Tae-Geun als Kind",
+    "andreaAlt": "Andrea als Kind",
+    "distance": "Damals lagen rund 9.000 km zwischen ihnen",
+    "transition": "Und etwa zwanzig Jahre später —"
+  },
   "journey": {
     "title": "Wie wir uns fanden",
     "intro": "Ein einziger Brief war der Anfang, und daraus wurde ein Weg, der Seoul und Mannheim verbindet.",

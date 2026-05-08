@@ -61,6 +61,16 @@
     "comingSoon": "Coming Soon",
     "releaseDate": "2026년 7월 공개 예정"
   },
+  "prologue": {
+    "eyebrow": "Prologue",
+    "title": "두 사람은 서로를 몰랐습니다",
+    "tgLocation": "울산 · 한국",
+    "andreaLocation": "트리어 · 독일",
+    "tgAlt": "어린 시절의 태근",
+    "andreaAlt": "어린 시절의 안드레아",
+    "distance": "그때, 약 9,000 km 떨어져",
+    "transition": "그리고 20여 년 뒤 ―"
+  },
   "journey": {
     "title": "우리의 만남",
     "intro": "한 통의 편지에서 시작되어, 서울과 만하임을 잇는 여정.",

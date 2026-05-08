@@ -61,6 +61,16 @@
     "comingSoon": "Coming Soon",
     "releaseDate": "Available in July 2026"
   },
+  "prologue": {
+    "eyebrow": "Prologue",
+    "title": "Once upon a time, they didn't know each other",
+    "tgLocation": "Ulsan · Korea",
+    "andreaLocation": "Trier · Germany",
+    "tgAlt": "Tae-Geun as a child",
+    "andreaAlt": "Andrea as a child",
+    "distance": "Back then, about 9,000 km apart",
+    "transition": "And some twenty years later —"
+  },
   "journey": {
     "title": "How we met",
     "intro": "It started with a single letter, and grew into a road that connects Seoul and Mannheim.",

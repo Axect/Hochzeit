@@ -1,0 +1,81 @@
+---
+import Section from '@components/Section.astro';
+import { t, withBase, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const eyebrow = t('prologue.eyebrow', locale);
+const title = t('prologue.title', locale);
+const tgLocation = t('prologue.tgLocation', locale);
+const andreaLocation = t('prologue.andreaLocation', locale);
+const distance = t('prologue.distance', locale);
+const transition = t('prologue.transition', locale);
+const tgAlt = t('prologue.tgAlt', locale);
+const andreaAlt = t('prologue.andreaAlt', locale);
+---
+
+<Section id="prologue" eyebrow={eyebrow} title={title}>
+  <div class="grid grid-cols-2 gap-4 sm:gap-6">
+    <figure class="text-center">
+      <div
+        class="prologue-frame relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-line)] bg-white shadow-sm"
+      >
+        <img
+          src={withBase('/main/childhood-tg.jpg')}
+          alt={tgAlt}
+          class="h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption
+        class="mt-3 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]"
+      >
+        {tgLocation}
+      </figcaption>
+    </figure>
+
+    <figure class="text-center">
+      <div
+        class="prologue-frame relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-line)] bg-white shadow-sm"
+      >
+        <img
+          src={withBase('/main/childhood-andrea.jpg')}
+          alt={andreaAlt}
+          class="h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption
+        class="mt-3 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]"
+      >
+        {andreaLocation}
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="my-10 flex items-center gap-4">
+    <span aria-hidden="true" class="h-px flex-1 bg-[var(--color-line)]"></span>
+    <span class="whitespace-nowrap text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+      {distance}
+    </span>
+    <span aria-hidden="true" class="h-px flex-1 bg-[var(--color-line)]"></span>
+  </div>
+
+  <p class="text-center font-serif text-base text-[var(--color-fg)]">
+    {transition}
+  </p>
+  <p aria-hidden="true" class="mt-3 text-center text-lg text-[var(--color-muted)]">↓</p>
+</Section>
+
+<style>
+  .prologue-frame {
+    /* Subtle warm tint on the photo print so the childhood feel reads as
+       "old album" without overdoing sepia. */
+    filter: saturate(0.92) contrast(0.98);
+  }
+</style>
