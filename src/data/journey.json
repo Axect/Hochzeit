@@ -50,7 +50,9 @@
         { "src": "/journey/first-visit-korea-3.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/first-visit-korea-4.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/first-visit-korea-5.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/first-visit-korea-6.jpg", "width": 1200, "height": 1600 }
+        { "src": "/journey/first-visit-korea-6.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/first-visit-korea-7.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/first-visit-korea-8.jpg", "width": 1600, "height": 1200 }
       ]
     },
     {
@@ -182,7 +184,54 @@
           "src": "/journey/shanghai-move-4.jpg",
           "width": 1600,
           "height": 1200
+        },
+        {
+          "src": "/journey/shanghai-move-5.jpg",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/journey/shanghai-move-6.jpg",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/journey/shanghai-move-7.jpg",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "src": "/journey/shanghai-move-8.jpg",
+          "width": 1600,
+          "height": 1200
         }
+      ]
+    },
+    {
+      "id": "shanghai-christmas",
+      "kind": "visit",
+      "date": "2025-12-24",
+      "lat": 31.2304,
+      "lon": 121.4737,
+      "title": {
+        "ko": "상하이의 첫 크리스마스",
+        "en": "Our first Christmas in Shanghai",
+        "de": "Unser erstes Weihnachten in Shanghai"
+      },
+      "body": {
+        "ko": "작은 트리 아래에서 보낸 첫 크리스마스 이브. 상하이의 거리에는 불빛이 켜졌고, 며칠 뒤에는 함께 새해도 맞았습니다.",
+        "en": "Our first Christmas Eve under a small tree. Lights came on across Shanghai, and a few days later we welcomed the new year together.",
+        "de": "Unser erster Heiligabend unter einem kleinen Baum. Die Lichter Shanghais leuchteten auf, und ein paar Tage später begrüßten wir gemeinsam das neue Jahr."
+      },
+      "photos": [
+        { "src": "/journey/christmas-1.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/christmas-2.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/christmas-3.jpg", "width": 1600, "height": 900 },
+        { "src": "/journey/christmas-4.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/christmas-5.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/christmas-6.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/christmas-7.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/christmas-8.jpg", "width": 1600, "height": 1200 }
       ]
     },
     {
@@ -231,6 +280,11 @@
           "src": "/journey/guilin-6.jpg",
           "width": 1200,
           "height": 1600
+        },
+        {
+          "src": "/journey/guilin-7.jpg",
+          "width": 1600,
+          "height": 1200
         }
       ]
     },
@@ -253,7 +307,8 @@
       "photos": [
         { "src": "/journey/hongkong-1.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/hongkong-2.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/hongkong-3.jpg", "width": 1200, "height": 1600 }
+        { "src": "/journey/hongkong-3.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/hongkong-4.jpg", "width": 1200, "height": 1600 }
       ]
     },
     {
@@ -275,7 +330,8 @@
       "photos": [
         { "src": "/journey/tsukuba-1.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/tsukuba-2.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/tsukuba-3.jpg", "width": 1600, "height": 1200 }
+        { "src": "/journey/tsukuba-3.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/tsukuba-4.jpg", "width": 1600, "height": 1200 }
       ]
     },
     {
