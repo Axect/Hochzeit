@@ -41,4 +41,6 @@ Thumbs.db
 # Lockfiles from other package managers (we use npm)
 yarn.lock
 pnpm-lock.yaml
-public/journey/_originals/
+
+# Untouched source photos (kept locally; never deployed, never tracked)
+**/_originals/
