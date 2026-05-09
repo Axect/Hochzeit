@@ -27,8 +27,8 @@
     "scrollHint": "Scroll to enter"
   },
   "greeting": {
-    "title": "Two of us, opening a new chapter",
-    "body": "What began as a pen-pal correspondence has grown into the most beautiful journey of our lives. The memories we have gathered together through Korea, Germany, China, Hong Kong, and Japan are now opening a new chapter.\nWe would be deeply honoured if you would join us at our wedding in Seoul and share in our joy on this special day.",
+    "title": "The two of us, opening a new chapter",
+    "body": "What began as a pen-pal friendship has grown into the most beautiful journey of our lives. The memories we have gathered together through Korea, Germany, China, Hong Kong, and Japan are now opening a new chapter.\nWe would be deeply honoured if you would join us at our wedding in Seoul and share in our joy on this special day.",
     "parents": {
       "groom": {
         "father": "Il Ha Kim",
@@ -73,7 +73,7 @@
   },
   "journey": {
     "title": "How we met",
-    "intro": "It started with a single letter, and grew into a road that connects Seoul and Leimen.",
+    "intro": "It started with a single letter, and unfolded into a road that connects Seoul and Leimen.",
     "previewHint": "Open the map to walk through every scene.",
     "openButton": "Open the map",
     "closeButton": "Close",
@@ -83,7 +83,7 @@
     "next": "Next",
     "kindLabel": {
       "letter": "Letter",
-      "visit": "Reunion",
+      "visit": "Together",
       "trip": "Journey",
       "wedding": "Wedding"
     },
@@ -107,7 +107,7 @@
   "directions": {
     "title": "Getting there",
     "addressLabel": "Address",
-    "transitTitle": "How to arrive",
+    "transitTitle": "Getting around",
     "subwayLabel": "Subway",
     "busLabel": "Bus",
     "carLabel": "By car",
@@ -146,7 +146,7 @@
   },
   "rsvp": {
     "title": "RSVP",
-    "intro": "So we can prepare warmly, please let us know whether you can join the ceremony — and the after-party.",
+    "intro": "So we can plan with care, please let us know whether you can join the ceremony — and the after-party.",
     "openFormButton": "Send your RSVP",
     "newWindowHint": "A Google Form will open in a new tab."
   },
