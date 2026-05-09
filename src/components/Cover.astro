@@ -1,7 +1,6 @@
 ---
-import { t, type Locale } from '@lib/i18n';
+import { t, tField, withBase, type Locale } from '@lib/i18n';
 import venue from '@config/venue.json';
-import { tField } from '@lib/i18n';
 
 interface Props {
   locale: Locale;
@@ -15,30 +14,45 @@ const dateLine = t('cover.dateLine', locale);
 const timeLine = t('cover.timeLine', locale);
 const venueLine = `${tField(venue.name, locale)} · ${tField(venue.hall, locale)}`;
 const scrollHint = t('cover.scrollHint', locale);
+const eyebrow =
+  locale === 'ko' ? '결혼합니다' : locale === 'en' ? 'Getting married' : 'Wir heiraten';
 ---
 
 <section
-  class="relative isolate flex min-h-[100svh] flex-col items-center justify-end overflow-hidden bg-[var(--color-bg)] pb-16 pt-24"
+  class="relative isolate flex min-h-[100svh] flex-col items-center justify-end overflow-hidden bg-[oklch(0.10_0.02_150)] pb-16 pt-24 text-white"
   aria-label={`${groomName} ${sep} ${brideName}`}
 >
-  <div
-    aria-hidden="true"
-    class="absolute inset-0 bg-gradient-to-b from-[oklch(0.93_0.04_150)] via-[var(--color-bg)] to-[var(--color-bg)]"
-  >
+  <div aria-hidden="true" class="absolute inset-0 -z-10">
+    <img
+      src={withBase('/main/cover-poster.jpg')}
+      alt=""
+      class="h-full w-full object-cover"
+      decoding="async"
+      fetchpriority="high"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-black/80"
+    >
+    </div>
   </div>
 
-  <div class="relative flex flex-1 flex-col items-center justify-center gap-8 px-6 text-center">
-    <p class="text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
-      {locale === 'ko' ? '결혼합니다' : locale === 'en' ? 'Getting married' : 'Wir heiraten'}
+  <div
+    class="relative flex flex-1 flex-col items-center justify-center gap-8 px-6 text-center"
+  >
+    <p class="text-xs uppercase tracking-[var(--tracking-wedding)] text-white/70">
+      {eyebrow}
     </p>
 
-    <h1 class="font-serif text-[clamp(2rem,9vw,4rem)] leading-tight text-[var(--color-fg)]">
+    <h1 class="font-serif text-[clamp(2rem,9vw,4rem)] leading-tight drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)]">
       <span class="block">{groomName}</span>
-      <span class="my-2 block text-3xl text-[var(--color-accent)]" aria-hidden="true">{sep}</span>
+      <span
+        class="my-2 block text-3xl text-[oklch(0.86_0.13_80)]"
+        aria-hidden="true">{sep}</span
+      >
       <span class="block">{brideName}</span>
     </h1>
 
-    <div class="space-y-1 text-sm text-[var(--color-muted)] sm:text-base">
+    <div class="space-y-1 text-sm text-white/85 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] sm:text-base">
       <p>{dateLine}</p>
       <p>{timeLine}</p>
       <p class="pt-2">{venueLine}</p>
@@ -47,12 +61,12 @@ const scrollHint = t('cover.scrollHint', locale);
 
   <a
     href="#greeting"
-    class="group relative flex flex-col items-center gap-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]"
+    class="group relative flex flex-col items-center gap-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-white/65"
   >
     {scrollHint}
     <span
       aria-hidden="true"
-      class="h-10 w-px bg-gradient-to-b from-[var(--color-muted)] to-transparent transition-transform group-hover:translate-y-1"
+      class="h-10 w-px bg-gradient-to-b from-white/65 to-transparent transition-transform group-hover:translate-y-1"
     >
     </span>
   </a>
