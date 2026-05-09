@@ -15,7 +15,7 @@ interface Event {
   date: string;
   lat: number;
   lon: number;
-  /** Optional origin coordinate (e.g. for the first letter: Seoul → Mannheim). */
+  /** Optional origin coordinate (e.g. for the first letter: Seoul → Leimen). */
   from?: { lat: number; lon: number };
   title: string;
   body: string;
@@ -385,7 +385,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
   }
 
   // Cinematic SVG zoom on active event.
-  // First-letter is special: we show *both* Seoul (from) and Mannheim (to) in
+  // First-letter is special: we show *both* Seoul (from) and Leimen (to) in
   // frame at once, with profile portraits at each end and the letter image
   // hovering over the midpoint of the arc.
   const activeEvent = sortedEvents[active];
@@ -407,7 +407,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
   const ty = H / 2 - camY * zoom;
 
   // Connection line: usually visited points in chronological order. For the
-  // first-letter scene we draw a single arc from Seoul → Mannheim instead.
+  // first-letter scene we draw a single arc from Seoul → Leimen instead.
   const linePath = isFirstLetter && activeOrigin
     ? `M${activeOrigin[0]},${activeOrigin[1]} Q${(activeOrigin[0] + activePoint[0]) / 2},${
         Math.min(activeOrigin[1], activePoint[1]) - 28
@@ -546,7 +546,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
               })}
 
               {/* First-letter overlay: TG profile at Seoul, Andrea profile at
-                  Mannheim, and the letter image hovering above the arc midpoint.
+                  Leimen, and the letter image hovering above the arc midpoint.
                   Sits inside the zoomed group so it scales with the camera. */}
               {isFirstLetter && activeOrigin && firstLetterMid && (
                 <g>
@@ -585,7 +585,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                     vectorEffect="non-scaling-stroke"
                   />
 
-                  {/* Andrea · Mannheim */}
+                  {/* Andrea · Leimen */}
                   <circle
                     cx={activePoint[0]}
                     cy={activePoint[1]}

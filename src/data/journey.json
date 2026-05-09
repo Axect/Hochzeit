@@ -4,8 +4,8 @@
       "id": "first-letter",
       "kind": "letter",
       "date": "2025-05-06",
-      "lat": 49.4875,
-      "lon": 8.466,
+      "lat": 49.345,
+      "lon": 8.6817,
       "from": {
         "lat": 37.5665,
         "lon": 126.978
@@ -16,9 +16,9 @@
         "de": "Der erste Brief"
       },
       "body": {
-        "ko": "태근이 서울에서 띄운 편지가 만하임의 안드레아 책상에 도착했습니다.",
-        "en": "A letter that Tae-Geun sent from Seoul arrived on Andrea's desk in Mannheim.",
-        "de": "Ein Brief, den Tae-Geun aus Seoul geschickt hatte, lag auf Andreas Schreibtisch in Mannheim."
+        "ko": "태근이 서울에서 띄운 편지가 라이멘의 안드레아 책상에 도착했습니다.",
+        "en": "A letter that Tae-Geun sent from Seoul arrived on Andrea's desk in Leimen.",
+        "de": "Ein Brief, den Tae-Geun aus Seoul geschickt hatte, lag auf Andreas Schreibtisch in Leimen."
       },
       "photos": [
         {
