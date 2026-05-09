@@ -73,7 +73,7 @@
   },
   "journey": {
     "title": "Wie wir uns fanden",
-    "intro": "Ein einziger Brief war der Anfang, und daraus wurde ein Weg, der Seoul und Leimen verbindet.",
+    "intro": "Ein einziger Brief war der Anfang einer Reise, die Seoul und Leimen verbindet.",
     "previewHint": "Öffne die Karte, um jede Szene zu durchwandern.",
     "openButton": "Karte öffnen",
     "closeButton": "Schließen",
@@ -83,11 +83,11 @@
     "next": "Weiter",
     "kindLabel": {
       "letter": "Brief",
-      "visit": "Wiedersehen",
+      "visit": "Begegnung",
       "trip": "Reise",
       "wedding": "Hochzeit"
     },
-    "reducedMotionNote": "Animationen sind reduziert. Wir zeigen Dir alle Momente auf einmal.",
+    "reducedMotionNote": "Du hast Animationen ausgeschaltet — wir zeigen Dir alle Momente auf einmal.",
     "missingCoords": "Für dieses Ereignis liegen keine Koordinaten vor."
   },
   "secretLetter": {
