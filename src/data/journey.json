@@ -107,7 +107,8 @@
         { "src": "/journey/germany-tour-10.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-11.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-12.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-13.jpg", "width": 1600, "height": 1200 }
+        { "src": "/journey/germany-tour-13.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-14.jpg", "width": 1600, "height": 1200 }
       ]
     },
     {
@@ -231,7 +232,9 @@
         { "src": "/journey/christmas-5.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/christmas-6.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/christmas-7.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/christmas-8.jpg", "width": 1600, "height": 1200 }
+        { "src": "/journey/christmas-8.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/christmas-9.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/christmas-10.jpg", "width": 1600, "height": 1200 }
       ]
     },
     {
