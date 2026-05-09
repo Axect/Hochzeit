@@ -11,6 +11,7 @@ import Accounts from '@components/Accounts.astro';
 import Rsvp from '@components/Rsvp.astro';
 import Guestbook from '@components/Guestbook.astro';
 import ShareButtons from '@components/ShareButtons.astro';
+import Ending from '@components/Ending.astro';
 import type { Locale } from '@lib/i18n';
 
 interface Props {
@@ -31,4 +32,5 @@ const { locale } = Astro.props;
 <Rsvp locale={locale} />
 <Guestbook locale={locale} />
 <ShareButtons locale={locale} />
+<Ending locale={locale} />
 <SecretLetter locale={locale} />

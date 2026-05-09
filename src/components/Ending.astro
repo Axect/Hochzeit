@@ -1,0 +1,213 @@
+---
+import { t, withBase, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const groomFirstName = t('greeting.parents.groom.name', locale);
+const brideFirstName = t('greeting.parents.bride.name', locale);
+const sep = t('cover.separator', locale);
+
+// Reused traditional Korean palette: 단주 vermilion for the seal/red lantern,
+// 청 indigo for the blue lantern, 오방색 (five-direction colours) for the
+// bottom stripe (청·적·황·백·흑).
+const VERMILION = '#b8281c';
+const INDIGO = '#2e4a7c';
+const WOOD = '#5d4530';
+const WOOD_DARK = '#3a2818';
+
+const obangsaek = [
+  { name: '청', hex: '#2e4a7c' },
+  { name: '적', hex: '#c0381c' },
+  { name: '황', hex: '#d9b042' },
+  { name: '백', hex: '#f0e9d4' },
+  { name: '흑', hex: '#2a2825' },
+];
+
+// 청사초롱 — a real one is a single rectangular silk-covered lantern with
+// red (홍, 양) silk on top and blue (청, 음) silk on the bottom, hung in
+// pairs at Korean weddings. Both lanterns in the pair are identical;
+// `id` is just used to stagger the sway animation.
+const lanterns = [{ id: 'left' }, { id: 'right' }];
+---
+
+<section
+  id="ending"
+  aria-label="ending"
+  class="ending-stationery relative isolate flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6 pt-44 pb-16"
+>
+  {/* Paired 청사초롱 hanging from the top — the indigo (groom) on the left,
+     the vermilion (bride) on the right. Strings reach all the way to the
+     top of the section so they read as actually hanging. */}
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 top-0 z-0 flex justify-between px-6 sm:px-12"
+  >
+    {
+      lanterns.map((l) => (
+        <svg
+          width="58"
+          height="180"
+          viewBox="0 0 60 200"
+          class={`lantern lantern-${l.id}`}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Hanging rope from the top edge → V-split harness → wooden bar
+             at the top of the silk body. */}
+          <line x1="30" y1="0" x2="30" y2="14" stroke={WOOD} stroke-width="1.4" />
+          <line x1="30" y1="14" x2="20" y2="26" stroke={WOOD} stroke-width="1.2" />
+          <line x1="30" y1="14" x2="40" y2="26" stroke={WOOD} stroke-width="1.2" />
+          <rect x="13" y="26" width="34" height="3" fill={WOOD} />
+
+          {/* Red (홍, 양) upper portion of the silk body — about a third. */}
+          <rect
+            x="14"
+            y="29"
+            width="32"
+            height="48"
+            fill={VERMILION}
+            stroke={WOOD_DARK}
+            stroke-width="0.7"
+          />
+          {/* Blue (청, 음) lower portion — the rest of the body. */}
+          <rect
+            x="14"
+            y="77"
+            width="32"
+            height="86"
+            fill={INDIGO}
+            stroke={WOOD_DARK}
+            stroke-width="0.7"
+          />
+
+          {/* Wooden bar at the bottom of the silk body. */}
+          <rect x="13" y="163" width="34" height="3" fill={WOOD} />
+
+          {/* Subtle bamboo-frame ribs running through the silk. */}
+          <g stroke={WOOD_DARK} stroke-width="0.4" opacity="0.45">
+            <line x1="22" y1="29" x2="22" y2="163" />
+            <line x1="30" y1="29" x2="30" y2="163" />
+            <line x1="38" y1="29" x2="38" y2="163" />
+            <line x1="14" y1="53" x2="46" y2="53" />
+            <line x1="14" y1="77" x2="46" y2="77" />
+            <line x1="14" y1="105" x2="46" y2="105" />
+            <line x1="14" y1="135" x2="46" y2="135" />
+          </g>
+
+          {/* A short red silk tassel under the bottom bar. */}
+          <line x1="30" y1="166" x2="30" y2="178" stroke={VERMILION} stroke-width="1.5" />
+          <circle cx="30" cy="182" r="3.5" fill={VERMILION} />
+        </svg>
+      ))
+    }
+  </div>
+
+  <div class="relative flex w-full max-w-md flex-col items-center text-center">
+    <figure
+      class="w-[min(76vw,19rem)] bg-white p-3 shadow-[0_10px_32px_rgba(60,40,15,0.18)]"
+    >
+      <img
+        src={withBase('/main/ending.jpg')}
+        alt=""
+        class="block h-auto w-full"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+
+    <p
+      class="mt-12 font-serif text-base italic text-[oklch(0.40_0.04_60)] sm:text-lg"
+      aria-hidden="true"
+    >
+      — fin. —
+    </p>
+
+    <p class="mt-5 font-serif text-sm text-[oklch(0.22_0.04_60)] sm:text-base">
+      — {groomFirstName}
+      <span class="mx-1 text-[oklch(0.50_0.21_27)]" aria-hidden="true">{sep}</span>
+      {brideFirstName} —
+    </p>
+
+    {/* Vermilion 도장 with a date stamp. Filter chain: feDisplacementMap
+       roughens the borders + glyph (pressed feel), then a thresholded noise
+       mask is feComposite-in'd to remove ink from random spots. */}
+    <div class="mt-12 flex items-center gap-4">
+      <svg
+        class="-rotate-[5deg] drop-shadow-[0_2px_6px_rgba(160,30,15,0.18)]"
+        width="74"
+        height="74"
+        viewBox="0 0 100 100"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <filter id="ink-press" x="-15%" y="-15%" width="130%" height="130%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" seed="4" result="rough-noise"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="rough-noise" scale="1.8" result="rough"></feDisplacementMap>
+            <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="11" result="ink-noise"></feTurbulence>
+            <feColorMatrix
+              in="ink-noise"
+              values="0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 0 0
+                      0 0 0 1.8 -0.55"
+              result="ink-mask"
+            ></feColorMatrix>
+            <feComposite in="rough" in2="ink-mask" operator="in"></feComposite>
+          </filter>
+        </defs>
+        <g filter="url(#ink-press)">
+          <rect x="6" y="6" width="88" height="88" fill="none" stroke={VERMILION} stroke-width="3.8"></rect>
+          <text
+            x="50"
+            y="73"
+            text-anchor="middle"
+            font-size="62"
+            fill={VERMILION}
+            font-family="'Gowun Batang','Noto Serif KR',serif"
+            font-weight="600">囍</text
+          >
+        </g>
+      </svg>
+      <p class="text-left text-xs leading-relaxed text-[oklch(0.40_0.04_60)]">
+        Seoul ·<br />
+        2026.10.17
+      </p>
+    </div>
+  </div>
+
+  {/* 오방색 stripe — five-direction colours running along the bottom edge.
+     Read left-to-right: 청(東) · 적(南) · 황(中) · 백(西) · 흑(北). */}
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 bottom-0 flex h-2.5 sm:h-3"
+  >
+    {obangsaek.map((c) => <div class="flex-1" style={`background-color: ${c.hex}`} />)}
+  </div>
+</section>
+
+<style>
+  .ending-stationery {
+    background-color: oklch(0.95 0.018 82);
+  }
+  /* Subtle gentle sway on the hanging lanterns. Disabled when the user
+     prefers reduced motion (handled by the global media query in
+     global.css). */
+  .lantern {
+    transform-origin: 50% 0;
+    animation: lantern-sway 6s ease-in-out infinite;
+  }
+  .lantern-right {
+    animation-delay: -3s;
+  }
+  @keyframes lantern-sway {
+    0%, 100% {
+      transform: rotate(-1.2deg);
+    }
+    50% {
+      transform: rotate(1.2deg);
+    }
+  }
+</style>
