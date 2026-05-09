@@ -202,6 +202,8 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
   }, [open, sortedEvents.length, lightbox]);
 
   // Lightbox keyboard nav — operates on the active event's photos.
+  // Going past the last photo closes the lightbox (returning to the map);
+  // going back from the first clamps in place.
   useEffect(() => {
     if (!lightbox) return;
     const ev = sortedEvents.find((e) => e.id === lightbox.eventId);
@@ -211,12 +213,10 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
       if (e.key === 'Escape') {
         setLightbox(null);
       } else if (e.key === 'ArrowLeft') {
-        setLightbox((l) =>
-          l ? { ...l, index: (l.index - 1 + photos.length) % photos.length } : null,
-        );
+        setLightbox((l) => (l && l.index > 0 ? { ...l, index: l.index - 1 } : l));
       } else if (e.key === 'ArrowRight') {
         setLightbox((l) =>
-          l ? { ...l, index: (l.index + 1) % photos.length } : null,
+          l && l.index < photos.length - 1 ? { ...l, index: l.index + 1 } : null,
         );
       }
     };
@@ -642,30 +642,6 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
             <rect width={W} height={H} fill="url(#journey-vignette)" pointerEvents="none" />
           </svg>
 
-          {/* Top-right progress dots */}
-          <div className="absolute right-3 top-1/2 z-10 flex -translate-y-1/2 flex-col gap-2 sm:right-6">
-            {sortedEvents.map((ev, idx) => {
-              const isActive = idx === active;
-              const visited = idx <= active;
-              return (
-                <button
-                  key={ev.id}
-                  type="button"
-                  onClick={() => setActive(idx)}
-                  aria-current={isActive}
-                  aria-label={ev.title}
-                  className={`tap-target group relative flex h-3 w-3 items-center justify-center rounded-full transition-all ${
-                    isActive
-                      ? 'h-4 w-4 bg-[oklch(0.84_0.13_80)] shadow-[0_0_18px_rgba(220,180,120,0.5)]'
-                      : visited
-                        ? 'bg-[oklch(0.72_0.13_80)]'
-                        : 'bg-white/20'
-                  }`}
-                />
-              );
-            })}
-          </div>
-
           {/* Bottom gradient + text overlay */}
           <div
             aria-hidden="true"
@@ -722,9 +698,11 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   onClick={goPrev}
                   disabled={active === 0}
                   aria-label={labels.prev}
-                  className="tap-target rounded-full border border-white/20 px-3 py-1.5 text-white/80 transition-colors hover:bg-white/10 disabled:opacity-30"
+                  className="tap-target inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white/90 backdrop-blur-md transition-colors hover:border-white/50 hover:bg-white/20 disabled:opacity-25 sm:h-12 sm:w-12"
                 >
-                  ←
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.25" aria-hidden="true">
+                    <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </button>
                 <span className="font-mono tabular-nums">
                   {String(active + 1).padStart(2, '0')}
@@ -745,9 +723,11 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   onClick={goNext}
                   disabled={active === sortedEvents.length - 1}
                   aria-label={labels.next}
-                  className="tap-target rounded-full border border-white/20 px-3 py-1.5 text-white/80 transition-colors hover:bg-white/10 disabled:opacity-30"
+                  className="tap-target inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white/90 backdrop-blur-md transition-colors hover:border-white/50 hover:bg-white/20 disabled:opacity-25 sm:h-12 sm:w-12"
                 >
-                  →
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.25" aria-hidden="true">
+                    <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -761,13 +741,12 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
           const photos = ev?.photos ?? [];
           if (photos.length === 0) return null;
           const photo = photos[lightbox.index];
+          // Match keyboard nav: clamp at first, close past last (returning to map).
           const goPrevPhoto = () =>
-            setLightbox((l) =>
-              l ? { ...l, index: (l.index - 1 + photos.length) % photos.length } : null,
-            );
+            setLightbox((l) => (l && l.index > 0 ? { ...l, index: l.index - 1 } : l));
           const goNextPhoto = () =>
             setLightbox((l) =>
-              l ? { ...l, index: (l.index + 1) % photos.length } : null,
+              l && l.index < photos.length - 1 ? { ...l, index: l.index + 1 } : null,
             );
           const onLightboxTouchStart = (e: React.TouchEvent) => {
             lightboxTouchStartX.current = e.touches[0]?.clientX ?? null;
