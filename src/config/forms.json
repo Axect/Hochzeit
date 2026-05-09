@@ -18,38 +18,32 @@
     "cacheTtlSeconds": 300,
     "ko": {
       "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSep0kT1B47AwICs53vODyZn3ReGLgjUZmVagW72j7bUvVJ6Lw/viewform",
-      "langEntryId": "entry.596f4fb1",
       "sheetId": "1bcZoDcHuYh1DASxbsWp8KTJ9ZLnHKUuPPeHccikCcl4",
       "sheetGid": "1175493814",
       "columns": {
         "timestamp": "타임스탬프",
         "name": "이름이나 닉네임을 알려 주세요",
-        "message": "두 사람에게 한마디",
-        "lang": "메시지 언어 · Language · Sprache"
+        "message": "두 사람에게 한마디"
       }
     },
     "en": {
       "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdJvObJ78NdJFZ-0gWjX6Rq-n-TmeF-BlLWr61UK74XNI06nQ/viewform",
-      "langEntryId": "entry.103feb68",
       "sheetId": "1jVEgPZRD2jXQ8ZlLUOxhzH75g2lWjFNtY9ezAZoxo6Q",
       "sheetGid": "1037389896",
       "columns": {
         "timestamp": "타임스탬프",
         "name": "May we have your name or nickname?",
-        "message": "A note for the two of us",
-        "lang": "Message language · 메시지 언어 · Sprache der Nachricht"
+        "message": "A note for the two of us"
       }
     },
     "de": {
       "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScBfZzQ4S7RK_82jFVFU7jJC2HEe1LVylkE7YnA_z6g-dOzoQ/viewform",
-      "langEntryId": "entry.4efa787f",
       "sheetId": "12KyhipiBsSw611S2rS22aSEpDVn6rTedVvAJRDMBrcg",
       "sheetGid": "1708901433",
       "columns": {
         "timestamp": "타임스탬프",
         "name": "Wie sollen wir Dich nennen?",
-        "message": "Ein paar Worte für uns",
-        "lang": "Sprache der Nachricht · Message language · 메시지 언어"
+        "message": "Ein paar Worte für uns"
       }
     }
   }

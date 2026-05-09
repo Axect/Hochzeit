@@ -158,8 +158,7 @@
     "empty": "Sei die erste Person, die etwas schreibt.",
     "errorTitle": "Gästebuch konnte nicht geladen werden",
     "errorBody": "Bitte versuche es gleich noch einmal.",
-    "retryButton": "Neu laden",
-    "fromLocale": "{flag} Sprache"
+    "retryButton": "Neu laden"
   },
   "footer": {
     "thanks": "Danke, dass Du Teil unseres Tages bist."

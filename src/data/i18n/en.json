@@ -158,8 +158,7 @@
     "empty": "Be the first to leave a note.",
     "errorTitle": "We couldn't load the guestbook",
     "errorBody": "Please try again in a moment.",
-    "retryButton": "Reload",
-    "fromLocale": "{flag} language"
+    "retryButton": "Reload"
   },
   "footer": {
     "thanks": "Thank you for being part of our day."

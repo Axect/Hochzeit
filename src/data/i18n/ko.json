@@ -158,8 +158,7 @@
     "empty": "첫 번째 메시지의 주인공이 되어 주세요.",
     "errorTitle": "방명록을 불러올 수 없어요",
     "errorBody": "잠시 후 다시 시도해 주세요.",
-    "retryButton": "다시 불러오기",
-    "fromLocale": "{flag} 언어"
+    "retryButton": "다시 불러오기"
   },
   "footer": {
     "thanks": "와 주셔서 감사합니다."

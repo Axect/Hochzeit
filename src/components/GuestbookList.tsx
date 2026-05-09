@@ -5,14 +5,13 @@ interface Entry {
   timestamp: Date;
   name: string;
   message: string;
-  lang: Locale | string;
 }
 
 interface Props {
   locale: Locale;
   sheetId: string;
   sheetGid: string;
-  columns: { timestamp: string; name: string; message: string; lang: string };
+  columns: { timestamp: string; name: string; message: string };
   approvedColumn: string;
   approvedValue: string;
   displayLimit: number;
@@ -31,15 +30,18 @@ type State =
   | { kind: 'error'; message: string }
   | { kind: 'ready'; entries: Entry[] };
 
-const flag = (lang: string) =>
-  lang === 'ko' ? '🇰🇷' : lang === 'en' ? '🇬🇧' : lang === 'de' ? '🇩🇪' : '🌐';
+// Each locale has its own sheet, so every entry shown here is in that locale.
+// The flag is therefore derived from the page's `locale` rather than stored
+// per-entry — keeping the visual cue without asking the form respondent for it.
+const flag = (locale: Locale) =>
+  locale === 'ko' ? '🇰🇷' : locale === 'en' ? '🇬🇧' : locale === 'de' ? '🇩🇪' : '🌐';
 
 const cacheKey = (sheetId: string, sheetGid: string) =>
   `guestbook:${sheetId}:${sheetGid}`;
 
 interface CachedPayload {
   fetchedAt: number;
-  entries: Array<{ timestamp: string; name: string; message: string; lang: string }>;
+  entries: Array<{ timestamp: string; name: string; message: string }>;
 }
 
 const buildUrl = (sheetId: string, sheetGid: string) =>
@@ -119,7 +121,6 @@ export default function GuestbookList({
         const tsIdx = colIndex(columns.timestamp);
         const nameIdx = colIndex(columns.name);
         const msgIdx = colIndex(columns.message);
-        const langIdx = colIndex(columns.lang);
         const approvedIdx = colIndex(approvedColumn);
 
         const rows: Entry[] = data.table.rows
@@ -133,10 +134,9 @@ export default function GuestbookList({
             const ts = tsRaw?.f ?? (typeof tsRaw?.v === 'string' ? tsRaw.v : null);
             const name = nameIdx >= 0 ? String(cells[nameIdx]?.v ?? '') : '';
             const message = msgIdx >= 0 ? String(cells[msgIdx]?.v ?? '') : '';
-            const lang = langIdx >= 0 ? String(cells[langIdx]?.v ?? 'ko') : 'ko';
             if (!message.trim()) return null;
             const date = ts ? new Date(ts) : new Date();
-            return { timestamp: date, name: name.trim() || '익명', message: message.trim(), lang };
+            return { timestamp: date, name: name.trim() || '익명', message: message.trim() };
           })
           .filter((e): e is Entry => e !== null)
           .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime())
@@ -206,7 +206,7 @@ export default function GuestbookList({
         >
           <header className="mb-1 flex items-center justify-between gap-2 text-xs text-[var(--color-muted)]">
             <span className="flex items-center gap-1">
-              <span aria-hidden="true">{flag(e.lang)}</span>
+              <span aria-hidden="true">{flag(locale)}</span>
               <span className="font-medium text-[var(--color-fg)]">{e.name}</span>
             </span>
             <time dateTime={e.timestamp.toISOString()}>{formatRelative(e.timestamp, locale)}</time>

@@ -14,26 +14,8 @@ const intro = t('guestbook.intro', locale);
 const leaveLabel = t('guestbook.leaveMessageButton', locale);
 
 const cfg = forms.guestbook[locale];
-const formBase = cfg.formUrl;
-const langEntry = cfg.langEntryId;
-
-// Each language form's "language" radio uses display labels (한국어 / English /
-// Deutsch). Map locale codes to those exact strings for the prefill to match.
-const LANG_DISPLAY: Record<Locale, string> = {
-  ko: '한국어',
-  en: 'English',
-  de: 'Deutsch',
-};
-
-const formUrl = (() => {
-  if (!formBase || formBase.includes('PLACEHOLDER')) return formBase;
-  const sep = formBase.includes('?') ? '&' : '?';
-  if (langEntry && !langEntry.includes('PLACEHOLDER')) {
-    return `${formBase}${sep}usp=pp_url&${encodeURIComponent(langEntry)}=${encodeURIComponent(LANG_DISPLAY[locale])}`;
-  }
-  return formBase;
-})();
-const isPlaceholder = !formBase || formBase.includes('PLACEHOLDER');
+const formUrl = cfg.formUrl;
+const isPlaceholder = !formUrl || formUrl.includes('PLACEHOLDER');
 
 const labels = {
   loading: t('guestbook.loading', locale),
