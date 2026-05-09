@@ -341,21 +341,21 @@
       "id": "seollal",
       "kind": "visit",
       "date": "2026-02-17",
-      "lat": 37.1995,
-      "lon": 126.8311,
+      "lat": 37.198,
+      "lon": 127.067,
       "title": {
         "ko": "함께 맞은 설날",
         "en": "Our first Seollal together",
         "de": "Unser erstes Seollal zusammen"
       },
       "body": {
-        "ko": "화성에서 함께 맞은 첫 한국 설날. 이틀 뒤 동탄에서 안드레아의 생일도 함께 축하했습니다.",
-        "en": "Our first Korean Lunar New Year together in Hwaseong. Two days later, we celebrated Andrea's birthday in Dongtan.",
-        "de": "Unser erstes koreanisches Neujahr (Seollal) gemeinsam in Hwaseong. Zwei Tage später feierten wir Andreas Geburtstag in Dongtan."
+        "ko": "동탄에서 함께 맞은 첫 한국 설날. 이틀 뒤 안드레아의 생일도 함께 축하했습니다.",
+        "en": "Our first Korean Lunar New Year together in Dongtan. Two days later, we also celebrated Andrea's birthday.",
+        "de": "Unser erstes koreanisches Neujahr (Seollal) gemeinsam in Dongtan. Zwei Tage später feierten wir auch Andreas Geburtstag."
       },
       "photos": [
         { "src": "/journey/seollal-5.jpg", "width": 1600, "height": 1200, "alt": "Seoul" },
-        { "src": "/journey/seollal-1.jpg", "width": 1600, "height": 1200, "alt": "Hwaseong" },
+        { "src": "/journey/seollal-1.jpg", "width": 1600, "height": 1200, "alt": "Dongtan" },
         { "src": "/journey/seollal-3.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/seollal-4.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/seollal-2.jpg", "width": 1600, "height": 1200, "alt": "Dongtan" }
