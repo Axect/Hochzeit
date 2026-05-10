@@ -19,10 +19,27 @@ const eyebrow =
 ---
 
 <section
-  class="relative isolate flex min-h-[100svh] flex-col items-center justify-end overflow-hidden bg-[oklch(0.10_0.02_150)] pb-16 pt-24 text-white"
+  class="relative isolate grid min-h-[100svh] grid-rows-[auto_1fr_auto] overflow-hidden bg-[oklch(0.08_0.02_150)] text-white"
   aria-label={`${groomName} ${sep} ${brideName}`}
 >
-  <div aria-hidden="true" class="absolute inset-0 -z-10">
+  <span aria-hidden="true" class="film-perf pointer-events-none absolute inset-y-0 left-0 z-20 w-3 sm:w-4"></span>
+  <span aria-hidden="true" class="film-perf pointer-events-none absolute inset-y-0 right-0 z-20 w-3 sm:w-4"></span>
+
+  <header class="relative z-10 flex flex-col items-center gap-3 px-8 pb-6 pt-20 text-center sm:gap-4 sm:pt-24">
+    <p class="text-[0.7rem] uppercase tracking-[var(--tracking-wedding)] text-white/70 sm:text-xs">
+      {eyebrow}
+    </p>
+    <h1 class="font-serif leading-[1.05] text-[clamp(1.75rem,7.5vw,3.25rem)]">
+      <span class="block">{groomName}</span>
+      <span
+        class="my-1 block text-2xl text-[oklch(0.86_0.13_80)] sm:text-3xl"
+        aria-hidden="true">{sep}</span
+      >
+      <span class="block">{brideName}</span>
+    </h1>
+  </header>
+
+  <div class="relative overflow-hidden">
     <img
       src={withBase('/main/cover-poster.jpg')}
       alt=""
@@ -31,43 +48,52 @@ const eyebrow =
       fetchpriority="high"
     />
     <div
-      class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-black/80"
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-[oklch(0.08_0.02_150)] to-transparent"
+    >
+    </div>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[oklch(0.08_0.02_150)] to-transparent"
     >
     </div>
   </div>
 
-  <div
-    class="relative flex flex-1 flex-col items-center justify-center gap-8 px-6 text-center"
-  >
-    <p class="text-xs uppercase tracking-[var(--tracking-wedding)] text-white/70">
-      {eyebrow}
-    </p>
-
-    <h1 class="font-serif text-[clamp(2rem,9vw,4rem)] leading-tight drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)]">
-      <span class="block">{groomName}</span>
-      <span
-        class="my-2 block text-3xl text-[oklch(0.86_0.13_80)]"
-        aria-hidden="true">{sep}</span
-      >
-      <span class="block">{brideName}</span>
-    </h1>
-
-    <div class="space-y-1 text-sm text-white/85 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] sm:text-base">
+  <footer class="relative z-10 flex flex-col items-center gap-4 px-8 pb-10 pt-6 text-center sm:pb-12">
+    <div class="space-y-1 text-sm text-white/85 sm:text-base">
       <p>{dateLine}</p>
       <p>{timeLine}</p>
       <p class="pt-2">{venueLine}</p>
     </div>
-  </div>
-
-  <a
-    href="#greeting"
-    class="group relative flex flex-col items-center gap-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-white/65"
-  >
-    {scrollHint}
-    <span
-      aria-hidden="true"
-      class="h-10 w-px bg-gradient-to-b from-white/65 to-transparent transition-transform group-hover:translate-y-1"
+    <a
+      href="#greeting"
+      class="group mt-2 flex flex-col items-center gap-2 text-[0.7rem] uppercase tracking-[var(--tracking-wedding)] text-white/65 sm:text-xs"
     >
-    </span>
-  </a>
+      {scrollHint}
+      <span
+        aria-hidden="true"
+        class="h-8 w-px bg-gradient-to-b from-white/65 to-transparent transition-transform group-hover:translate-y-1"
+      >
+      </span>
+    </a>
+  </footer>
 </section>
+
+<style>
+  .film-perf {
+    background-image: radial-gradient(
+      ellipse 3px 5px at center,
+      oklch(0.96 0.012 95) 0,
+      oklch(0.96 0.012 95) 60%,
+      transparent 62%
+    );
+    background-size: 100% 20px;
+    background-repeat: repeat-y;
+    background-position: center;
+  }
+  @media (min-width: 480px) {
+    .film-perf {
+      background-size: 100% 24px;
+    }
+  }
+</style>
