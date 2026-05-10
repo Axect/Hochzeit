@@ -7,7 +7,7 @@ import Journey from '@components/Journey.astro';
 import WeddingPhoto from '@components/WeddingPhoto.astro';
 import SecretLetter from '@components/SecretLetter.astro';
 import Directions from '@components/Directions.astro';
-import Accounts from '@components/Accounts.astro';
+// import Accounts from '@components/Accounts.astro'; // hidden — restore with the JSX below
 import Rsvp from '@components/Rsvp.astro';
 import Guestbook from '@components/Guestbook.astro';
 import ShareButtons from '@components/ShareButtons.astro';
@@ -28,7 +28,7 @@ const { locale } = Astro.props;
 <Journey locale={locale} />
 <WeddingPhoto locale={locale} />
 <Directions locale={locale} />
-<Accounts locale={locale} />
+{/* <Accounts locale={locale} /> — temporarily hidden, restore by uncommenting */}
 <Rsvp locale={locale} />
 <Guestbook locale={locale} />
 <ShareButtons locale={locale} />
