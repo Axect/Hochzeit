@@ -37,21 +37,27 @@ const kakaoRoughmap = (venue as { kakaoRoughmap?: { timestamp: string; key: stri
 const googleEmbedSrc =
   (venue as { googleEmbed?: string }).googleEmbed ??
   `https://maps.google.com/maps?q=${lat},${lon}&hl=${locale === 'de' ? 'de' : 'en'}&z=16&output=embed`;
+
+// Kakao's roughmap loader injects `roughmapLander.js` via document.write and
+// bundles its own React. Run inline on the main page, that synchronous inject
+// runs *during* our React islands' hydration and nulls React's dispatcher,
+// crashing the JourneyMap island (React #423). We isolate the whole embed in an
+// iframe (srcdoc) so Kakao's document.write + React stay in their own document
+// and can never touch the parent page's React.
+const kakaoSrcdoc = kakaoRoughmap
+  ? `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}.root_daum_roughmap{width:100%!important;margin:0!important}.root_daum_roughmap .wrap_map{width:100%!important}</style></head><body><div id="daumRoughmapContainer${kakaoRoughmap.timestamp}" class="root_daum_roughmap root_daum_roughmap_landing"></div><script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"><\/script><script charset="UTF-8">(function(){var w=Math.max(280,Math.min(640,window.innerWidth||360));var h=Math.round((w*9)/16);new daum.roughmap.Lander({timestamp:"${kakaoRoughmap.timestamp}",key:"${kakaoRoughmap.key}",mapWidth:String(w),mapHeight:String(h)}).render();})();<\/script></body></html>`
+  : '';
 ---
 
 <Section id="directions" title={title}>
   {
     useKakaoEmbed && kakaoRoughmap ? (
-      <div class="kakao-roughmap-wrap w-full overflow-hidden rounded-md border border-[var(--color-line)]">
-        <div
-          id={`daumRoughmapContainer${kakaoRoughmap.timestamp}`}
-          class="root_daum_roughmap root_daum_roughmap_landing mx-auto"
-        >
-          <noscript>
-            <p class="p-4 text-sm text-[var(--color-muted)]">{t('directions.fallbackNote', locale)}</p>
-          </noscript>
-        </div>
-      </div>
+      <iframe
+        title={`${venueName} on KakaoMap`}
+        srcdoc={kakaoSrcdoc}
+        loading="lazy"
+        class="aspect-[16/9] w-full overflow-hidden rounded-md border border-[var(--color-line)] bg-[var(--color-accent-soft)]"
+      />
     ) : (
       <iframe
         title={`${venueName} on Google Maps`}
@@ -242,47 +248,3 @@ const googleEmbedSrc =
     }
   </ul>
 </Section>
-
-{
-  /*
-   * Kakao "지도 퍼가기" (roughmap) embed scripts. The loader script defines
-   * `daum.roughmap.Lander` synchronously; the inline script then renders.
-   * We size the map dynamically so it never overflows narrow phone screens.
-   */
-  useKakaoEmbed && kakaoRoughmap && (
-    <>
-      <script
-        is:inline
-        charset="UTF-8"
-        class="daum_roughmap_loader_script"
-        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
-      />
-      <script
-        is:inline
-        charset="UTF-8"
-        define:vars={{ ts: kakaoRoughmap.timestamp, key: kakaoRoughmap.key }}
-      >
-        (function () {
-          var maxW = 640;
-          var available = document.documentElement.clientWidth - 48;
-          var w = Math.max(280, Math.min(maxW, available));
-          var h = Math.round((w * 9) / 16);
-          new daum.roughmap.Lander({
-            timestamp: ts,
-            key: key,
-            mapWidth: String(w),
-            mapHeight: String(h),
-          }).render();
-        })();
-      </script>
-    </>
-  )
-}
-
-<style is:global>
-  /* Make Kakao's fixed-size embed fit our mobile-first card cleanly. */
-  .kakao-roughmap-wrap .root_daum_roughmap {
-    margin: 0 auto;
-    max-width: 100%;
-  }
-</style>
