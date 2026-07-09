@@ -1,0 +1,135 @@
+{"kind":"deck","id":"pr/dovdmf","name":"Deck"}
+{"kind":"layout","layoutId":"d2166d28-57c6-46ce-8c70-c84533b6e750","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"3dfc3824-363c-43d5-9e8e-12a2c94d81d2","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/0dlqsr","slide":1,"title":"MOBILE WEDDING INVITATION","textShapes":4}
+{"kind":"shape","id":"sh/zed8v6ps","slide":1,"bbox":[620,0,660,720]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":1,"text":"MOBILE WEDDING INVITATION","textPreview":"MOBILE WEDDING INVITATION","textChars":25,"textLines":1,"bbox":[72,78,300,24]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":1,"text":"Schönere Fotoeinbindung für eure digitale Einladung","textPreview":"Schönere Fotoeinbindung für eure digitale Einladung","textChars":51,"textLines":1,"bbox":[72,130,610,178]}
+{"kind":"textbox","id":"sh/obm58z25","slide":1,"text":"Fünf Designrichtungen, die das Originalfoto ruhiger, hochwertiger und besser lesbar einsetzen - mit der bestehenden grünen Farbwelt.","textPreview":"Fünf Designrichtungen, die das Originalfoto ruhiger, hochwertiger und besser lesbar einsetzen - mit der bestehenden grünen Farbwelt.","textChars":132,"textLines":1,"bbox":[76,330,525,100]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":1,"bbox":[76,470,190,1.5]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":1,"text":"Tae-Geun Kim & Andrea Karin Morgen","textPreview":"Tae-Geun Kim & Andrea Karin Morgen","textChars":34,"textLines":1,"bbox":[76,494,430,42]}
+{"kind":"image","id":"im/loj2t83i","slide":1,"name":"","geometry":"rect","alt":"Portrait photo of the couple by a lake","bbox":[690,0,590,720]}
+{"kind":"notes","id":"nt/0dlqsr","slide":1,"text":""}
+{"kind":"slide","id":"sl/oi5ft8","slide":2,"title":"Das Foto braucht mehr Ruhe und eine klarere Bühne","textShapes":7}
+{"kind":"textbox","id":"sh/v6psfil0","slide":2,"text":"Das Foto braucht mehr Ruhe und eine klarere Bühne","textPreview":"Das Foto braucht mehr Ruhe und eine klarere Bühne","textChars":49,"textLines":1,"bbox":[72,54,710,90]}
+{"kind":"textbox","id":"sh/knih4byh","slide":2,"text":"Im aktuellen Entwurf liegt der Textblock schwer über den Gesichtern. Die Farbe funktioniert sehr gut, aber Foto und Einladung kämpfen um Aufmerksamkeit.","textPreview":"Im aktuellen Entwurf liegt der Textblock schwer über den Gesichtern. Die Farbe funktioniert sehr gut, aber Foto und Einladung kämpfen um ...","textChars":152,"textLines":1,"bbox":[72,145,650,70]}
+{"kind":"shape","id":"sh/d8bat47y","slide":2,"bbox":[809,37,252,626]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":2,"bbox":[820,48,230,604]}
+{"kind":"shape","id":"sh/vu9knih4","slide":2,"bbox":[893,59,84,15]}
+{"kind":"textbox","id":"sh/d0z61032","slide":2,"text":"GESTALTUNGSPRINZIP","textPreview":"GESTALTUNGSPRINZIP","textChars":18,"textLines":1,"bbox":[72,270,260,24]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":2,"text":"Gesichter nicht mit großen Textflächen überdecken.","textPreview":"Gesichter nicht mit großen Textflächen überdecken.","textChars":50,"textLines":1,"bbox":[72,314,555,44]}
+{"kind":"textbox","id":"sh/vixczed8","slide":2,"text":"Das Foto entweder groß und weich inszenieren oder bewusst rahmen.","textPreview":"Das Foto entweder groß und weich inszenieren oder bewusst rahmen.","textChars":65,"textLines":1,"bbox":[72,370,610,44]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":2,"text":"Die wichtigen Daten auf ruhigen Farbflächen platzieren.","textPreview":"Die wichtigen Daten auf ruhigen Farbflächen platzieren.","textChars":55,"textLines":1,"bbox":[72,426,560,44]}
+{"kind":"textbox","id":"sh/61032lsz","slide":2,"text":"Creme und Gold als kleine Akzente nutzen, damit Grün elegant bleibt.","textPreview":"Creme und Gold als kleine Akzente nutzen, damit Grün elegant bleibt.","textChars":68,"textLines":1,"bbox":[72,482,585,44]}
+{"kind":"image","id":"im/1032lszq","slide":2,"name":"","geometry":"roundRect","alt":"Current mobile invitation screenshot","bbox":[830,68,210,564]}
+{"kind":"notes","id":"nt/oi5ft8","slide":2,"text":""}
+{"kind":"slide","id":"sl/tldoi0","slide":3,"title":"OPTION 1","textShapes":10}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":3,"text":"OPTION 1","textPreview":"OPTION 1","textChars":8,"textLines":1,"bbox":[72,54,260,24]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":3,"text":"Full-bleed Foto mit weichem grünen Verlauf","textPreview":"Full-bleed Foto mit weichem grünen Verlauf","textChars":42,"textLines":1,"bbox":[72,86,440,84]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":3,"text":"Das Foto wird emotionaler, weil es die ganze Einladung trägt. Der Text sitzt unten auf einer ruhigen grünen Zone.","textPreview":"Das Foto wird emotionaler, weil es die ganze Einladung trägt. Der Text sitzt unten auf einer ruhigen grünen Zone.","textChars":113,"textLines":1,"bbox":[72,176,440,58]}
+{"kind":"shape","id":"sh/fa9w3m94","slide":3,"bbox":[749,39,322,626]}
+{"kind":"shape","id":"sh/qpg3ex0n","slide":3,"bbox":[760,50,300,604]}
+{"kind":"shape","id":"sh/xczed8v6","slide":3,"bbox":[868,61,84,15]}
+{"kind":"shape","id":"sh/je9cvixc","slide":3,"bbox":[760,362,300,292]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":3,"text":"WIR HEIRATEN","textPreview":"WIR HEIRATEN","textChars":12,"textLines":1,"bbox":[794,388,232,25]}
+{"kind":"textbox","id":"sh/svu9knih","slide":3,"text":"Tae-Geun\n&\nAndrea","textPreview":"Tae-Geun | & | Andrea","textChars":17,"textLines":3,"bbox":[794,424,232,118]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":3,"bbox":[843,562,132,1.5]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":3,"text":"Samstag, 17. Oktober 2026\n17:30 Uhr\nVenuevinia - 3. Etage, Saphirsaal","textPreview":"Samstag, 17. Oktober 2026 | 17:30 Uhr | Venuevinia - 3. Etage, Saphirsaal","textChars":69,"textLines":3,"bbox":[790,582,240,62]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":3,"text":"WARUM ES FUNKTIONIERT","textPreview":"WARUM ES FUNKTIONIERT","textChars":21,"textLines":1,"bbox":[72,282,260,24]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":3,"text":"Das Bild fühlt sich nicht ausgeschnitten an.","textPreview":"Das Bild fühlt sich nicht ausgeschnitten an.","textChars":44,"textLines":1,"bbox":[72,326,545,44]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":3,"text":"Die Gesichter bleiben frei, der Blick bleibt beim Paar.","textPreview":"Die Gesichter bleiben frei, der Blick bleibt beim Paar.","textChars":55,"textLines":1,"bbox":[72,382,560,44]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":3,"text":"Der grüne Verlauf verbindet Foto und Papierfarbwelt.","textPreview":"Der grüne Verlauf verbindet Foto und Papierfarbwelt.","textChars":52,"textLines":1,"bbox":[72,438,560,44]}
+{"kind":"image","id":"im/xobm58z2","slide":3,"name":"","geometry":"roundRect","alt":"Portrait photo of the couple by a lake","bbox":[760,50,300,604]}
+{"kind":"notes","id":"nt/tldoi0","slide":3,"text":""}
+{"kind":"slide","id":"sl/p62jne","slide":4,"title":"OPTION 2","textShapes":10}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":4,"text":"OPTION 2","textPreview":"OPTION 2","textChars":8,"textLines":1,"bbox":[72,54,260,24]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":4,"text":"Editorialer Ausschnitt mit großem Namensfeld","textPreview":"Editorialer Ausschnitt mit großem Namensfeld","textChars":44,"textLines":1,"bbox":[72,86,440,84]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":4,"text":"Das Foto wird bewusst wie ein Magazin-Cover gecroppt. Der Einladungstext bekommt eine elegante, klare Fläche.","textPreview":"Das Foto wird bewusst wie ein Magazin-Cover gecroppt. Der Einladungstext bekommt eine elegante, klare Fläche.","textChars":109,"textLines":1,"bbox":[72,176,440,58]}
+{"kind":"shape","id":"sh/65wjudg7","slide":4,"bbox":[749,39,322,626]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":4,"bbox":[760,50,300,604]}
+{"kind":"shape","id":"sh/obm58z25","slide":4,"bbox":[868,61,84,15]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":4,"bbox":[782,410,256,190]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":4,"text":"WIR HEIRATEN","textPreview":"WIR HEIRATEN","textChars":12,"textLines":1,"bbox":[804,435,212,20]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":4,"text":"Tae-Geun Kim\nund\nAndrea Karin Morgen","textPreview":"Tae-Geun Kim | und | Andrea Karin Morgen","textChars":36,"textLines":3,"bbox":[796,466,228,82]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":4,"bbox":[842,562,134,1.5]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":4,"text":"17. Oktober 2026","textPreview":"17. Oktober 2026","textChars":16,"textLines":1,"bbox":[800,578,220,20]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":4,"bbox":[810,70,70,2]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":4,"text":"WARUM ES FUNKTIONIERT","textPreview":"WARUM ES FUNKTIONIERT","textChars":21,"textLines":1,"bbox":[72,282,260,24]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":4,"text":"Die Fotoecke wirkt absichtlich gestaltet statt zufällig hinterlegt.","textPreview":"Die Fotoecke wirkt absichtlich gestaltet statt zufällig hinterlegt.","textChars":67,"textLines":1,"bbox":[72,326,585,44]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":4,"text":"Die Namen bekommen einen hochwertigen Auftritt.","textPreview":"Die Namen bekommen einen hochwertigen Auftritt.","textChars":47,"textLines":1,"bbox":[72,382,560,44]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":4,"text":"Besonders gut, wenn die Einladung eher klassisch wirken soll.","textPreview":"Besonders gut, wenn die Einladung eher klassisch wirken soll.","textChars":61,"textLines":1,"bbox":[72,438,570,44]}
+{"kind":"image","id":"im/oj2t83it","slide":4,"name":"","geometry":"roundRect","alt":"Portrait photo of the couple by a lake","bbox":[790,88,240,315]}
+{"kind":"notes","id":"nt/p62jne","slide":4,"text":""}
+{"kind":"slide","id":"sl/akezdv","slide":5,"title":"OPTION 3","textShapes":10}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":5,"text":"OPTION 3","textPreview":"OPTION 3","textChars":8,"textLines":1,"bbox":[72,54,260,24]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":5,"text":"Foto als ruhiger Header, Einladung darunter","textPreview":"Foto als ruhiger Header, Einladung darunter","textChars":43,"textLines":1,"bbox":[72,86,440,84]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":5,"text":"Die obere Bildfläche zeigt den Moment, darunter bleibt alles gut lesbar. Das wirkt mobile-nativ und sehr aufgeräumt.","textPreview":"Die obere Bildfläche zeigt den Moment, darunter bleibt alles gut lesbar. Das wirkt mobile-nativ und sehr aufgeräumt.","textChars":116,"textLines":1,"bbox":[72,176,440,58]}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":5,"bbox":[749,39,322,626]}
+{"kind":"shape","id":"sh/psfil0rq","slide":5,"bbox":[760,50,300,604]}
+{"kind":"shape","id":"sh/e1w7mp0b","slide":5,"bbox":[868,61,84,15]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":5,"bbox":[760,255,300,55]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":5,"text":"WIR HEIRATEN","textPreview":"WIR HEIRATEN","textChars":12,"textLines":1,"bbox":[802,338,216,22]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":5,"text":"Tae-Geun Kim\n&\nAndrea Karin Morgen","textPreview":"Tae-Geun Kim | & | Andrea Karin Morgen","textChars":34,"textLines":3,"bbox":[788,380,244,112]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":5,"bbox":[842,510,136,1.5]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":5,"text":"Samstag, 17. Oktober 2026\n17:30 Uhr\nVenuevinia - 3. Etage","textPreview":"Samstag, 17. Oktober 2026 | 17:30 Uhr | Venuevinia - 3. Etage","textChars":57,"textLines":3,"bbox":[794,536,232,64]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":5,"text":"WARUM ES FUNKTIONIERT","textPreview":"WARUM ES FUNKTIONIERT","textChars":21,"textLines":1,"bbox":[72,282,260,24]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":5,"text":"Das Paar ist sofort sichtbar, aber die Typografie bleibt ungestört.","textPreview":"Das Paar ist sofort sichtbar, aber die Typografie bleibt ungestört.","textChars":67,"textLines":1,"bbox":[72,326,585,44]}
+{"kind":"textbox","id":"sh/obm58z25","slide":5,"text":"Die Struktur ist sehr leicht in eurer Website umzusetzen.","textPreview":"Die Struktur ist sehr leicht in eurer Website umzusetzen.","textChars":57,"textLines":1,"bbox":[72,382,560,44]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":5,"text":"Ideal, wenn später weitere Abschnitte nach unten folgen.","textPreview":"Ideal, wenn später weitere Abschnitte nach unten folgen.","textChars":56,"textLines":1,"bbox":[72,438,560,44]}
+{"kind":"image","id":"im/2lszqtcj","slide":5,"name":"","geometry":"roundRect","alt":"Portrait photo of the couple by a lake","bbox":[760,50,300,260]}
+{"kind":"notes","id":"nt/akezdv","slide":5,"text":""}
+{"kind":"slide","id":"sl/u6p0o7","slide":6,"title":"OPTION 4","textShapes":11}
+{"kind":"textbox","id":"sh/d8bat47y","slide":6,"text":"OPTION 4","textPreview":"OPTION 4","textChars":8,"textLines":1,"bbox":[72,54,260,24]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":6,"text":"Geteilte Einladung mit Foto-Medaillon","textPreview":"Geteilte Einladung mit Foto-Medaillon","textChars":37,"textLines":1,"bbox":[72,86,440,84]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":6,"text":"Das Foto wird kleiner, aber edler: als runder Fokus über einer klassischen Einladungskarte.","textPreview":"Das Foto wird kleiner, aber edler: als runder Fokus über einer klassischen Einladungskarte.","textChars":91,"textLines":1,"bbox":[72,176,440,58]}
+{"kind":"shape","id":"sh/kf6dcbul","slide":6,"bbox":[749,39,322,626]}
+{"kind":"shape","id":"sh/d0z61032","slide":6,"bbox":[760,50,300,604]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":6,"bbox":[868,61,84,15]}
+{"kind":"shape","id":"sh/vu9knih4","slide":6,"bbox":[830,86,160,160]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":6,"text":"WIR HEIRATEN","textPreview":"WIR HEIRATEN","textChars":12,"textLines":1,"bbox":[796,278,230,22]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":6,"text":"Tae-Geun Kim\n&\nAndrea Karin Morgen","textPreview":"Tae-Geun Kim | & | Andrea Karin Morgen","textChars":34,"textLines":3,"bbox":[780,315,262,112]}
+{"kind":"shape","id":"sh/0fepkzup","slide":6,"bbox":[842,454,136,1.5]}
+{"kind":"textbox","id":"sh/bulwval8","slide":6,"text":"Samstag, 17. Oktober 2026\n17:30 Uhr\nVenuevinia - 3. Etage, Saphirsaal","textPreview":"Samstag, 17. Oktober 2026 | 17:30 Uhr | Venuevinia - 3. Etage, Saphirsaal","textChars":69,"textLines":3,"bbox":[792,478,236,70]}
+{"kind":"shape","id":"sh/i9s36hcr","slide":6,"bbox":[818,574,184,34]}
+{"kind":"textbox","id":"sh/tovahoza","slide":6,"text":"NACH UNTEN SCROLLEN","textPreview":"NACH UNTEN SCROLLEN","textChars":19,"textLines":1,"bbox":[828,584,164,15]}
+{"kind":"textbox","id":"sh/032lszqt","slide":6,"text":"WARUM ES FUNKTIONIERT","textPreview":"WARUM ES FUNKTIONIERT","textChars":21,"textLines":1,"bbox":[72,282,260,24]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":6,"text":"Sehr nah an einer gedruckten Einladung.","textPreview":"Sehr nah an einer gedruckten Einladung.","textChars":39,"textLines":1,"bbox":[72,326,560,44]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":6,"text":"Das Bild ist präsent, ohne die Seite zu dominieren.","textPreview":"Das Bild ist präsent, ohne die Seite zu dominieren.","textChars":51,"textLines":1,"bbox":[72,382,560,44]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":6,"text":"Gut, wenn ihr eine formelle, ruhige Ästhetik möchtet.","textPreview":"Gut, wenn ihr eine formelle, ruhige Ästhetik möchtet.","textChars":53,"textLines":1,"bbox":[72,438,560,44]}
+{"kind":"image","id":"im/1w7mp0bi","slide":6,"name":"","geometry":"ellipse","alt":"Portrait photo of the couple by a lake","bbox":[838,94,144,144]}
+{"kind":"notes","id":"nt/u6p0o7","slide":6,"text":""}
+{"kind":"slide","id":"sl/3tmlju","slide":7,"title":"OPTION 5","textShapes":11}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":7,"text":"OPTION 5","textPreview":"OPTION 5","textChars":8,"textLines":1,"bbox":[72,54,260,24]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":7,"text":"Gerahmtes Foto mit Namensbühne","textPreview":"Gerahmtes Foto mit Namensbühne","textChars":30,"textLines":1,"bbox":[72,86,440,84]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":7,"text":"Das Foto bleibt ganz sichtbar, aber die Typografie bekommt durch einen halbtransparenten Layer mehr Tiefe.","textPreview":"Das Foto bleibt ganz sichtbar, aber die Typografie bekommt durch einen halbtransparenten Layer mehr Tiefe.","textChars":106,"textLines":1,"bbox":[72,176,440,58]}
+{"kind":"shape","id":"sh/ed8bat47","slide":7,"bbox":[749,39,322,626]}
+{"kind":"shape","id":"sh/7u54zido","slide":7,"bbox":[760,50,300,604]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":7,"bbox":[868,61,84,15]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":7,"bbox":[782,82,256,386]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":7,"bbox":[794,296,232,160]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":7,"text":"Tae-Geun\n&\nAndrea","textPreview":"Tae-Geun | & | Andrea","textChars":17,"textLines":3,"bbox":[812,326,196,82]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":7,"text":"17. Oktober 2026","textPreview":"17. Oktober 2026","textChars":16,"textLines":1,"bbox":[815,416,190,18]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":7,"text":"WIR HEIRATEN","textPreview":"WIR HEIRATEN","textChars":12,"textLines":1,"bbox":[800,508,220,18]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":7,"text":"17:30 Uhr\nVenuevinia - Saphirsaal","textPreview":"17:30 Uhr | Venuevinia - Saphirsaal","textChars":33,"textLines":2,"bbox":[790,538,240,44]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":7,"text":"WARUM ES FUNKTIONIERT","textPreview":"WARUM ES FUNKTIONIERT","textChars":21,"textLines":1,"bbox":[72,282,260,24]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":7,"text":"Der Rahmen macht das Foto bewusster und festlicher.","textPreview":"Der Rahmen macht das Foto bewusster und festlicher.","textChars":51,"textLines":1,"bbox":[72,326,560,44]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":7,"text":"Die Namen liegen über weniger unruhigen Bildstellen.","textPreview":"Die Namen liegen über weniger unruhigen Bildstellen.","textChars":52,"textLines":1,"bbox":[72,382,560,44]}
+{"kind":"textbox","id":"sh/obm58z25","slide":7,"text":"Ein guter Kompromiss zwischen Foto-Statement und Lesbarkeit.","textPreview":"Ein guter Kompromiss zwischen Foto-Statement und Lesbarkeit.","textChars":60,"textLines":1,"bbox":[72,438,580,44]}
+{"kind":"image","id":"im/zidonyd0","slide":7,"name":"","geometry":"roundRect","alt":"Portrait photo of the couple by a lake","bbox":[794,94,232,362]}
+{"kind":"notes","id":"nt/3tmlju","slide":7,"text":""}
+{"kind":"slide","id":"sl/wbiddt","slide":8,"title":"EMPFEHLUNG","textShapes":8}
+{"kind":"textbox","id":"sh/udg7adsj","slide":8,"text":"EMPFEHLUNG","textPreview":"EMPFEHLUNG","textChars":10,"textLines":1,"bbox":[72,72,260,24]}
+{"kind":"textbox","id":"sh/54zidony","slide":8,"text":"Am stärksten wirken Option 1 oder Option 3","textPreview":"Am stärksten wirken Option 1 oder Option 3","textChars":42,"textLines":1,"bbox":[72,120,740,110]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":8,"text":"Option 1 fühlt sich emotional und modern an. Option 3 ist die sauberste mobile Lösung, weil Foto, Namen und Details jeweils eigene Zonen bekommen.","textPreview":"Option 1 fühlt sich emotional und modern an. Option 3 ist die sauberste mobile Lösung, weil Foto, Namen und Details jeweils eigene Zonen ...","textChars":146,"textLines":1,"bbox":[72,252,720,80]}
+{"kind":"shape","id":"sh/nap4r65w","slide":8,"bbox":[72,370,210,1.5]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":8,"text":"Für die finale Einladung: Bild oben oder vollflächig, Text nie direkt über den Gesichtern.","textPreview":"Für die finale Einladung: Bild oben oder vollflächig, Text nie direkt über den Gesichtern.","textChars":90,"textLines":1,"bbox":[72,414,720,44]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":8,"text":"Grün als Hauptfläche behalten, Creme für Lesbarkeit, Gold nur als feiner Akzent.","textPreview":"Grün als Hauptfläche behalten, Creme für Lesbarkeit, Gold nur als feiner Akzent.","textChars":80,"textLines":1,"bbox":[72,470,720,44]}
+{"kind":"textbox","id":"sh/cvixczed","slide":8,"text":"Beim Umsetzen zuerst den Mobile-Screen designen, danach Desktop ableiten.","textPreview":"Beim Umsetzen zuerst den Mobile-Screen designen, danach Desktop ableiten.","textChars":73,"textLines":1,"bbox":[72,526,720,44]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":8,"bbox":[893,53,252,522]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":8,"bbox":[904,64,230,500]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":8,"bbox":[977,75,84,15]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":8,"text":"Tae-Geun\n&\nAndrea","textPreview":"Tae-Geun | & | Andrea","textChars":17,"textLines":3,"bbox":[924,318,190,80]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":8,"bbox":[952,420,134,1.5]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":8,"text":"17. Oktober 2026","textPreview":"17. Oktober 2026","textChars":16,"textLines":1,"bbox":[930,446,178,20]}
+{"kind":"image","id":"im/ex0nuxc3","slide":8,"name":"","geometry":"roundRect","alt":"Portrait photo of the couple by a lake","bbox":[904,64,230,214]}
+{"kind":"notes","id":"nt/wbiddt","slide":8,"text":""}

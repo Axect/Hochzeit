@@ -1,6 +1,6 @@
 ---
 import journey from '@data/journey.json';
-import { t, tField, formatDate, fmt, type Locale } from '@lib/i18n';
+import { t, tField, formatDate, fmt, withBase, type Locale } from '@lib/i18n';
 import JourneyMap from '@components/JourneyMap.tsx';
 
 interface Props {
@@ -59,12 +59,37 @@ const labels = {
     wedding: t('journey.kindLabel.wedding', locale),
   },
 };
+const backgroundImage = withBase('/journey/first-letter-bg.png');
 ---
 
 <section
   id="journey"
   aria-label={title}
-  class="relative flex min-h-[100svh] w-full flex-col bg-[oklch(0.30_0.06_150)] text-white"
+  class="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-[oklch(0.30_0.06_150)] text-white"
 >
-  <JourneyMap client:visible events={events} labels={labels} title={title} intro={intro} />
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -inset-10 bg-cover bg-center bg-no-repeat opacity-90 blur-xl saturate-110"
+    style={`background-image: url('${backgroundImage}');`}
+  >
+  </div>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 bg-contain bg-center bg-no-repeat opacity-90 md:bg-cover md:opacity-100"
+    style={`background-image: url('${backgroundImage}');`}
+  >
+  </div>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 bg-[oklch(0.12_0.04_150)]/58 backdrop-blur-[1px]"
+  >
+  </div>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[oklch(0.12_0.04_150)]/50 via-transparent to-[oklch(0.29_0.055_150)]/95"
+  >
+  </div>
+  <div class="relative z-10">
+    <JourneyMap client:visible events={events} labels={labels} title={title} intro={intro} />
+  </div>
 </section>

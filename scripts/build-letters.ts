@@ -184,6 +184,10 @@ if (existsSync(CODES_PATH)) {
     );
     process.exit(1);
   }
+  if (existsSync(OUT_PATH)) {
+    console.log('• No private letter file — keeping existing encrypted store (dev mode).');
+    process.exit(0);
+  }
   writeStore(empty);
   console.log('• No private letter file — wrote empty encrypted store (dev mode).');
   process.exit(0);

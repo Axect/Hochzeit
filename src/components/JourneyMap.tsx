@@ -243,14 +243,16 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
   // ============ Preview (always-visible, one viewport) ============
   const Preview = (
     <div className="relative flex min-h-[100svh] w-full flex-col items-center justify-center px-6 py-20 text-center">
-      <p className="mb-3 text-[11px] uppercase tracking-[0.32em] text-white/55">
+      <p className="mb-3 text-[11px] uppercase tracking-[0.32em] text-white/85">
         {labels.kindLabel.letter} · {labels.kindLabel.trip} · {labels.kindLabel.wedding}
       </p>
-      <h2 className="font-serif text-[clamp(2.25rem,8vw,4rem)] leading-[1.05] text-white">
+      <h2 className="font-serif text-[clamp(2.25rem,8vw,4rem)] leading-[1.05] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.55)]">
         {title}
       </h2>
-      <p className="mt-5 max-w-md text-base leading-relaxed text-white/75 sm:text-lg">{intro}</p>
-      <p className="mt-2 max-w-md text-sm text-white/45">{labels.hint}</p>
+      <p className="mt-5 max-w-md text-base leading-relaxed text-white/95 drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] sm:text-lg">
+        {intro}
+      </p>
+      <p className="mt-2 max-w-md text-sm text-white/75">{labels.hint}</p>
 
       {/* Static dot row hinting at the 12 moments */}
       <div className="mt-8 flex items-center gap-1.5" aria-hidden="true">
@@ -268,7 +270,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
           />
         ))}
       </div>
-      <p className="mt-3 text-xs text-white/45">{labels.momentCount}</p>
+      <p className="mt-3 text-xs text-white/70">{labels.momentCount}</p>
 
       <button
         type="button"

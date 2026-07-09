@@ -27,8 +27,9 @@ const lines = body.split('\n');
   </div>
 
   <dl class="mt-12 grid grid-cols-1 gap-6 text-sm sm:grid-cols-2">
-    <div class="rounded-lg border border-[var(--color-line)] bg-white/40 p-5 text-center">
-      <dt class="mb-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+    <div class="relative overflow-hidden rounded-lg border-2 border-[oklch(0.68_0.10_95)] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(255,255,255,0.56))] p-5 text-center shadow-[0_18px_45px_rgba(18,45,31,0.12)]">
+      <span aria-hidden="true" class="absolute inset-x-0 top-0 h-1 bg-[var(--color-accent)]"></span>
+      <dt class="mb-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-[oklch(0.42_0.07_95)]">
         {locale === 'ko' ? '신랑측' : locale === 'en' ? "Groom's family" : 'Familie des Bräutigams'}
       </dt>
       <dd class="space-y-0.5">
@@ -55,8 +56,9 @@ const lines = body.split('\n');
       </dd>
     </div>
 
-    <div class="rounded-lg border border-[var(--color-line)] bg-white/40 p-5 text-center">
-      <dt class="mb-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+    <div class="relative overflow-hidden rounded-lg border-2 border-[oklch(0.68_0.10_95)] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(255,255,255,0.56))] p-5 text-center shadow-[0_18px_45px_rgba(18,45,31,0.12)]">
+      <span aria-hidden="true" class="absolute inset-x-0 top-0 h-1 bg-[var(--color-accent)]"></span>
+      <dt class="mb-2 text-xs uppercase tracking-[var(--tracking-wedding)] text-[oklch(0.42_0.07_95)]">
         {locale === 'ko' ? '신부측' : locale === 'en' ? "Bride's family" : 'Familie der Braut'}
       </dt>
       <dd class="space-y-0.5">

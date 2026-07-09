@@ -1,0 +1,136 @@
+{"kind":"deck","id":"pr/gjya8e","name":"Deck"}
+{"kind":"layout","layoutId":"5a9fd228-c0fc-4180-9b44-8394ae6331d2","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"4efbf863-4341-4d4e-bcb8-63fc5b012cf7","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/215b54","slide":1,"title":"TAE-GEUN & ANDREA","textShapes":5}
+{"kind":"shape","id":"sh/zupwb2hw","slide":1,"bbox":[790,0,490,720]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":1,"bbox":[848,70,310,500]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":1,"bbox":[878,104,250,310]}
+{"kind":"textbox","id":"sh/z61032ls","slide":1,"text":"TAE-GEUN & ANDREA","textPreview":"TAE-GEUN & ANDREA","textChars":17,"textLines":1,"bbox":[850,452,306,32]}
+{"kind":"shape","id":"sh/orytsvu9","slide":1,"bbox":[930,506,150,1.2]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":1,"text":"NEUE RICHTUNG","textPreview":"NEUE RICHTUNG","textChars":13,"textLines":1,"bbox":[78,84,420,22]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":1,"text":"Mehr Einladungskarte, weniger Website-Overlay","textPreview":"Mehr Einladungskarte, weniger Website-Overlay","textChars":45,"textLines":1,"bbox":[78,132,660,122]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":1,"text":"Die neuen Beispiele nehmen die Referenzen ernster: rahmendes Foto, Papierflaeche, feine Linien, Tannengruen und deutlich weniger Text ueber dem Bild.","textPreview":"Die neuen Beispiele nehmen die Referenzen ernster: rahmendes Foto, Papierflaeche, feine Linien, Tannengruen und deutlich weniger Text ueb...","textChars":149,"textLines":1,"bbox":[82,292,560,96]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":1,"bbox":[82,440,180,1.2]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":1,"text":"Tae-Geun Kim & Andrea Karin Morgen","textPreview":"Tae-Geun Kim & Andrea Karin Morgen","textChars":34,"textLines":1,"bbox":[82,472,470,42]}
+{"kind":"image","id":"im/jm1cfa9w","slide":1,"name":"","geometry":"rect","alt":"Photo of Tae-Geun and Andrea","bbox":[894,120,218,236]}
+{"kind":"notes","id":"nt/215b54","slide":1,"text":""}
+{"kind":"slide","id":"sl/onvq8t","slide":2,"title":"VARIANTE 1","textShapes":9}
+{"kind":"textbox","id":"sh/ed8bat47","slide":2,"text":"VARIANTE 1","textPreview":"VARIANTE 1","textChars":10,"textLines":1,"bbox":[78,56,420,22]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":2,"text":"Kartenartige Save-the-Date Seite","textPreview":"Kartenartige Save-the-Date Seite","textChars":32,"textLines":1,"bbox":[78,90,430,88]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":2,"text":"Nahe an der ersten Referenz: ein grosses, hell gerahmtes Foto, Papierflaeche und kein Textblock ueber den Gesichtern.","textPreview":"Nahe an der ersten Referenz: ein grosses, hell gerahmtes Foto, Papierflaeche und kein Textblock ueber den Gesichtern.","textChars":117,"textLines":1,"bbox":[80,190,430,72]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":2,"bbox":[722,28,364,654]}
+{"kind":"shape","id":"sh/eloj2t83","slide":2,"bbox":[736,42,336,626]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":2,"bbox":[850,52,108,24]}
+{"kind":"shape","id":"sh/wra5gbq1","slide":2,"bbox":[762,70,284,534]}
+{"kind":"shape","id":"sh/7adsji5s","slide":2,"bbox":[790,104,228,1.2]}
+{"kind":"shape","id":"sh/epkzupwb","slide":2,"bbox":[790,626,228,1.2]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":2,"bbox":[782,162,244,308]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":2,"bbox":[796,178,216,238]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":2,"text":"SAVE\nTHE\nDATE","textPreview":"SAVE | THE | DATE","textChars":13,"textLines":3,"bbox":[794,198,72,80]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":2,"text":"TAE-GEUN & ANDREA","textPreview":"TAE-GEUN & ANDREA","textChars":17,"textLines":1,"bbox":[758,492,292,42]}
+{"kind":"shape","id":"sh/xczed8v6","slide":2,"bbox":[844,552,118,1.2]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":2,"text":"17  OCTOBER  2026","textPreview":"17  OCTOBER  2026","textChars":17,"textLines":1,"bbox":[788,574,238,24]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":2,"text":"VENUEVINIA","textPreview":"VENUEVINIA","textChars":10,"textLines":1,"bbox":[800,604,214,22]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":2,"bbox":[82,510,34,1]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":2,"text":"Wirkt wie eine digitale Version einer Papierkarte.","textPreview":"Wirkt wie eine digitale Version einer Papierkarte.","textChars":50,"textLines":1,"bbox":[130,498,365,44]}
+{"kind":"shape","id":"sh/loj2t83i","slide":2,"bbox":[82,568,34,1]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":2,"text":"Das Foto ist Hauptmotiv, aber die Daten bleiben klar lesbar.","textPreview":"Das Foto ist Hauptmotiv, aber die Daten bleiben klar lesbar.","textChars":60,"textLines":1,"bbox":[130,556,365,44]}
+{"kind":"image","id":"im/dcbulwva","slide":2,"name":"","geometry":"rect","alt":"Photo of Tae-Geun and Andrea","bbox":[802,184,204,226]}
+{"kind":"notes","id":"nt/onvq8t","slide":2,"text":""}
+{"kind":"slide","id":"sl/q0nwm7","slide":3,"title":"VARIANTE 2","textShapes":10}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"text":"VARIANTE 2","textPreview":"VARIANTE 2","textChars":10,"textLines":1,"bbox":[78,56,420,22]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":3,"text":"Tannengruene Hochzeitskarte","textPreview":"Tannengruene Hochzeitskarte","textChars":27,"textLines":1,"bbox":[78,90,430,88]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":3,"text":"Die zweite Referenz wird ruhiger interpretiert: Foto oben, weisse Karte unten, Namen gross und elegant.","textPreview":"Die zweite Referenz wird ruhiger interpretiert: Foto oben, weisse Karte unten, Namen gross und elegant.","textChars":103,"textLines":1,"bbox":[80,190,430,72]}
+{"kind":"shape","id":"sh/dsji5sne","slide":3,"bbox":[722,28,364,654]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":3,"bbox":[736,42,336,626]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":3,"bbox":[850,52,108,24]}
+{"kind":"shape","id":"sh/61032lsz","slide":3,"bbox":[762,72,284,556]}
+{"kind":"shape","id":"sh/ovahoza1","slide":3,"bbox":[744,238,320,118]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":3,"text":"Save the date","textPreview":"Save the date","textChars":13,"textLines":1,"bbox":[802,338,200,38]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":3,"text":"For the wedding of","textPreview":"For the wedding of","textChars":18,"textLines":1,"bbox":[800,392,204,22]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":3,"text":"Tae-Geun\n&\nAndrea","textPreview":"Tae-Geun | & | Andrea","textChars":17,"textLines":3,"bbox":[770,420,268,116]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":3,"bbox":[824,556,158,1.2]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":3,"text":"17.10.2026","textPreview":"17.10.2026","textChars":10,"textLines":1,"bbox":[808,578,190,30]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":3,"text":"17:30 UHR   SAPHIRSAAL","textPreview":"17:30 UHR   SAPHIRSAAL","textChars":22,"textLines":1,"bbox":[790,612,230,18]}
+{"kind":"shape","id":"sh/4r65wjud","slide":3,"bbox":[82,510,34,1]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":3,"text":"Am staerksten, wenn ihr eine klassische Einladung wollt.","textPreview":"Am staerksten, wenn ihr eine klassische Einladung wollt.","textChars":56,"textLines":1,"bbox":[130,498,365,44]}
+{"kind":"shape","id":"sh/m94fu18j","slide":3,"bbox":[82,568,34,1]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":3,"text":"Sehr einfach als erste Mobile-Sektion umzusetzen.","textPreview":"Sehr einfach als erste Mobile-Sektion umzusetzen.","textChars":49,"textLines":1,"bbox":[130,556,365,44]}
+{"kind":"image","id":"im/sneloj2t","slide":3,"name":"","geometry":"rect","alt":"Photo of Tae-Geun and Andrea","bbox":[782,88,244,214]}
+{"kind":"notes","id":"nt/q0nwm7","slide":3,"text":""}
+{"kind":"slide","id":"sl/6cfthn","slide":4,"title":"VARIANTE 3","textShapes":9}
+{"kind":"textbox","id":"sh/7adsji5s","slide":4,"text":"VARIANTE 3","textPreview":"VARIANTE 3","textChars":10,"textLines":1,"bbox":[78,56,420,22]}
+{"kind":"textbox","id":"sh/wval87ed","slide":4,"text":"Foto im Passepartout","textPreview":"Foto im Passepartout","textChars":20,"textLines":1,"bbox":[78,90,430,88]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":4,"text":"Eine hochwertige, ruhige Loesung: das Foto bekommt einen echten Passepartout-Rahmen wie bei einer gedruckten Karte.","textPreview":"Eine hochwertige, ruhige Loesung: das Foto bekommt einen echten Passepartout-Rahmen wie bei einer gedruckten Karte.","textChars":115,"textLines":1,"bbox":[80,190,430,72]}
+{"kind":"shape","id":"sh/e1w7mp0b","slide":4,"bbox":[722,28,364,654]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":4,"bbox":[736,42,336,626]}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":4,"bbox":[850,52,108,24]}
+{"kind":"shape","id":"sh/psfil0rq","slide":4,"bbox":[784,82,240,360]}
+{"kind":"shape","id":"sh/ed8bat47","slide":4,"bbox":[800,102,208,238]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":4,"text":"WIR HEIRATEN","textPreview":"WIR HEIRATEN","textChars":12,"textLines":1,"bbox":[796,372,214,18]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":4,"text":"Tae-Geun Kim\nund\nAndrea Karin Morgen","textPreview":"Tae-Geun Kim | und | Andrea Karin Morgen","textChars":36,"textLines":3,"bbox":[766,472,278,82]}
+{"kind":"shape","id":"sh/lwval87e","slide":4,"bbox":[840,565,128,1.2]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":4,"text":"Samstag, 17. Oktober 2026","textPreview":"Samstag, 17. Oktober 2026","textChars":25,"textLines":1,"bbox":[780,590,250,18]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":4,"text":"17:30 Uhr","textPreview":"17:30 Uhr","textChars":9,"textLines":1,"bbox":[824,612,164,18]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":4,"bbox":[82,510,34,1]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":4,"text":"Sehr edel und nah am Papierdesign.","textPreview":"Sehr edel und nah am Papierdesign.","textChars":34,"textLines":1,"bbox":[130,498,365,44]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":4,"bbox":[82,568,34,1]}
+{"kind":"textbox","id":"sh/3ex0nuxc","slide":4,"text":"Besonders gut, weil das Foto nicht mehr wie ein Hintergrund wirkt.","textPreview":"Besonders gut, weil das Foto nicht mehr wie ein Hintergrund wirkt.","textChars":66,"textLines":1,"bbox":[130,556,365,44]}
+{"kind":"image","id":"im/qxs72x4n","slide":4,"name":"","geometry":"rect","alt":"Photo of Tae-Geun and Andrea","bbox":[806,108,196,226]}
+{"kind":"notes","id":"nt/6cfthn","slide":4,"text":""}
+{"kind":"slide","id":"sl/d8889s","slide":5,"title":"VARIANTE 4","textShapes":9}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":5,"text":"VARIANTE 4","textPreview":"VARIANTE 4","textChars":10,"textLines":1,"bbox":[78,56,420,22]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":5,"text":"Dunkle Karte mit hellem Foto-Fenster","textPreview":"Dunkle Karte mit hellem Foto-Fenster","textChars":36,"textLines":1,"bbox":[78,90,430,88]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":5,"text":"Tannengruen bleibt dominant, aber das Foto wird wie ein Fenster in die Karte gesetzt.","textPreview":"Tannengruen bleibt dominant, aber das Foto wird wie ein Fenster in die Karte gesetzt.","textChars":85,"textLines":1,"bbox":[80,190,430,72]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":5,"bbox":[722,28,364,654]}
+{"kind":"shape","id":"sh/ixczed8v","slide":5,"bbox":[736,42,336,626]}
+{"kind":"shape","id":"sh/tovahoza","slide":5,"bbox":[850,52,108,24]}
+{"kind":"shape","id":"sh/032lszqt","slide":5,"bbox":[760,72,288,540]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":5,"bbox":[784,116,240,278]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":5,"text":"TAE-GEUN","textPreview":"TAE-GEUN","textChars":8,"textLines":1,"bbox":[774,430,260,32]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":5,"text":"&","textPreview":"&","textChars":1,"textLines":1,"bbox":[846,468,112,36]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":5,"text":"ANDREA","textPreview":"ANDREA","textChars":6,"textLines":1,"bbox":[774,506,260,32]}
+{"kind":"shape","id":"sh/vahoza1g","slide":5,"bbox":[840,558,128,1.2]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"text":"17. OKTOBER 2026","textPreview":"17. OKTOBER 2026","textChars":16,"textLines":1,"bbox":[792,586,224,18]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":5,"bbox":[82,510,34,1]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":5,"text":"Wirkt festlich und moderner als die helle Karte.","textPreview":"Wirkt festlich und moderner als die helle Karte.","textChars":48,"textLines":1,"bbox":[130,498,365,44]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":5,"bbox":[82,568,34,1]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":5,"text":"Gut, wenn Tannengruen wirklich die Hauptfarbe sein soll.","textPreview":"Gut, wenn Tannengruen wirklich die Hauptfarbe sein soll.","textChars":56,"textLines":1,"bbox":[130,556,365,44]}
+{"kind":"image","id":"im/nuxc3ylc","slide":5,"name":"","geometry":"rect","alt":"Photo of Tae-Geun and Andrea","bbox":[796,128,216,254]}
+{"kind":"notes","id":"nt/d8889s","slide":5,"text":""}
+{"kind":"slide","id":"sl/glp08h","slide":6,"title":"VARIANTE 5","textShapes":9}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":6,"text":"VARIANTE 5","textPreview":"VARIANTE 5","textChars":10,"textLines":1,"bbox":[78,56,420,22]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":6,"text":"Magazin-Cover mit Papierstreifen","textPreview":"Magazin-Cover mit Papierstreifen","textChars":32,"textLines":1,"bbox":[78,90,430,88]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":6,"text":"Das Foto ist gross und emotional, die Informationen liegen aber auf hellen, kartenartigen Streifen.","textPreview":"Das Foto ist gross und emotional, die Informationen liegen aber auf hellen, kartenartigen Streifen.","textChars":99,"textLines":1,"bbox":[80,190,430,72]}
+{"kind":"shape","id":"sh/2t83itgf","slide":6,"bbox":[722,28,364,654]}
+{"kind":"shape","id":"sh/re1w7mp0","slide":6,"bbox":[736,42,336,626]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":6,"bbox":[850,52,108,24]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":6,"bbox":[736,42,336,626]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":6,"bbox":[774,92,260,76]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":6,"text":"SAVE THE DATE","textPreview":"SAVE THE DATE","textChars":13,"textLines":1,"bbox":[798,112,210,20]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":6,"text":"17.10.2026","textPreview":"17.10.2026","textChars":10,"textLines":1,"bbox":[802,136,206,20]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":6,"bbox":[758,470,292,118]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":6,"text":"Tae-Geun & Andrea","textPreview":"Tae-Geun & Andrea","textChars":17,"textLines":1,"bbox":[774,496,260,40]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":6,"bbox":[836,548,136,1.2]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":6,"text":"Venuevinia   Saphirsaal","textPreview":"Venuevinia   Saphirsaal","textChars":23,"textLines":1,"bbox":[788,566,230,20]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":6,"bbox":[82,510,34,1]}
+{"kind":"textbox","id":"sh/sji5snel","slide":6,"text":"Deutlich fotozentrierter, aber nicht chaotisch.","textPreview":"Deutlich fotozentrierter, aber nicht chaotisch.","textChars":47,"textLines":1,"bbox":[130,498,365,44]}
+{"kind":"shape","id":"sh/za1gvy90","slide":6,"bbox":[82,568,34,1]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":6,"text":"Die Papierstreifen geben dem Design den Einladungscharakter.","textPreview":"Die Papierstreifen geben dem Design den Einladungscharakter.","textChars":60,"textLines":1,"bbox":[130,556,365,44]}
+{"kind":"image","id":"im/8z25kb6x","slide":6,"name":"","geometry":"roundRect","alt":"Photo of Tae-Geun and Andrea","bbox":[736,42,336,626]}
+{"kind":"notes","id":"nt/glp08h","slide":6,"text":""}
+{"kind":"slide","id":"sl/gaxoth","slide":7,"title":"MEINE EMPFEHLUNG","textShapes":6}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":7,"text":"MEINE EMPFEHLUNG","textPreview":"MEINE EMPFEHLUNG","textChars":16,"textLines":1,"bbox":[78,72,420,22]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":7,"text":"Nimm Variante 1 oder 2 als Basis","textPreview":"Nimm Variante 1 oder 2 als Basis","textChars":32,"textLines":1,"bbox":[78,118,690,94]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":7,"text":"Beide greifen deine Beispiele am klarsten auf: Karte statt Website, Foto als bewusst gerahmtes Motiv und Tannengruen als eleganter Hauptton.","textPreview":"Beide greifen deine Beispiele am klarsten auf: Karte statt Website, Foto als bewusst gerahmtes Motiv und Tannengruen als eleganter Hauptton.","textChars":140,"textLines":1,"bbox":[82,250,660,80]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":7,"bbox":[82,382,190,1.2]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":7,"text":"Variante 1 wirkt am romantischsten. Variante 2 ist die staerkste Vorlage fuer die echte Umsetzung, weil sie mobil sehr lesbar bleibt.","textPreview":"Variante 1 wirkt am romantischsten. Variante 2 ist die staerkste Vorlage fuer die echte Umsetzung, weil sie mobil sehr lesbar bleibt.","textChars":133,"textLines":1,"bbox":[82,420,650,82]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":7,"bbox":[856,60,284,528]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":7,"bbox":[870,74,256,500]}
+{"kind":"shape","id":"sh/czed8v6p","slide":7,"bbox":[944,84,108,24]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":7,"bbox":[902,132,192,244]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":7,"text":"Tae-Geun\n&\nAndrea","textPreview":"Tae-Geun | & | Andrea","textChars":17,"textLines":3,"bbox":[886,396,224,76]}
+{"kind":"shape","id":"sh/fyxobm58","slide":7,"bbox":[938,486,120,1.2]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":7,"text":"17. Oktober 2026","textPreview":"17. Oktober 2026","textChars":16,"textLines":1,"bbox":[902,510,190,18]}
+{"kind":"image","id":"im/ylc7u54z","slide":7,"name":"","geometry":"rect","alt":"Photo of Tae-Geun and Andrea","bbox":[914,146,168,174]}
+{"kind":"notes","id":"nt/gaxoth","slide":7,"text":""}

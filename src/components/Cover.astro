@@ -9,79 +9,86 @@ interface Props {
 const { locale } = Astro.props;
 const groomName = t('cover.groomName', locale);
 const brideName = t('cover.brideName', locale);
-const sep = t('cover.separator', locale);
+const coverGroomName = locale === 'ko' ? groomName : groomName.split(' ')[0];
+const coverBrideName = locale === 'ko' ? brideName : brideName.split(' ')[0];
+const coverGroomNameParts = coverGroomName.split(/\s+/).filter(Boolean);
+const coverBrideNameParts = coverBrideName.split(/\s+/).filter(Boolean);
 const dateLine = t('cover.dateLine', locale);
 const timeLine = t('cover.timeLine', locale);
-const venueLine = `${tField(venue.name, locale)} · ${tField(venue.hall, locale)}`;
+const venueLine = `${tField(venue.name, locale)} - ${tField(venue.hall, locale)}`;
 const scrollHint = t('cover.scrollHint', locale);
 const eyebrow =
-  locale === 'ko' ? '결혼합니다' : locale === 'en' ? 'Getting married' : 'Wir heiraten';
+  locale === 'ko' ? 'Getting married' : locale === 'en' ? 'Getting married' : 'Wir heiraten';
+const coverImage = withBase('/main/cover-poster.jpg');
 ---
 
 <section
-  class="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-[oklch(0.30_0.06_150)] text-white"
-  aria-label={`${groomName} ${sep} ${brideName}`}
+  class="relative isolate min-h-[100svh] overflow-hidden bg-[oklch(0.30_0.06_150)] text-white"
+  aria-label={`${groomName} and ${brideName}`}
 >
-  <!-- Photo area: full width. Right side cropped via object-position so the
-       couple is centred; the left edge is kept intact. -->
-  <div class="relative flex-1 overflow-hidden">
-    <img
-      src={withBase('/main/cover-poster.jpg')}
-      alt=""
-      class="absolute inset-0 h-full w-full object-cover object-[23%_50%]"
-      decoding="async"
-      fetchpriority="high"
-    />
-    <!-- Top scrim for name legibility -->
-    <div
-      aria-hidden="true"
-      class="pointer-events-none absolute inset-x-0 top-0 h-2/5 bg-gradient-to-b from-black/55 to-transparent"
-    >
-    </div>
-    <!-- Bottom fade into the green footer -->
-    <div
-      aria-hidden="true"
-      class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[oklch(0.30_0.06_150)] to-transparent"
-    >
-    </div>
-
-    <!-- Names: top center, frosted box -->
-    <header class="absolute inset-x-0 top-0 flex justify-center px-6 pt-16 sm:pt-20">
-      <div
-        class="flex flex-col items-center gap-3 rounded-2xl border border-white/15 bg-[oklch(0.30_0.06_150)]/75 px-8 py-6 text-center shadow-lg backdrop-blur-md sm:gap-4 sm:px-10 sm:py-7"
-      >
-        <p class="text-[0.7rem] uppercase tracking-[var(--tracking-wedding)] text-white/80 sm:text-xs">
-          {eyebrow}
-        </p>
-        <h1 class="font-serif leading-[1.05] text-[clamp(1.75rem,7.5vw,3.25rem)]">
-          <span class="block">{groomName}</span>
-          <span
-            class="my-1 block text-2xl text-[oklch(0.86_0.13_80)] sm:text-3xl"
-            aria-hidden="true">{sep}</span
-          >
-          <span class="block">{brideName}</span>
-        </h1>
-      </div>
-    </header>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,oklch(0.35_0.055_150)_0%,transparent_44%),linear-gradient(180deg,transparent_0%,oklch(0.24_0.045_150)_100%)]"
+  >
   </div>
 
-  <!-- Schedule + scroll hint: below the photo, on green (as before) -->
-  <footer class="relative z-10 flex flex-col items-center gap-4 px-8 pb-10 pt-6 text-center sm:pb-12">
-    <div class="space-y-1 text-sm text-white/90 sm:text-base">
-      <p>{dateLine}</p>
-      <p>{timeLine}</p>
-      <p class="pt-2">{venueLine}</p>
+  <div class="relative mx-auto flex min-h-[100svh] w-full max-w-[42rem] flex-col px-6 pb-8 pt-10 sm:px-9 sm:pt-12">
+    <div class="flex h-28 items-start gap-5 text-[oklch(0.78_0.13_80)]">
+      <span class="h-full w-px bg-current/80"></span>
+      <p class="[writing-mode:vertical-rl] font-serif text-xs uppercase tracking-[0.38em]">
+        T &amp; A &middot; 2026
+      </p>
     </div>
-    <a
-      href="#greeting"
-      class="group mt-2 flex flex-col items-center gap-2 text-[0.7rem] uppercase tracking-[var(--tracking-wedding)] text-white/70 sm:text-xs"
+
+    <div
+      aria-hidden="true"
+      class="mt-5 aspect-square w-full flex-none rounded-[2rem] border border-[oklch(0.78_0.13_80)]/35 bg-cover bg-center shadow-2xl shadow-black/25 sm:mt-6"
+      style={`background-image: url('${coverImage}');`}
     >
-      {scrollHint}
-      <span
-        aria-hidden="true"
-        class="h-8 w-px bg-gradient-to-b from-white/70 to-transparent transition-transform group-hover:translate-y-1"
+    </div>
+
+    <header class="relative z-10 mt-6">
+      <div
+        class="mx-auto flex w-full flex-col items-center rounded-[1.75rem] border border-[oklch(0.78_0.13_80)]/55 bg-[oklch(0.30_0.06_150)]/92 px-5 py-6 text-center shadow-2xl shadow-black/30 backdrop-blur-md sm:px-10 sm:py-8"
       >
-      </span>
-    </a>
-  </footer>
+        <p class="text-[0.7rem] uppercase tracking-[0.34em] text-[oklch(0.82_0.10_80)] sm:text-xs">
+          &middot; {eyebrow} &middot;
+        </p>
+        <h1
+          class="mt-6 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-2 break-keep font-serif uppercase leading-none text-white text-[clamp(2rem,8vw,3.35rem)] sm:mt-7"
+        >
+          <span class="inline-flex flex-wrap justify-center gap-x-2">
+            {coverGroomNameParts.map((part) => <span class="whitespace-nowrap">{part}</span>)}
+          </span>
+          <span class="mx-3 text-[oklch(0.82_0.10_80)]" aria-hidden="true">&amp;</span>
+          <span class="inline-flex flex-wrap justify-center gap-x-2">
+            {coverBrideNameParts.map((part) => <span class="whitespace-nowrap">{part}</span>)}
+          </span>
+        </h1>
+        <div class="mt-6 flex items-center gap-5 text-[oklch(0.82_0.10_80)] sm:mt-8">
+          <span class="h-px w-12 bg-current/70"></span>
+          <span class="text-lg leading-none" aria-hidden="true">&diams;</span>
+          <span class="h-px w-12 bg-current/70"></span>
+        </div>
+        <div class="mt-6 space-y-2 text-white/90 sm:mt-8">
+          <p class="text-[clamp(1rem,4vw,1.35rem)] uppercase tracking-[0.18em]">{dateLine}</p>
+          <p class="text-sm font-semibold text-white/70 sm:text-base">{venueLine} - {timeLine}</p>
+        </div>
+      </div>
+    </header>
+
+    <footer class="relative z-10 flex justify-center pb-2 pt-5 text-center">
+      <a
+        href="#greeting"
+        class="group flex flex-col items-center gap-2 text-[0.65rem] uppercase tracking-[0.3em] text-white/60 sm:text-xs"
+      >
+        {scrollHint}
+        <span
+          aria-hidden="true"
+          class="h-8 w-px bg-gradient-to-b from-[oklch(0.82_0.10_80)]/80 to-transparent transition-transform group-hover:translate-y-1"
+        >
+        </span>
+      </a>
+    </footer>
+  </div>
 </section>

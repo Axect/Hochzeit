@@ -1,5 +1,4 @@
 ---
-import Section from '@components/Section.astro';
 import { t, type Locale } from '@lib/i18n';
 
 interface Props {
@@ -13,19 +12,49 @@ const comingSoon = t('weddingPhoto.comingSoon', locale);
 const releaseDate = t('weddingPhoto.releaseDate', locale);
 ---
 
-<Section id="wedding-photo" title={title}>
+<section
+  id="wedding-photo"
+  class="relative w-full overflow-hidden bg-[linear-gradient(180deg,oklch(0.29_0.055_150)_0%,oklch(0.36_0.055_150)_42%,oklch(0.91_0.025_85)_100%)] px-6 py-20"
+  aria-labelledby="wedding-photo-title"
+>
   <div
-    class="relative mx-auto flex aspect-[4/5] w-full max-w-sm flex-col items-center justify-center gap-3 overflow-hidden rounded-md border border-[var(--color-line)] bg-gradient-to-br from-[oklch(0.94_0.04_150)] via-white/40 to-[var(--color-accent-soft)] text-center"
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(250,238,204,0.20),transparent_36%),radial-gradient(circle_at_50%_62%,rgba(12,32,24,0)_0%,rgba(12,32,24,0.24)_64%,rgba(12,32,24,0.08)_100%)]"
   >
-    {/* Decorative star/spark dots, hand-placed for an asymmetric, hand-drawn feel */}
-    <span aria-hidden="true" class="absolute left-[18%] top-[22%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-60"></span>
-    <span aria-hidden="true" class="absolute left-[78%] top-[34%] block h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] opacity-40"></span>
-    <span aria-hidden="true" class="absolute left-[28%] top-[78%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-50"></span>
-    <span aria-hidden="true" class="absolute left-[68%] top-[68%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-30"></span>
-
-    <p class="text-[10px] uppercase tracking-[0.32em] text-[var(--color-muted)]">{subtitle}</p>
-    <p class="font-serif text-3xl text-[var(--color-fg)]">{comingSoon}</p>
-    <span aria-hidden="true" class="my-1 block h-px w-10 bg-[var(--color-accent)]"></span>
-    <p class="text-sm text-[var(--color-muted)]">{releaseDate}</p>
   </div>
-</Section>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 bottom-0 h-36 bg-gradient-to-b from-transparent to-[var(--color-bg)]"
+  >
+  </div>
+
+  <div class="relative z-10 mx-auto w-full max-w-md">
+    <header class="mb-10 text-center">
+      <h2 id="wedding-photo-title" class="font-serif text-2xl text-white sm:text-3xl">
+        {title}
+      </h2>
+      <span aria-hidden="true" class="mx-auto mt-4 block h-px w-12 bg-[var(--color-accent)]" />
+    </header>
+
+    <div
+      class="relative mx-auto flex aspect-[4/5] w-full max-w-sm flex-col items-center justify-center gap-3 overflow-hidden rounded-md border border-white/30 bg-[linear-gradient(145deg,rgba(255,255,255,0.26),rgba(255,255,255,0.11)_45%,rgba(244,226,182,0.24))] text-center shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-sm"
+    >
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.20),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(7,30,20,0.16))]"
+      >
+      </div>
+
+      {/* Decorative star/spark dots, hand-placed for an asymmetric, hand-drawn feel */}
+      <span aria-hidden="true" class="absolute left-[18%] top-[22%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-80"></span>
+      <span aria-hidden="true" class="absolute left-[78%] top-[34%] block h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] opacity-60"></span>
+      <span aria-hidden="true" class="absolute left-[28%] top-[78%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-70"></span>
+      <span aria-hidden="true" class="absolute left-[68%] top-[68%] block h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-50"></span>
+
+      <p class="relative text-[10px] uppercase tracking-[0.32em] text-white/75">{subtitle}</p>
+      <p class="relative font-serif text-3xl text-white">{comingSoon}</p>
+      <span aria-hidden="true" class="relative my-1 block h-px w-10 bg-[var(--color-accent)]"></span>
+      <p class="relative text-sm text-white/75">{releaseDate}</p>
+    </div>
+  </div>
+</section>
