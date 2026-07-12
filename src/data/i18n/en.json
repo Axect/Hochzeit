@@ -45,8 +45,8 @@
     }
   },
   "schedule": {
-    "title": "On the day",
-    "footnote": "* Ceremony and reception run on a private floor for about two hours from the start (until ~19:30). Please let us know whether you can join the after-party in your RSVP."
+    "title": "Schedule",
+    "footnote": "Please let us know in your RSVP whether you will also be staying for the after-party."
   },
   "gallery": {
     "title": "Moments together",
@@ -56,9 +56,9 @@
     "nextImage": "Next image"
   },
   "weddingPhoto": {
-    "title": "Wedding Photo",
-    "subtitle": "Studio portraits",
-    "comingSoon": "Coming Soon",
+    "title": "Our engagement photos",
+    "subtitle": "Engagement photos",
+    "comingSoon": "Coming soon",
     "releaseDate": "Available in July 2026"
   },
   "prologue": {
@@ -79,6 +79,7 @@
     "closeButton": "Close",
     "momentCount": "{count} moments",
     "viewPhoto": "View photo",
+    "additionalPhotos": "+ {count} photos",
     "prev": "Previous",
     "next": "Next",
     "kindLabel": {

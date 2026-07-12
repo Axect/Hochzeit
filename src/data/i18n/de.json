@@ -45,8 +45,8 @@
     }
   },
   "schedule": {
-    "title": "Am Tag",
-    "footnote": "* Trauung und Empfang finden ab Beginn der Trauung etwa zwei Stunden lang (bis ca. 19:30) auf einer eigenen Etage statt. Bitte sagt uns in der Antwort auch Bescheid, ob Ihr zur After-Party kommen möchtet."
+    "title": "Tagesablauf",
+    "footnote": "Bitte gebt uns bei Eurer Zusage Bescheid, ob Ihr auch zur After-Party bleibt!"
   },
   "gallery": {
     "title": "Gemeinsame Momente",
@@ -56,9 +56,9 @@
     "nextImage": "Nächstes Bild"
   },
   "weddingPhoto": {
-    "title": "Wedding Photo",
-    "subtitle": "Studio-Porträts",
-    "comingSoon": "Bald verfügbar",
+    "title": "Unsere Verlobungsfotos",
+    "subtitle": "Verlobungsfotos",
+    "comingSoon": "Die Fotos folgen bald",
     "releaseDate": "Verfügbar ab Juli 2026"
   },
   "prologue": {
@@ -69,16 +69,17 @@
     "tgAlt": "Tae-Geun als Kind",
     "andreaAlt": "Andrea als Kind",
     "distance": "Damals lagen rund 9.000 km zwischen ihnen",
-    "transition": "Und etwa zwanzig Jahre später —"
+    "transition": "Und etwa zwanzig Jahre später"
   },
   "journey": {
-    "title": "Wie wir uns fanden",
-    "intro": "Ein einziger Brief war der Anfang einer Reise, die Seoul und Leimen verbindet.",
-    "previewHint": "Öffne die Karte, um jede Szene zu durchwandern.",
+    "title": "Unser großes Abenteuer",
+    "intro": "Aus einem Brief wurde eine Liebe, die zwei Kontinente und unsere Welten verbindet.",
+    "previewHint": "Begleitet uns auf der Reise vom allerersten Brief bis zu unserer Verlobung.",
     "openButton": "Karte öffnen",
     "closeButton": "Schließen",
     "momentCount": "{count} Momente",
     "viewPhoto": "Foto öffnen",
+    "additionalPhotos": "+ {count} Fotos",
     "prev": "Zurück",
     "next": "Weiter",
     "kindLabel": {

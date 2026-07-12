@@ -32,6 +32,7 @@ interface Labels {
   hint: string;
   momentCount: string;
   viewPhoto: string;
+  additionalPhotos: string;
   kindLabel: Record<'letter' | 'visit' | 'trip' | 'wedding', string>;
 }
 
@@ -391,6 +392,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
   // frame at once, with profile portraits at each end and the letter image
   // hovering over the midpoint of the arc.
   const activeEvent = sortedEvents[active];
+  const previewPhotos = activeEvent.photos.slice(0, 4);
   const activePoint = points[active] ?? [W / 2, H / 2];
   const activeOrigin = originPoints?.[active] ?? null;
   const isFirstLetter = activeEvent?.id === 'first-letter' && activeOrigin !== null;
@@ -668,9 +670,9 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   {activeEvent.body}
                 </p>
 
-                {activeEvent.photos.length > 0 && (
-                  <ul className="mt-4 flex gap-2 overflow-x-auto pb-1 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                    {activeEvent.photos.map((p, idx) => (
+                {previewPhotos.length > 0 && (
+                  <ul className="mt-4 flex gap-2 pb-1">
+                    {previewPhotos.map((p, idx) => (
                       <li key={p.src} className="shrink-0">
                         <button
                           type="button"
@@ -687,6 +689,15 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                             decoding="async"
                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                           />
+                          {idx === previewPhotos.length - 1 &&
+                            activeEvent.photos.length > previewPhotos.length && (
+                            <span className="absolute bottom-1 right-1 border border-white/25 bg-black/60 px-1.5 py-0.5 text-[10px] font-medium text-white shadow-sm">
+                              {labels.additionalPhotos.replace(
+                                '{count}',
+                                String(activeEvent.photos.length - previewPhotos.length),
+                              )}
+                            </span>
+                          )}
                         </button>
                       </li>
                     ))}

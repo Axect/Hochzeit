@@ -13,23 +13,27 @@ const footnote = t('schedule.footnote', locale);
 ---
 
 <Section id="schedule" title={title}>
-  <ol class="relative space-y-3 border-l border-[var(--color-line)] pl-6">
+  <ol class="relative mx-auto max-w-sm space-y-4 before:absolute before:bottom-12 before:left-1/2 before:top-12 before:w-px before:-translate-x-1/2 before:bg-[linear-gradient(var(--color-line),var(--color-accent),var(--color-line)]">
     {
       schedule.items.map((item) => (
-        <li class="relative">
+        <li class="relative flex min-h-36 flex-col items-center justify-center px-5 py-4 text-center">
+          <time class="bg-[var(--color-bg)] px-3 font-serif text-xl leading-tight text-[var(--color-accent)]">
+            {item.time}{locale === 'de' ? ' Uhr' : ''}
+          </time>
           <span
             aria-hidden="true"
-            class="absolute -left-[27px] top-2 block h-2 w-2 rounded-full bg-[var(--color-accent)]"
+            class="relative z-10 my-3 block h-2.5 w-2.5 rotate-45 border border-[var(--color-bg)] bg-[var(--color-accent)] shadow-[0_0_0_1px_var(--color-accent)]"
           />
-          <div class="flex items-baseline justify-between gap-4">
-            <time class="font-mono text-sm text-[var(--color-muted)]">{item.time}</time>
-            <span class="flex-1 text-right text-base text-[var(--color-fg)]">
-              {tField(item.title, locale)}
-            </span>
-          </div>
+          <span class="bg-[var(--color-bg)] px-3 text-base text-[var(--color-fg)]">
+            {tField(item.title, locale)}
+          </span>
+          {item.id === 'after-party' && (
+            <p class="relative mt-7 max-w-sm border border-[var(--color-line)] border-t-2 border-t-[var(--color-accent)] bg-white/70 px-6 py-5 text-center text-sm leading-relaxed text-[var(--color-fg)] shadow-[0_12px_28px_rgba(18,45,31,0.08)]">
+              {footnote}
+            </p>
+          )}
         </li>
       ))
     }
   </ol>
-  <p class="mt-8 text-center text-xs text-[var(--color-muted)]">{footnote}</p>
 </Section>

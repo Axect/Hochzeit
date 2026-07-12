@@ -8,7 +8,6 @@ interface Props {
 const { locale } = Astro.props;
 const groomFirstName = t('greeting.parents.groom.name', locale);
 const brideFirstName = t('greeting.parents.bride.name', locale);
-const sep = t('cover.separator', locale);
 
 // Reused traditional Korean palette: 단주 vermilion for the seal/red lantern,
 // 청 indigo for the blue lantern, 오방색 (five-direction colours) for the
@@ -126,7 +125,7 @@ const lanterns = [{ id: 'left' }, { id: 'right' }];
 
     <p class="mt-5 font-serif text-sm text-[oklch(0.22_0.04_60)] sm:text-base">
       — {groomFirstName}
-      <span class="mx-1 text-[oklch(0.50_0.21_27)]" aria-hidden="true">{sep}</span>
+      <span class="mx-1 text-[var(--color-accent)]" aria-hidden="true">&amp;</span>
       {brideFirstName} —
     </p>
 

@@ -45,8 +45,8 @@
     }
   },
   "schedule": {
-    "title": "예식 안내",
-    "footnote": "* 예식과 피로연은 식 시작부터 약 두 시간(~19:30) 동안 단독층에서 진행됩니다. 뒷풀이 파티 참석 여부는 아래 '참석 의사 전달'에서 함께 알려 주세요."
+    "title": "예식 순서",
+    "footnote": "참석 여부를 알려주실 때 뒷풀이 파티에도 함께하실 수 있는지 알려 주세요."
   },
   "gallery": {
     "title": "함께한 순간들",
@@ -56,9 +56,9 @@
     "nextImage": "다음 사진"
   },
   "weddingPhoto": {
-    "title": "Wedding Photo",
-    "subtitle": "스튜디오 촬영",
-    "comingSoon": "Coming Soon",
+    "title": "우리의 약혼 사진",
+    "subtitle": "약혼 사진",
+    "comingSoon": "곧 공개됩니다",
     "releaseDate": "2026년 7월 공개 예정"
   },
   "prologue": {
@@ -79,6 +79,7 @@
     "closeButton": "닫기",
     "momentCount": "{count}개의 순간",
     "viewPhoto": "사진 크게 보기",
+    "additionalPhotos": "+ 사진 {count}장",
     "prev": "이전",
     "next": "다음",
     "kindLabel": {

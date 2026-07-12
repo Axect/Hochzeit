@@ -6,16 +6,16 @@
       "title": {
         "ko": "예식 시작",
         "en": "Wedding ceremony begins",
-        "de": "Beginn der Trauung"
+        "de": "Trauung mit anschließenden Gruppenfotos"
       }
     },
     {
-      "id": "reception",
-      "time": "~19:30",
+      "id": "buffet",
+      "time": "18:00 – 19:30",
       "title": {
-        "ko": "피로연 (단독층)",
-        "en": "Reception · private floor",
-        "de": "Empfang · eigene Etage"
+        "ko": "단독층 뷔페",
+        "en": "Buffet on a private floor",
+        "de": "Gemeinsames Hochzeitsessen (auf einer separaten Etage)"
       }
     },
     {

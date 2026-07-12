@@ -91,8 +91,11 @@ const ogImageFullUrl = new URL(ogImageHref, Astro.site ?? Astro.url).toString();
       <slot />
     </main>
 
-    <footer class="px-4 pb-10 pt-16 text-center text-sm text-[var(--color-muted)] safe-bottom">
-      <p>{t('footer.thanks', locale)}</p>
+    <footer class="px-6 pb-12 pt-20 text-center safe-bottom">
+      <span aria-hidden="true" class="mx-auto block h-px w-12 bg-[var(--color-accent)]"></span>
+      <p class="mx-auto mt-5 max-w-sm font-serif text-xl leading-relaxed text-[var(--color-fg)] sm:text-2xl">
+        {t('footer.thanks', locale)}
+      </p>
     </footer>
   </body>
 </html>
