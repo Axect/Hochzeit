@@ -108,7 +108,7 @@
   "directions": {
     "title": "Anfahrt",
     "addressLabel": "Adresse",
-    "transitTitle": "So findest Du uns",
+    "transitTitle": "So findet Ihr uns",
     "subwayLabel": "U-Bahn",
     "busLabel": "Bus",
     "carLabel": "Mit dem Auto",
@@ -141,13 +141,13 @@
   },
   "share": {
     "title": "Einladung teilen",
-    "intro": "Gib diese Einladung gerne an Familie und Freunde weiter.",
+    "intro": "Gebt diese Einladung gerne an Familie und Freunde weiter.",
     "copyLinkButton": "Link kopieren",
     "linkCopied": "Link kopiert"
   },
   "rsvp": {
     "title": "Zu- oder Absage",
-    "intro": "Damit wir gut planen können, sag uns bitte Bescheid, ob Du zur Trauung — und auch zur After-Party — kommen kannst.",
+    "intro": "Damit wir gut planen können, sagt uns bitte Bescheid, ob Ihr zur Trauung — und auch zur After-Party — kommen könnt.",
     "openFormButton": "Antwort senden",
     "newWindowHint": "Ein Google-Formular öffnet sich in einem neuen Tab."
   },

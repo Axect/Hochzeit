@@ -1,0 +1,46 @@
+---
+import { withBase, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const isGerman = locale === 'de';
+const href = withBase(isGerman ? '/guides/hochzeitsguide.html' : '/guides/wedding-guide.html');
+const label = isGerman ? 'Zum Hochzeitsguide' : 'Open the wedding guide';
+const title = isGerman ? 'Hochzeitsguide' : 'Wedding Guide';
+const eyebrow = isGerman ? 'Für unsere Gäste' : 'For our guests';
+const description = isGerman
+  ? 'Andere Länder, andere Sitten! Weil eine koreanische Hochzeit für viele von uns Neuland ist, haben wir einen kompakten Hochzeitsguide für euch erstellt. Klickt einfach hier, um alles Wichtige zum Tagesablauf, Dresscode und den schönsten Traditionen zu erfahren.'
+  : 'Different countries, different customs! Since a Korean wedding is new territory for many of us, we have created a compact wedding guide for you. Simply click here to learn everything you need to know about the schedule, dress code, and the most beautiful traditions.';
+---
+
+<aside class="px-5 py-12 sm:px-8" aria-label={title}>
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="guide-card group mx-auto block max-w-md border border-[var(--color-line)] border-t-2 border-t-[var(--color-accent)] bg-white/70 p-7 text-center shadow-[0_12px_28px_rgba(18,45,31,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(18,45,31,0.13)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] sm:p-9"
+  >
+    <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-[var(--color-line)] bg-[var(--color-bg)] text-[var(--color-accent)]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current" stroke-width="1.5">
+        <path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3H12v16.5H6.75A2.25 2.25 0 0 0 4.5 21V5.25Z" />
+        <path d="M19.5 5.25A2.25 2.25 0 0 0 17.25 3H12v16.5h5.25A2.25 2.25 0 0 1 19.5 21V5.25Z" />
+      </svg>
+    </span>
+    <span class="mt-5 block text-xs font-medium uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+      {eyebrow}
+    </span>
+    <span class="mt-2 block font-serif text-3xl text-[var(--color-fg)]">
+      {title}
+    </span>
+    <span class="mx-auto mt-4 block max-w-md text-sm leading-relaxed text-[var(--color-fg)]">
+      {description}
+    </span>
+    <span class="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--color-accent)] px-6 py-2 text-sm font-medium text-white transition-colors group-hover:bg-[var(--color-fg)]">
+      {label}
+      <span aria-hidden="true">→</span>
+    </span>
+  </a>
+</aside>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hochzeitsguide - Tae-Geun & Andrea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-green: #1a3623;
+            --cream: #f4f1ea;
+            --gold: #b39b59;
+            --text-dark: #2c3e35;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--cream);
+            padding-bottom: 4rem;
+        }
+
+        /* Hero Section mimicking Image 1 */
+        .hero {
+            background-color: var(--dark-green);
+            color: var(--cream);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .hero-subtitle {
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--cream);
+            opacity: 0.9;
+        }
+
+        /* Content Styles */
+        .content {
+            padding: 2rem 2rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-green);
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-green);
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        strong {
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+
+        /* Decorative Elements mimicking Image 1 & 2 */
+        .divider {
+            text-align: center;
+            color: var(--gold);
+            margin: 2rem 0;
+            font-size: 1.2rem;
+        }
+
+        .divider::before {
+            content: "— ♦ —";
+            letter-spacing: 0.5em;
+        }
+
+        /* Cards for special sections mimicking Image 2 boxes */
+        .card {
+            border: 1px solid var(--gold);
+            padding: 2rem;
+            margin: 2rem 0;
+            background-color: var(--cream);
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(26, 54, 35, 0.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-family: 'Lora', serif;
+            font-weight: 500;
+        }
+
+        .card-divider {
+            width: 40px;
+            height: 1px;
+            background-color: var(--dark-green);
+            margin: 1rem auto 1.5rem auto;
+        }
+
+        /* Timeline Styles */
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .time {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: var(--dark-green);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-text {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.7rem; }
+            .content { padding: 1rem 1.5rem; }
+            .card { padding: 1.5rem; }
+        }
+
+        /* ========================================= */
+        /* PRINT STYLES FOR PDF GENERATION           */
+        /* ========================================= */
+        @media print {
+            /* Zwingt den Browser, alle Hintergrundfarben exakt so zu drucken */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            @page {
+                size: A4;
+                margin: 0; /* Ränder entfernen, damit der Hintergrund vollflächig wirkt */
+            }
+
+            body {
+                background-color: var(--cream) !important;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 100% !important; /* Nutze die gesamte Breite des Papiers */
+                padding: 0 0 2rem 0 !important;
+                background-color: var(--cream) !important;
+            }
+
+            .content {
+                padding: 2rem 10% !important; /* Angenehmer Abstand an den Seiten im Druck */
+            }
+
+            .hero {
+                padding: 3rem 2rem !important; /* Etwas weniger Padding oben beim Druck */
+            }
+
+            /* Verhindert Seitenumbrüche innerhalb von wichtigen Boxen/Absätzen */
+            .card, .timeline-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                box-shadow: none !important; /* Schatten beim Druck entfernen */
+            }
+
+            h2, h3 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            p, ul, li {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="hero">
+            <span class="hero-subtitle">· Wir beginnen ein neues Kapitel ·</span>
+            <h1>TAE-GEUN <span>&</span> ANDREA</h1>
+            <div class="divider" style="color: var(--cream);"></div>
+            <p>Willkommen zu unserem<br>Koreanischen Hochzeitsguide</p>
+        </header>
+
+        <div class="content">
+            
+            <p style="text-align: center; font-size: 1.1rem; margin-top: 1rem;">
+                Wir freuen uns riesig, unseren besonderen Tag mit euch zu feiern! Da eine koreanische Hochzeit einige wunderschöne, aber für viele vielleicht neue Traditionen beinhaltet, haben wir diesen kleinen Guide für euch zusammengestellt. So wisst ihr genau, was passiert, und könnt die Bedeutung hinter den Ritualen mit uns teilen.
+            </p>
+
+            <div class="divider"></div>
+
+            <h2>Vor der Zeremonie</h2>
+            
+            <div class="card">
+                <h3>Die Geschenke (Chug-uigeum)</h3>
+                <div class="card-divider"></div>
+                <p><strong>Das Wichtigste vorab:</strong> Dass ihr den weiten Weg nach Korea auf euch nehmt, ist für uns bereits das allergrößte Geschenk! Wir erwarten von unseren internationalen Gästen absolut keine zusätzlichen Geld- oder Sachgeschenke.</p>
+                <p>Falls ihr euch dennoch an den koreanischen Traditionen beteiligen möchtet, hier ein kleiner Einblick: In Korea schenkt man traditionell keine verpackten Geschenke. Stattdessen ist es Brauch, am Eingang der Hochzeitshalle an speziellen Empfangstischen ein Geldgeschenk in einem weißen Umschlag zu übergeben.</p>
+                <ul>
+                    <li><strong>Der koreanische Brauch:</strong> Für lokale Gäste sind frisch gedruckte Geldscheine in Summen wie 50.000 oder 100.000 Won üblich. Bitte fühlt euch als unsere Gäste aus der Heimat daran aber <em>absolut nicht gebunden</em>!</li>
+                    <li><strong>Der Umschlag & Name:</strong> Falls ihr einen Umschlag übergeben möchtet: Weiße Umschläge und Stifte liegen im Empfangsbereich unserer Hochzeit für euch bereit. Notiert einfach euren Namen gut lesbar auf dem Umschlag und legt euer Geldgeschenk hinein.</li>
+                    <li><strong>Der Ablauf am Empfangstisch:</strong> Anders als sonst in Korea üblich, gibt es bei uns <strong>nur einen gemeinsamen Empfangstisch</strong> (den Tisch des Bräutigams), der die Umschläge für uns beide entgegennimmt. Der Ablauf dort ist ganz simpel: Ihr gebt euren Umschlag bei der Person am Tisch ab und tragt euch anschließend in unser Gästebuch ein.</li>
+                    <li><strong>Die Essensmarke:</strong> Sobald ihr euch am Empfangstisch eingetragen habt, erhaltet ihr eure Essenscoupons für das spätere Hochzeitsbuffet. <strong>Ganz wichtig:</strong> Diese Coupons erhaltet ihr natürlich völlig unabhängig davon, ob ihr einen Umschlag abgebt oder nicht! Kommt also alle unbedingt am Empfang vorbei.</li>
+                </ul>
+            </div>
+
+            <div class="card" style="border: 2px solid var(--gold);">
+                <h3 style="color: var(--dark-green); text-transform: none; font-size: 1.5rem; text-align: center;">Kommt mich im Brautzimmer besuchen!</h3>
+                <div class="card-divider"></div>
+                <p style="text-align: center;">
+                    Sucht nach dem Besuch am Empfangstisch unbedingt das <strong>Brautzimmer (Sinbu-daegisil)</strong> auf! In Korea ist es Tradition, dass die Braut die Gäste vor der Zeremonie in einem eigenen, hübsch dekorierten Raum empfängt. 
+                </p>
+                <p style="text-align: center; margin-bottom: 0;">
+                    Hier werde ich auf euch warten, um in Ruhe "Hallo" zu sagen und erste Erinnerungsfotos mit euch zu machen. <strong>Ich würde mich riesig freuen, wenn ihr dort bei mir vorbeischaut!</strong>
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>Der Tagesablauf im Detail</h2>
+            
+            <div class="timeline-item">
+                <span class="time">17:30 Uhr</span>
+                <div class="timeline-title">Trauung & Gruppenfotos</div>
+                <p>Unsere kurze Hochzeitszeremonie wird einige wunderschöne koreanische Traditionen beinhalten.</p>
+                <p><span class="highlight-text">Die Hochzeitsfotos:</span> Nach der offiziellen Zeremonie werden traditionell gemeinsame Gruppenfotos gemacht. Hierbei gibt es in Korea eine feste Reihenfolge: Zuerst werden die offiziellen Fotos mit den Familien aufgenommen. Direkt im Anschluss folgen die Bilder mit allen Freunden. Bleibt also nach der Trauung bitte noch kurz in der Halle, damit wir ein schönes gemeinsames Erinnerungsfoto mit euch machen können!</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="time">18:00 – 19:30 Uhr</span>
+                <div class="timeline-title">Gemeinsames Hochzeitsessen</div>
+                <p>Nach der Zeremonie und den Fotos wechseln wir für das Festessen gemeinsam auf eine separate Etage! Mit euren vorher am Eingang erhaltenen Essensmarken könnt ihr euch nun auf ein fantastisches Hochzeitsbuffet freuen.</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="time">20:00 Uhr</span>
+                <div class="timeline-title">After-Party</div>
+                <p>Bei den meisten koreanischen Hochzeiten ist nach dem Essen offiziell Schluss. Bei uns natürlich nicht! Wir wollen den Tag gemeinsam mit euch richtig ausklingen lassen.</p>
+                <p><span class="highlight-text">Info zur Location:</span> In Abhängigkeit der Gäste, die bei der Einladung zurückmelden, dass sie mit uns weiterfeiern möchten, werden wir eine entsprechende Location anmieten. Den genauen Ort geben wir euch dann kurz vor dem Hochzeitstag bekannt!</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>Die goldenen Regeln des „Hagaek-Looks“</h2>
+            <p style="text-align: center;">Die koreanische Gesellschaft kleidet sich zu formellen Anlässen elegant, aber konservativer und unauffälliger als in Deutschland. Das Ziel ist es, dem Brautpaar die volle Aufmerksamkeit zu überlassen.</p>
+
+            <h3>Die Farbwahl (Das größte Fettnäpfchen)</h3>
+            <ul>
+                <li><strong>Absolutes Tabu:</strong> Weiß, Elfenbein, Creme oder sehr helles Beige. Diese Farben sind exklusiv für die Braut reserviert.</li>
+                <li><strong>Kein Komplett-Schwarz:</strong> Ganz in Schwarz aufzulaufen wirkt in Korea schnell zu düster und erinnert an eine Beerdigung.</li>
+                <li><strong>Keine Knallfarben:</strong> Knalliges Rot, Neonfarben oder sehr wilde Muster sind ungern gesehen.</li>
+                <li><strong>Die perfekte Palette:</strong> Setzt auf gedeckte, ruhige Töne wie Navy, Dunkelgrau, gedecktes Blau, Olive, Salbeigrün oder sanfte Pastelltöne (z. B. softes Altrosa).</li>
+            </ul>
+
+            <h3>Schnitte und Freizügigkeit</h3>
+            <ul>
+                <li><strong>Schultern bedecken:</strong> Trägertops oder schulterfreie Kleider sollten mit einem Blazer, einer feinen Strickjacke oder einem Bolero kombiniert werden.</li>
+                <li><strong>Dekolleté:</strong> Tiefe Ausschnitte sind tabu. Hochgeschlossene Schnitte oder dezente Rundhalsausschnitte sind die sichere Wahl.</li>
+                <li><strong>Rocklänge:</strong> Röcke und Kleider sollten mindestens bis kurz über das Knie reichen.</li>
+            </ul>
+
+            <div class="card">
+                <h3>Dresscode-Empfehlungen auf einen Blick</h3>
+                <div class="card-divider"></div>
+                <p><strong>Für Frauen:</strong> Ein gut sitzender Hosenanzug in Navy/Grau mit einer dezenten hellen Bluse (nicht reinweiß) oder ein schlichtes, knielanges Etuikleid. Dazu geschlossene Halbschuhe, Loafer oder klassische Pumps (keine allzu hohen Absätze).</p>
+                <p><strong>Für Männer:</strong> Ein gut sitzender Anzug in Dunkelblau, Grau oder Anthrazit mit einem klassischen, hellen Businesshemd. Eine Krawatte ist heute optional (den obersten Knopf dann gerne offen lassen). Dazu elegante Lederschuhe.</p>
+                <p><strong>Achtung bei traditioneller Kleidung:</strong> Trage als ausländischer Gast bitte keinen traditionellen koreanischen Hanbok. Dieser ist bei Hochzeiten den Familien von Braut und Bräutigam vorbehalten und signalisiert eine sehr enge familiäre Rolle.</p>
+            </div>
+
+            <h3>Warum das Ganze? Das berüchtigte Gruppenfoto</h3>
+            <p>Am Ende der meist kurzen Zeremonie bittet der Fotograf alle Gruppen nacheinander auf die Bühne (erst die Familie, dann Freunde und Kollegen). Dabei wird ein großes Gruppenfoto gemacht, auf dem alle Gäste dicht gedrängt um das Brautpaar herumstehen. Es gilt in der koreanischen Kultur als Geste der Höflichkeit, sich farblich so anzupassen, dass auf diesem Foto nur das Brautpaar optisch im Mittelpunkt steht. Ein knallrotes Kleid oder ein auffälliges Hemd würden hier sofort den Blick auf sich ziehen!</p>
+
+            <div class="divider"></div>
+
+            <h2>Koreanische Hochzeitstraditionen</h2>
+
+            <h3>Der Einzug der Mütter (Hwachok Jeomhwa)</h3>
+            <p>Der offizielle Beginn der Zeremonie gehört unseren Müttern! Sie betreten den Saal als Erstes und tragen dabei den traditionellen koreanischen Hanbok.</p>
+            <ul>
+                <li><strong>Die Farben:</strong> Traditionell trägt die Mutter der Braut warme Töne (wie Rosa oder Rot), während die Mutter des Bräutigams kühle Töne (wie Blau) trägt. Diese Farben repräsentieren Yin und Yang und stehen für die Harmonie zwischen den beiden Familien.</li>
+                <li><strong>Das Anzünden der Kerzen:</strong> Die Mütter zünden gemeinsam zwei Kerzen an. Das Licht symbolisiert, dass sie den Weg für unsere gemeinsame Zukunft erhellen und böse Geister vertreiben. Außerdem besiegelt es die Verbindung unserer Familien.</li>
+            </ul>
+
+            <h3>Die Verbeugungen</h3>
+            <p>Die Zeremonie in Korea ist sehr geprägt von Respekt und tiefer Dankbarkeit:</p>
+            <ul>
+                <li><strong>Verbeugung der Brautleute (Gyobaerye):</strong> Wir werden uns tief voreinander verbeugen als Versprechen, uns zu respektieren und ein Leben lang füreinander da zu sein.</li>
+                <li><strong>Verbeugung vor den Eltern:</strong> Ein sehr emotionaler Moment. Wir verbeugen uns tief vor unseren Eltern, um ihnen für all die Liebe und Unterstützung zu danken.</li>
+                <li><strong>Verbeugung vor den Gästen:</strong> Auch euch werden wir uns zuwenden und verbeugen, um unsere tiefe Dankbarkeit für euer Kommen zu zeigen.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="card" style="text-align: center; background-color: var(--dark-green); color: var(--cream); border-color: var(--dark-green);">
+                <h3 style="color: var(--gold);">Praktischer Tipp für Seoul</h3>
+                <div class="card-divider" style="background-color: var(--gold);"></div>
+                <p>Ein absoluter Lebensretter-Tipp vorab: <strong style="color: var(--gold);">Google Maps funktioniert in Südkorea leider nicht gut</strong> (insbesondere als Fußgänger-Navi).</p>
+                <p style="margin-bottom: 0;">Bitte ladet euch vorab die App <span style="color: var(--gold); font-weight: bold;">Naver Map</span> oder <span style="color: var(--gold); font-weight: bold;">KakaoMap</span> herunter. Diese gibt es auf Englisch und sie bringen euch absolut zuverlässig zu unserer Hochzeitslocation!</p>
+            </div>
+
+            <p style="text-align: center; font-size: 1.1rem; margin-top: 3rem; font-family: 'Playfair Display', serif; font-style: italic;">
+                Macht euch wegen der Traditionen und Abläufe bitte keinen Stress – für uns ist euer Dabeisein das allergrößte Geschenk! Wir freuen uns auf euch!
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>

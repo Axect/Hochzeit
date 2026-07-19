@@ -96,18 +96,18 @@
       },
       "photos": [
         { "src": "/journey/germany-tour-1.jpg", "width": 1600, "height": 1200, "alt": "München" },
-        { "src": "/journey/germany-tour-2.jpg", "width": 1600, "height": 1200, "alt": "Trier" },
-        { "src": "/journey/germany-tour-3.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-4.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-5.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-6.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/germany-tour-7.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/germany-tour-8.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/germany-tour-9.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/germany-tour-15.jpg", "width": 1824, "height": 1368 },
+        { "src": "/journey/germany-tour-3.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-10.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-5.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-9.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/germany-tour-4.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/germany-tour-17.jpg", "width": 1368, "height": 1824 },
+        { "src": "/journey/germany-tour-2.jpg", "width": 1600, "height": 1200, "alt": "Trier" },
+        { "src": "/journey/germany-tour-16.jpg", "width": 1824, "height": 1368 },
         { "src": "/journey/germany-tour-11.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-12.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-13.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-14.jpg", "width": 1600, "height": 1200 }
       ]
     },
@@ -129,12 +129,6 @@
       },
       "photos": [
         {
-          "src": "/journey/chuseok-1.jpg",
-          "width": 1600,
-          "height": 1200,
-          "alt": "대전"
-        },
-        {
           "src": "/journey/chuseok-2.jpg",
           "width": 1200,
           "height": 1600,
@@ -145,6 +139,42 @@
           "width": 1200,
           "height": 1600,
           "alt": "전주"
+        },
+        {
+          "src": "/journey/chuseok-4.jpg",
+          "width": 2736,
+          "height": 3648
+        },
+        {
+          "src": "/journey/chuseok-5.jpg",
+          "width": 3648,
+          "height": 2736
+        },
+        {
+          "src": "/journey/chuseok-6.jpg",
+          "width": 3648,
+          "height": 2736
+        },
+        {
+          "src": "/journey/chuseok-7.jpg",
+          "width": 3648,
+          "height": 2736
+        },
+        {
+          "src": "/journey/chuseok-8.jpg",
+          "width": 3024,
+          "height": 4032
+        },
+        {
+          "src": "/journey/chuseok-9.jpg",
+          "width": 3024,
+          "height": 4032
+        },
+        {
+          "src": "/journey/chuseok-1.jpg",
+          "width": 1600,
+          "height": 1200,
+          "alt": "대전"
         }
       ]
     },
@@ -260,12 +290,22 @@
           "height": 1200
         },
         {
-          "src": "/journey/guilin-2.jpg",
-          "width": 1600,
-          "height": 1200
+          "src": "/journey/guilin-10.jpg",
+          "width": 4000,
+          "height": 3000
+        },
+        {
+          "src": "/journey/guilin-12.jpg",
+          "width": 3000,
+          "height": 4000
         },
         {
           "src": "/journey/guilin-3.jpg",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "src": "/journey/guilin-5.jpg",
           "width": 1200,
           "height": 1600
         },
@@ -275,9 +315,9 @@
           "height": 1200
         },
         {
-          "src": "/journey/guilin-5.jpg",
-          "width": 1200,
-          "height": 1600
+          "src": "/journey/guilin-7.jpg",
+          "width": 1600,
+          "height": 1200
         },
         {
           "src": "/journey/guilin-6.jpg",
@@ -285,9 +325,14 @@
           "height": 1600
         },
         {
-          "src": "/journey/guilin-7.jpg",
+          "src": "/journey/guilin-2.jpg",
           "width": 1600,
           "height": 1200
+        },
+        {
+          "src": "/journey/guilin-9.jpg",
+          "width": 3000,
+          "height": 4000
         }
       ]
     },
@@ -308,10 +353,14 @@
         "de": "Skyline, enge Gassen und eine Tasse Tee."
       },
       "photos": [
-        { "src": "/journey/hongkong-1.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/hongkong-7.jpg", "width": 4000, "height": 3000 },
         { "src": "/journey/hongkong-2.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/hongkong-5.jpg", "width": 4000, "height": 3000 },
         { "src": "/journey/hongkong-3.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/hongkong-4.jpg", "width": 1200, "height": 1600 }
+        { "src": "/journey/hongkong-6.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/hongkong-8.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/hongkong-4.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/hongkong-1.jpg", "width": 1600, "height": 1200 }
       ]
     },
     {
@@ -359,6 +408,40 @@
         { "src": "/journey/seollal-3.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/seollal-4.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/seollal-2.jpg", "width": 1600, "height": 1200, "alt": "Dongtan" }
+      ]
+    },
+    {
+      "id": "engagement-weekend",
+      "kind": "visit",
+      "date": "2026-06-05",
+      "lat": 31.2304,
+      "lon": 121.4737,
+      "title": {
+        "ko": "우리의 약혼 주말",
+        "en": "Our engagement weekend",
+        "de": "Unser Verlobungswochenende"
+      },
+      "body": {
+        "ko": "함께한 주말, 우리는 서로에게 청혼하며 우리의 이야기를 한 단계 더 빛나게 했습니다. 안드레아는 손으로 뜬 몰랑 인형과 지금까지의 사랑 이야기를 되짚으며 자신의 시선으로 우리의 순간들을 담아 쓴 편지로 태건을 놀라게 했습니다. 태건은 마지막 조각이 빠진 1,000피스 퍼즐을 건넸습니다. 마지막 조각을 얻기 위해 안드레아는 두 사람의 첫 만남과 한국에 관한 수수께끼를 풀어야 하는, 자신만을 위해 만든 컴퓨터 게임을 헤쳐 나갔습니다.",
+        "en": "During a weekend together, we crowned our story with two proposals. Andrea surprised Taegun with hand-crocheted Molangs and a handwritten letter that looked back on the chapters of their love story and retold their shared moments from her perspective. Taegun gave Andrea a 1,000-piece puzzle of the two of them, with its final piece missing. To receive it, she had to play her way through a computer game created especially for her, solving riddles about how they met and Korea.",
+        "de": "Bei einem gemeinsamen Wochenende krönten wir unsere Geschichte mit zwei gegenseitigen Anträgen. Ich überraschte ihn mit handgehäkelten Molangs und einem handgeschriebenen Brief, in dem ich die bisherigen Kapitel unserer Liebesgeschichte rekapitulierte und unsere gemeinsamen Momente mit meinen Gedanken aus der Ich-Perspektive erzählte. Er überreichte mir ein 1000-Teile-Puzzle von uns, dessen letztes Teil fehlte. Um dieses zu erhalten, durfte ich mir in einem eigens für mich kreierten Computerspiel durch Rätsel zu unserem Kennenlernen und Korea den Weg freispielen."
+      },
+      "photos": [
+        { "src": "/journey/proposal-1.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/proposal-2.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/proposal-3.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/proposal-4.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/proposal-5.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/proposal-6.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/proposal-7.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/proposal-8.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/proposal-9.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/proposal-10.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/proposal-11.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/proposal-12.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/proposal-13.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/proposal-14.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/proposal-15.jpg", "width": 4000, "height": 3000 }
       ]
     },
     {

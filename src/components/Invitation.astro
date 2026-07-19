@@ -2,6 +2,7 @@
 import Cover from '@components/Cover.astro';
 import Greeting from '@components/Greeting.astro';
 import Schedule from '@components/Schedule.astro';
+import WeddingGuideLink from '@components/WeddingGuideLink.astro';
 import Prologue from '@components/Prologue.astro';
 import Journey from '@components/Journey.astro';
 import WeddingPhoto from '@components/WeddingPhoto.astro';
@@ -24,6 +25,7 @@ const { locale } = Astro.props;
 <Cover locale={locale} />
 <Greeting locale={locale} />
 <Schedule locale={locale} />
+<WeddingGuideLink locale={locale} />
 <Prologue locale={locale} />
 <Journey locale={locale} />
 <WeddingPhoto locale={locale} />
@@ -31,6 +33,6 @@ const { locale } = Astro.props;
 {/* <Accounts locale={locale} /> — temporarily hidden, restore by uncommenting */}
 <Rsvp locale={locale} />
 <Guestbook locale={locale} />
-<ShareButtons locale={locale} />
+{locale === 'ko' && <ShareButtons locale={locale} />}
 <Ending locale={locale} />
 <SecretLetter locale={locale} />
