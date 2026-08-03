@@ -64,18 +64,28 @@
       "title": {
         "ko": "박사 학위 수여식",
         "en": "PhD graduation",
-        "de": "Promotionsfeier"
+        "de": "Promotionsfeier & Erkundungen"
       },
       "body": {
         "ko": "태근의 박사 졸업식. 가장 긴 길의 끝에서 안드레아가 곁에 있어 주었습니다.",
         "en": "Tae-Geun's PhD ceremony. At the end of the longest road, Andrea was beside him.",
-        "de": "Tae-Geuns Promotionsfeier. Am Ende des längsten Weges stand Andrea an seiner Seite."
+        "de": "Tae-Geuns Promotionsfeier. Am Ende des längsten Weges stand Andrea an seiner Seite. Dort lernte sie auch direkt die Familie kennen und wir reisten gemeinsam weiter."
       },
       "photos": [
+        { "src": "/journey/phd-graduation-3.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/phd-1.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/phd-2.jpg", "width": 3000, "height": 4000 },
         { "src": "/journey/phd-graduation-1.jpg", "width": 1257, "height": 1600 },
         { "src": "/journey/phd-graduation-2.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/phd-graduation-3.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/phd-graduation-4.jpg", "width": 1200, "height": 1600 }
+        { "src": "/journey/phd-graduation-4.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/phd-3.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/phd-4.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/phd-5.jpg", "width": 4032, "height": 3024 },
+        { "src": "/journey/phd-6.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/phd-7.jpg", "width": 4032, "height": 3024 },
+        { "src": "/journey/phd-8.jpg", "width": 2736, "height": 3648 },
+        { "src": "/journey/phd-9.jpg", "width": 3648, "height": 2736 },
+        { "src": "/journey/phd-10.jpg", "width": 4032, "height": 3024 }
       ]
     },
     {
@@ -252,7 +262,7 @@
       "body": {
         "ko": "작은 트리 아래에서 보낸 첫 크리스마스 이브. 상하이의 거리에는 불빛이 켜졌고, 며칠 뒤에는 함께 새해도 맞았습니다.",
         "en": "Our first Christmas Eve under a small tree. Lights came on across Shanghai, and a few days later we welcomed the new year together.",
-        "de": "Unser erster Heiligabend unter einem kleinen Baum. Die Lichter Shanghais leuchteten auf, und ein paar Tage später begrüßten wir gemeinsam das neue Jahr."
+        "de": "Unser erstes gemeinsames Weihnachten feierten wir auf ganz besondere Weise mit einer abendlichen Flusskreuzfahrt durch das funkelnde Shanghai. Nach einem unvergesslichen Dinner in einem Sternerestaurant ließen wir den Abend gemütlich im Hotel ausklingen. Nur ein paar Tage später begrüßten wir in derselben Stadt gemeinsam das neue Jahr."
       },
       "photos": [
         { "src": "/journey/christmas-1.jpg", "width": 1200, "height": 1600 },
@@ -452,16 +462,37 @@
       "lat": 35.8562,
       "lon": 129.2247,
       "title": {
-        "ko": "Andrea 부모님과 한국",
-        "en": "Andrea's parents in Korea",
-        "de": "Andreas Eltern in Korea"
+        "ko": "부모님과 함께한 첫 한국 여행",
+        "en": "Parents' first time in Korea",
+        "de": "Eltern zum ersten Mal in Korea"
       },
       "body": {
-        "ko": "서울, 경주, 울산. 두 가족이 처음으로 같은 길을 함께 걸었습니다.",
-        "en": "Seoul, Gyeongju, Ulsan. The first roads our two families walked together.",
-        "de": "Seoul, Gyeongju, Ulsan. Die ersten Wege, die unsere beiden Familien gemeinsam gingen."
+        "ko": "부모님께는 첫 아시아 여행이었고, 그 여정은 특별한 이정표가 되었습니다. 서울, 경주, 울산을 함께 여행하며 우리 두 가족은 처음 만났습니다. 맛있는 음식과 잊지 못할 순간들 속에서 우리는 금세 하나가 되었습니다.",
+        "en": "For my parents, it was their first time in Asia—and an especially meaningful milestone. Between Seoul, Gyeongju, and Ulsan, our families met for the first time. Over wonderful food and unforgettable moments, we immediately grew close.",
+        "de": "Für meine Eltern war es das erste Mal in Asien – und dann gleich ein ganz besonderer Meilenstein. Zwischen Seoul, Gyeongju und Ulsan trafen unsere Familien zum ersten Mal aufeinander. Bei bestem Essen und unvergesslichen Momenten wuchsen wir sofort zusammen."
       },
-      "photos": []
+      "photos": [
+        { "src": "/journey/parents-in-korea-1.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-2.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-3.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-4.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/parents-in-korea-5.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/parents-in-korea-6.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-7.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/parents-in-korea-8.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-9.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-10.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/parents-in-korea-11.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/parents-in-korea-12.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/parents-in-korea-13.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-14.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/parents-in-korea-15.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-16.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-17.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-18.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/parents-in-korea-19.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/parents-in-korea-20.jpg", "width": 1200, "height": 1600 }
+      ]
     },
     {
       "id": "wedding-trier",
