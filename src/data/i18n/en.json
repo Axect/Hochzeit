@@ -113,9 +113,9 @@
     "busLabel": "Bus",
     "carLabel": "By car",
     "parkingLabel": "Parking",
-    "kakaoButton": "Open in KakaoMap",
-    "naverButton": "Open in Naver Map",
-    "googleButton": "Open in Google Maps",
+    "kakaoButton": "Kakao Map",
+    "naverButton": "Naver Map",
+    "googleButton": "Google Maps",
     "fallbackNote": "If the map doesn't load, please use the buttons above.",
     "airportTitle": "From Incheon Airport",
     "airportIntro": "For guests travelling from abroad.",
@@ -142,6 +142,7 @@
   "share": {
     "title": "Share the invitation",
     "intro": "Pass this invitation along to family and friends.",
+    "shareInvitationButton": "Share invitation",
     "copyLinkButton": "Copy link",
     "linkCopied": "Link copied"
   },

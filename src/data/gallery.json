@@ -1,37 +1,10 @@
 {
   "items": [
-    {
-      "id": "placeholder-1",
-      "src": "/gallery/placeholder-1.jpg",
-      "width": 1600,
-      "height": 1200,
-      "alt": {
-        "ko": "스튜디오 사진 1 (예시)",
-        "en": "Studio photo 1 (placeholder)",
-        "de": "Studiofoto 1 (Platzhalter)"
-      }
-    },
-    {
-      "id": "placeholder-2",
-      "src": "/gallery/placeholder-2.jpg",
-      "width": 1200,
-      "height": 1600,
-      "alt": {
-        "ko": "스튜디오 사진 2 (예시)",
-        "en": "Studio photo 2 (placeholder)",
-        "de": "Studiofoto 2 (Platzhalter)"
-      }
-    },
-    {
-      "id": "placeholder-3",
-      "src": "/gallery/placeholder-3.jpg",
-      "width": 1600,
-      "height": 1200,
-      "alt": {
-        "ko": "스튜디오 사진 3 (예시)",
-        "en": "Studio photo 3 (placeholder)",
-        "de": "Studiofoto 3 (Platzhalter)"
-      }
-    }
+    { "id": "rose-bouquet", "src": "/engagement/rose-bouquet.jpeg", "width": 1066, "height": 1600, "alt": { "ko": "붉은 장미 꽃다발과 함께한 태근과 안드레아", "en": "Tae-Geun and Andrea with a bouquet of red roses", "de": "Tae-Geun und Andrea mit einem Strauß roter Rosen" } },
+    { "id": "veil-portrait", "src": "/engagement/veil-portrait.jpeg", "width": 1066, "height": 1600, "alt": { "ko": "베일 아래에서 함께 미소 짓는 태근과 안드레아", "en": "Tae-Geun and Andrea smiling together beneath a veil", "de": "Tae-Geun und Andrea lächeln gemeinsam unter einem Schleier" } },
+    { "id": "garden-closeup", "src": "/engagement/garden-closeup.jpeg", "width": 1600, "height": 1066, "alt": { "ko": "정원에서 서로를 바라보는 태근과 안드레아", "en": "Tae-Geun and Andrea looking at each other in the garden", "de": "Tae-Geun und Andrea blicken sich im Garten an" } },
+    { "id": "sunlit-garden", "src": "/engagement/sunlit-garden.jpeg", "width": 1066, "height": 1600, "alt": { "ko": "햇살 가득한 정원 속 태근과 안드레아", "en": "Tae-Geun and Andrea in a sunlit garden", "de": "Tae-Geun und Andrea im sonnendurchfluteten Garten" } },
+    { "id": "window-proposal", "src": "/engagement/window-proposal.jpeg", "width": 1066, "height": 1600, "alt": { "ko": "창가에서 꽃다발을 건네는 태근과 안드레아", "en": "Tae-Geun presenting Andrea with a bouquet by the window", "de": "Tae-Geun überreicht Andrea am Fenster einen Blumenstrauß" } },
+    { "id": "red-dress-walk", "src": "/engagement/red-dress-walk.jpeg", "width": 1066, "height": 1600, "alt": { "ko": "붉은 드레스를 입고 함께 걷는 태근과 안드레아", "en": "Tae-Geun and Andrea walking together, Andrea in a red dress", "de": "Tae-Geun und Andrea bei einem Spaziergang im roten Kleid" } }
   ]
 }

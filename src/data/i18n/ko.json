@@ -113,8 +113,8 @@
     "busLabel": "버스",
     "carLabel": "자가용",
     "parkingLabel": "주차",
-    "kakaoButton": "카카오맵 길찾기",
-    "naverButton": "네이버지도 길찾기",
+    "kakaoButton": "Kakao Map",
+    "naverButton": "Naver Map",
     "googleButton": "Google Maps",
     "fallbackNote": "지도가 보이지 않으시면, 위 버튼으로 외부 앱을 이용해 주세요.",
     "airportTitle": "인천공항에서 오시는 길",
@@ -142,6 +142,7 @@
   "share": {
     "title": "청첩장 공유",
     "intro": "이 청첩장을 가족·친구에게 공유해 주세요.",
+    "shareInvitationButton": "청첩장 공유하기",
     "copyLinkButton": "링크 복사",
     "linkCopied": "링크가 복사되었습니다"
   },

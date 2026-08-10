@@ -9,7 +9,7 @@ interface Props {
 const { locale } = Astro.props;
 const title = t('share.title', locale);
 const intro = t('share.intro', locale);
-const copyLinkLabel = t('share.copyLinkButton', locale);
+const shareLabel = t('share.shareInvitationButton', locale);
 const linkCopiedMsg = t('share.linkCopied', locale);
 ---
 
@@ -19,14 +19,14 @@ const linkCopiedMsg = t('share.linkCopied', locale);
   <div class="flex justify-center">
     <button
       type="button"
-      id="share-copy"
-      class="tap-target inline-flex items-center justify-center gap-2 rounded-md border border-[var(--color-line)] bg-white/60 px-5 py-3 text-sm text-[var(--color-fg)] hover:bg-[var(--color-accent-soft)]"
+      id="share-invitation"
+      class="external-tab-button tap-target"
     >
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
-      {copyLinkLabel}
+      {shareLabel}
     </button>
   </div>
 
@@ -51,12 +51,20 @@ const linkCopiedMsg = t('share.linkCopied', locale);
       toastTimer = setTimeout(() => (toast.style.opacity = '0'), 1800);
     };
 
-    const copyBtn = document.getElementById('share-copy');
-    if (!copyBtn) return;
+    const shareBtn = document.getElementById('share-invitation');
+    if (!shareBtn) return;
 
     const url = window.location.href;
 
-    copyBtn.addEventListener('click', async () => {
+    shareBtn.addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: document.title, url });
+          return;
+        } catch (error) {
+          if (error && error.name === 'AbortError') return;
+        }
+      }
       try {
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(url);

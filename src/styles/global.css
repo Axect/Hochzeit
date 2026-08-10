@@ -99,6 +99,31 @@ h3 {
     min-width: 44px;
     min-height: 44px;
   }
+
+  .external-tab-button {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background: var(--color-accent);
+    padding: 0.5rem 1.5rem;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 150ms ease;
+  }
+
+  .external-tab-button:hover {
+    background: var(--color-fg);
+  }
+
+  .external-tab-button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+
   .safe-bottom {
     padding-bottom: env(safe-area-inset-bottom);
   }

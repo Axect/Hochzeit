@@ -65,13 +65,13 @@ export default function GalleryLightbox({
 
   return (
     <>
-      <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-3">
         {items.map((item, idx) => (
-          <li key={item.id}>
+          <li key={item.id} className={idx === 0 || idx === 3 ? 'col-span-2' : ''}>
             <button
               type="button"
               onClick={() => setOpenIndex(idx)}
-              className="tap-target group relative block aspect-square w-full overflow-hidden rounded-md border border-[var(--color-line)] bg-[var(--color-line)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+              className={`tap-target group relative block w-full overflow-hidden rounded-sm border border-white/70 bg-[var(--color-line)] shadow-[0_10px_24px_rgba(38,58,39,0.10)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] ${idx === 0 ? 'aspect-[4/5]' : idx === 3 ? 'aspect-[4/3]' : 'aspect-[3/4]'}`}
               aria-label={`${labels.open}: ${item.alt}`}
             >
               <img
@@ -81,7 +81,7 @@ export default function GalleryLightbox({
                 height={item.height}
                 loading="lazy"
                 decoding="async"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
             </button>
           </li>
