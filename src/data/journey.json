@@ -18,7 +18,7 @@
       "body": {
         "ko": "태근이 서울에서 띄운 편지가 라이멘의 안드레아 책상에 도착했습니다.",
         "en": "A letter that Tae-Geun sent from Seoul arrived on Andrea's desk in Leimen.",
-        "de": "Ein Brief von Tae-Geun aus Südkorea erreichte Andrea in Deutschland"
+        "de": "Ein Brief von Tae-Geun aus Südkorea erreichte Andrea in Deutschland und war der Beginn unserer gemeinsamen Geschichte."
       },
       "photos": [
         {
@@ -42,17 +42,22 @@
       "body": {
         "ko": "서울에서 하루를 보낸 뒤 울산과 부산까지. 편지로만 알던 사람과 처음 같은 공기를 마셨습니다.",
         "en": "A day in Seoul, then on to Ulsan and Busan. We breathed the same air for the first time.",
-        "de": "Ein Tag in Seoul, dann weiter nach Ulsan und Busan. Zum ersten Mal atmeten wir dieselbe Luft."
+        "de": "Über Seoul, Ulsan und Busan: Der Moment, in dem aus zwei entfernten Welten ein gemeinsamer Atemzug wurde."
       },
       "photos": [
         { "src": "/journey/first-visit-korea-1.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/first-visit-korea-2.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/first-visit-korea-3.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/first-visit-korea-4.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/first-visit-korea-5.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/first-visit-korea-6.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/first-visit-korea-7.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/first-visit-korea-8.jpg", "width": 1600, "height": 1200 }
+        { "src": "/journey/phd-3.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/phd-4.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/phd-6.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/phd-8.jpg", "width": 2736, "height": 3648 },
+        { "src": "/journey/phd-9.jpg", "width": 3648, "height": 2736 },
+        { "src": "/journey/phd-10.jpg", "width": 4032, "height": 3024 },
+        { "src": "/journey/first-visit-korea-5.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/first-visit-korea-6.jpg", "width": 1200, "height": 1600 }
       ]
     },
     {
@@ -78,14 +83,8 @@
         { "src": "/journey/phd-graduation-1.jpg", "width": 1257, "height": 1600 },
         { "src": "/journey/phd-graduation-2.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/phd-graduation-4.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/phd-3.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/phd-4.jpg", "width": 3000, "height": 4000 },
         { "src": "/journey/phd-5.jpg", "width": 4032, "height": 3024 },
-        { "src": "/journey/phd-6.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/phd-7.jpg", "width": 4032, "height": 3024 },
-        { "src": "/journey/phd-8.jpg", "width": 2736, "height": 3648 },
-        { "src": "/journey/phd-9.jpg", "width": 3648, "height": 2736 },
-        { "src": "/journey/phd-10.jpg", "width": 4032, "height": 3024 }
+        { "src": "/journey/phd-7.jpg", "width": 4032, "height": 3024 }
       ]
     },
     {
@@ -102,16 +101,18 @@
       "body": {
         "ko": "프랑크푸르트에서 시작해 뮌헨, 트리어, 그리고 벤스하임까지. 한 달 가까이 함께한 첫 긴 여정이었습니다.",
         "en": "From Frankfurt through Munich, Trier, and Bensheim. Almost a month, our first long journey together.",
-        "de": "Von Frankfurt über München, Trier und Bensheim. Fast einen Monat lang, unsere erste lange Reise zu zweit."
+        "de": "Ein Monat, vier Stationen und unendlich viele schöne Momente. Von Frankfurt über München, Trier und Bensheim – unser erstes großes Abenteuer zu zweit."
       },
       "photos": [
         { "src": "/journey/germany-tour-1.jpg", "width": 1600, "height": 1200, "alt": "München" },
         { "src": "/journey/germany-tour-7.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/germany-tour-6.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/germany-tour-15.jpg", "width": 1824, "height": 1368 },
         { "src": "/journey/germany-tour-3.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-10.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-5.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-9.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/germany-tour-8.jpg", "width": 1200, "height": 1600 },
         { "src": "/journey/germany-tour-4.jpg", "width": 1600, "height": 1200 },
         { "src": "/journey/germany-tour-17.jpg", "width": 1368, "height": 1824 },
         { "src": "/journey/germany-tour-2.jpg", "width": 1600, "height": 1200, "alt": "Trier" },
@@ -202,50 +203,26 @@
       "body": {
         "ko": "두 사람의 새 도시. 함께 짐을 풀고, 처음으로 같은 주소를 갖게 되었습니다.",
         "en": "Our new city. We unpacked together and shared a single address for the first time.",
-        "de": "Unsere neue Stadt. Wir packten gemeinsam aus und hatten zum ersten Mal dieselbe Adresse."
+        "de": "Neuanfang in Shanghai: Mit zwei Koffern im Gepäck und unserer Zukunft vor uns. Der Moment, in dem wir zum ersten Mal dieselbe Adresse teilten."
       },
       "photos": [
-        {
-          "src": "/journey/shanghai-move-1.jpg",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/journey/shanghai-move-2.jpg",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/journey/shanghai-move-3.jpg",
-          "width": 1600,
-          "height": 1200,
-          "alt": "Fudan University"
-        },
-        {
-          "src": "/journey/shanghai-move-4.jpg",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/journey/shanghai-move-5.jpg",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/journey/shanghai-move-6.jpg",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/journey/shanghai-move-7.jpg",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/journey/shanghai-move-8.jpg",
-          "width": 1600,
-          "height": 1200
-        }
+        { "src": "/journey/shanghai-move-12.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/shanghai-move-14.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/shanghai-move-3.jpg", "width": 1600, "height": 1200, "alt": "Fudan University" },
+        { "src": "/journey/shanghai-move-4.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/shanghai-move-5.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/shanghai-move-9.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/shanghai-move-6.jpg", "width": 1200, "height": 1600 },
+        { "src": "/journey/shanghai-move-7.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/shanghai-move-10.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/shanghai-move-8.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/shanghai-move-11.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/shanghai-move-1.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/shanghai-move-2.jpg", "width": 1600, "height": 1200 },
+        { "src": "/journey/shanghai-move-13.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/shanghai-move-16.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/shanghai-move-17.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/shanghai-move-15.jpg", "width": 4000, "height": 3000 }
       ]
     },
     {
@@ -292,7 +269,7 @@
       "body": {
         "ko": "수묵화 같은 산수 사이에서 보낸 며칠.",
         "en": "A few days among landscapes that look like ink paintings.",
-        "de": "Ein paar Tage inmitten von Landschaften wie aus Tuschezeichnungen."
+        "de": "Ganz ungeplant: Ein paar Tage inmitten von Landschaften wie aus Tuschezeichnungen."
       },
       "photos": [
         {
@@ -411,7 +388,7 @@
       "body": {
         "ko": "동탄에서 함께 맞은 첫 한국 설날. 이틀 뒤 안드레아의 생일도 함께 축하했습니다.",
         "en": "Our first Korean Lunar New Year together in Dongtan. Two days later, we also celebrated Andrea's birthday.",
-        "de": "Unser erstes koreanisches Neujahr (Seollal) gemeinsam in Dongtan. Zwei Tage später feierten wir auch Andreas Geburtstag."
+        "de": "Das erste gemeinsam begrüßte Seollal in Dongtan. Und zwei Tage später der besondere Moment, an dem wir auch Andreas Geburtstag zusammen feierten."
       },
       "photos": [
         { "src": "/journey/seollal-5.jpg", "width": 1600, "height": 1200, "alt": "Seoul" },
@@ -469,7 +446,7 @@
       "body": {
         "ko": "부모님께는 첫 아시아 여행이었고, 그 여정은 특별한 이정표가 되었습니다. 서울, 경주, 울산을 함께 여행하며 우리 두 가족은 처음 만났습니다. 맛있는 음식과 잊지 못할 순간들 속에서 우리는 금세 하나가 되었습니다.",
         "en": "For my parents, it was their first time in Asia—and an especially meaningful milestone. Between Seoul, Gyeongju, and Ulsan, our families met for the first time. Over wonderful food and unforgettable moments, we immediately grew close.",
-        "de": "Für meine Eltern war es das erste Mal in Asien – und dann gleich ein ganz besonderer Meilenstein. Zwischen Seoul, Gyeongju und Ulsan trafen unsere Familien zum ersten Mal aufeinander. Bei bestem Essen und unvergesslichen Momenten wuchsen wir sofort zusammen."
+        "de": "Für Andreas Eltern war es das erste Mal in Asien – und dann gleich ein ganz besonderer Meilenstein. Zwischen Seoul, Gyeongju und Ulsan trafen unsere Familien zum ersten Mal aufeinander. Bei bestem Essen und unvergesslichen Momenten wuchsen wir sofort zusammen."
       },
       "photos": [
         { "src": "/journey/parents-in-korea-1.jpg", "width": 4000, "height": 3000 },
@@ -492,6 +469,49 @@
         { "src": "/journey/parents-in-korea-18.jpg", "width": 4000, "height": 3000 },
         { "src": "/journey/parents-in-korea-19.jpg", "width": 3000, "height": 4000 },
         { "src": "/journey/parents-in-korea-20.jpg", "width": 1200, "height": 1600 }
+      ]
+    },
+    {
+      "id": "wuhan-with-friends",
+      "kind": "trip",
+      "date": "2026-07-21",
+      "lat": 30.5928,
+      "lon": 114.3055,
+      "title": {
+        "ko": "친구들과의 첫 여행",
+        "en": "Our first trip with friends",
+        "de": "Unsere erste Reise mit Freunden"
+      },
+      "body": {
+        "ko": "친구들과 함께한 첫 여행, 우한에서 보낸 특별한 시간.",
+        "en": "Our first trip with friends—special days spent in Wuhan.",
+        "de": "Zu Besuch bei Freunden in Wuhan. Neue Straßen entdecken, vertraute Gesichter wiedersehen und wunderschöne Erinnerungen sammeln."
+      },
+      "photos": [
+        { "src": "/journey/wuhan-1.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-2.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-3.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/wuhan-5.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-8.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/wuhan-9.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/wuhan-7.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/wuhan-14.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/wuhan-18.jpg", "width": 1279, "height": 1706 },
+        { "src": "/journey/wuhan-16.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/wuhan-20.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-22.jpg", "width": 3000, "height": 4000 },
+        { "src": "/journey/wuhan-4.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-6.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-12.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-15.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-21.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-23.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-10.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-13.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-11.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-17.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-19.jpg", "width": 4000, "height": 3000 },
+        { "src": "/journey/wuhan-24.jpg", "width": 4000, "height": 3000 }
       ]
     },
     {
