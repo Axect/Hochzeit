@@ -60,7 +60,7 @@ const collectFiles = (dir: string, out: string[] = []): string[] => {
 const splitIntoPhrases = (text: string): string[] => {
   // Split on whitespace runs, newlines, common punctuation; keep substrings of meaningful length.
   return text
-    .split(/[\s\n\r\t.,;:!?“”‘’"\(\)\[\]\/]+/)
+    .split(/(?:\s|[.,;:!?“”‘’"()]|\[|\]|\u002f)+/)
     .map((p) => p.trim())
     .filter((p) => p.length >= MIN_PHRASE_LEN);
 };

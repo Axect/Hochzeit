@@ -71,7 +71,7 @@ const linkCopiedMsg = t('share.linkCopied', locale);
           showToast(linkCopiedMsg);
           return;
         }
-      } catch (_) {
+      } catch {
         /* fall through to execCommand */
       }
       const ta = document.createElement('textarea');

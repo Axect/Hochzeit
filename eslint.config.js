@@ -10,6 +10,9 @@ export default [
     languageOptions: {
       ecmaVersion: 2024,
       sourceType: 'module',
+      globals: {
+        process: 'readonly',
+      },
     },
     rules: {
       '@typescript-eslint/no-unused-vars': [

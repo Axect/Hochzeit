@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { withBase } from '@lib/i18n';
 
 interface GalleryItem {
   id: string;
@@ -75,7 +76,7 @@ export default function GalleryLightbox({
               aria-label={`${labels.open}: ${item.alt}`}
             >
               <img
-                src={item.src}
+                src={withBase(item.src)}
                 alt={item.alt}
                 width={item.width}
                 height={item.height}
@@ -132,7 +133,7 @@ export default function GalleryLightbox({
           </button>
           <figure className="max-h-[90vh] max-w-[95vw]">
             <img
-              src={active.src}
+              src={withBase(active.src)}
               alt={active.alt}
               width={active.width}
               height={active.height}

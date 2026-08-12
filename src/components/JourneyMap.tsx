@@ -57,8 +57,6 @@ const prefersReducedMotion = () =>
   typeof window !== 'undefined' &&
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
-
 const KIND_GLYPH: Record<Event['kind'], string> = {
   letter: '✉',
   visit: '✦',

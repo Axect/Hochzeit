@@ -174,7 +174,7 @@ const renderRow = (acc: Account) => ({
       let ok = false;
       try {
         ok = document.execCommand('copy');
-      } catch (_) {
+      } catch {
         ok = false;
       }
       ta.remove();
@@ -193,7 +193,7 @@ const renderRow = (acc: Account) => ({
           }
           if (fallbackCopy(value)) showToast(copiedMsg);
           else showToast(copyFailedMsg);
-        } catch (_) {
+        } catch {
           if (fallbackCopy(value)) showToast(copiedMsg);
           else showToast(copyFailedMsg);
         }
