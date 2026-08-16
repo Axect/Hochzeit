@@ -644,14 +644,13 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
             <rect width={W} height={H} fill="url(#journey-vignette)" pointerEvents="none" />
           </svg>
 
-          {/* Bottom gradient + text overlay */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-[oklch(0.12_0.04_150)] via-[oklch(0.12_0.04_150)]/85 to-transparent"
-          />
-
-          <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-12 pt-10 sm:px-12 sm:pb-16">
-            <div className="mx-auto max-w-2xl">
+          {/* Bottom text overlay with its own scrim. The gradient wrapper is
+              sized to its content (minimum 62% of the viewport) so long story
+              cards stay covered by the scrim instead of rising past a
+              fixed-height gradient into the bright route line and markers.
+              If a card ever outgrows the viewport it scrolls internally. */}
+          <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-full min-h-[62%] flex-col justify-end bg-gradient-to-t from-[oklch(0.12_0.04_150)] via-[oklch(0.12_0.04_150)]/85 to-transparent">
+            <div className="mx-auto min-h-0 w-full max-w-2xl overflow-y-auto px-6 pb-12 pt-24 sm:px-12 sm:pb-16 sm:pt-32">
               <div key={activeEvent.id} className="journey-card-fade space-y-3 text-left">
                 <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.32em] text-white/55">
                   <span aria-hidden="true" className="text-base text-[oklch(0.84_0.13_80)]">
@@ -661,13 +660,12 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   <span className="text-white/30">·</span>
                   <time>{activeEvent.dateFormatted}</time>
                 </p>
-                <h3 className="font-serif text-[clamp(2rem,7vw,3.75rem)] leading-[1.05] text-white">
+                <h3 className="font-serif text-[clamp(2rem,7vw,3.75rem)] leading-[1.05] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)]">
                   {activeEvent.title}
                 </h3>
-                <p className="max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+                <p className="max-w-xl text-base leading-relaxed text-white/80 drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] sm:text-lg">
                   {activeEvent.body}
                 </p>
-
                 {previewPhotos.length > 0 && (
                   <ul className="mt-4 flex gap-2 pb-1">
                     {previewPhotos.map((p, idx) => (
