@@ -34,11 +34,11 @@
         "de": "International Taxi (Festpreis)"
       },
       "summary": {
-        "ko": "영등포구는 정액 ₩55,000입니다. 영문 가능 기사가 운전하고 통행료가 포함되어 있어 편하게 이용할 수 있어요.",
-        "en": "Flat ₩55,000 to Yeongdeungpo (Zone A). English-speaking driver, all tolls included — no surprises.",
-        "de": "Pauschal 55.000 ₩ nach Yeongdeungpo (Zone A). Englischsprachiger Fahrer, Mautgebühren inklusive — keine Überraschungen."
+        "ko": "영등포구(서울 B권역)는 정액 ₩75,000입니다. 영문 가능 기사가 운전하고 공항고속도로·인천대교 통행료가 포함되어 있어 편하게 이용할 수 있어요.",
+        "en": "Flat ₩75,000 to Yeongdeungpo (Seoul Zone B). English-speaking driver, expressway tolls included — no surprises.",
+        "de": "Pauschal 75.000 ₩ nach Yeongdeungpo (Seoul-Zone B). Englischsprachiger Fahrer, Mautgebühren inklusive — keine Überraschungen."
       },
-      "fare": "₩55,000",
+      "fare": "₩75,000",
       "duration": {
         "ko": "약 50~80분",
         "en": "~50–80 min",
@@ -69,6 +69,42 @@
   ],
   "hotels": [
     {
+      "id": "lotte-city-guro",
+      "name": "Lotte City Hotel Guro",
+      "nameLocal": "롯데시티호텔 구로",
+      "stars": 4,
+      "distance": {
+        "ko": "구로디지털단지역(2호선) 도보 약 7~10분. 신풍역에서 지하철 약 15분(환승 1회) 또는 택시 약 10~15분.",
+        "en": "A 7–10 min walk from Gu-digital Complex Stn (Line 2). About 15 min by subway from Sinpung (one transfer), or 10–15 min by taxi.",
+        "de": "7–10 Min. zu Fuß von der Station Digital Complex (Linie 2). Ab Sinpung ca. 15 Min. U-Bahn (ein Umstieg) oder 10–15 Min. mit dem Taxi."
+      },
+      "price": "₩100,000~180,000",
+      "note": {
+        "ko": "롯데 체인 비즈니스 호텔. 객실이 넓고 조용해 가족 단위 숙박에 좋습니다. 조식은 뷔페 패키지로 예약하면 더 저렴합니다(단품 성인 약 ₩30,000).",
+        "en": "Lotte-chain business hotel. Spacious, quiet rooms, well suited for families. Book breakfast as a package for the better rate (buffet otherwise ~₩30,000 per adult).",
+        "de": "Business-Hotel der Lotte-Kette. Große, ruhige Zimmer, gut für Familien. Frühstück am besten als Paket buchen (Buffet sonst ca. 30.000 ₩ pro Erwachsenem)."
+      },
+      "url": "https://www.lottehotel.com/guro-city/en/about/information/index.html"
+    },
+    {
+      "id": "shilla-stay-guro",
+      "name": "Shilla Stay Guro",
+      "nameLocal": "신라스테이 구로",
+      "stars": 4,
+      "distance": {
+        "ko": "구로디지털단지역(2호선) 도보 약 5~7분. 신풍역에서 지하철 약 15분(환승 1회) 또는 택시 약 10~15분.",
+        "en": "A 5–7 min walk from Gu-digital Complex Stn (Line 2). About 15 min by subway from Sinpung (one transfer), or 10–15 min by taxi.",
+        "de": "5–7 Min. zu Fuß von der Station Digital Complex (Linie 2). Ab Sinpung ca. 15 Min. U-Bahn (ein Umstieg) oder 10–15 Min. mit dem Taxi."
+      },
+      "price": "₩130,000~180,000",
+      "note": {
+        "ko": "신라 호텔 체인의 비즈니스 호텔. 객실이 정돈되어 있고 영문 응대가 원활합니다. 롯데시티호텔 구로와 같은 역 세권이라 한쪽이 만실일 때 대안으로 좋습니다.",
+        "en": "Shilla-chain business hotel by the same station as Lotte City Guro. Tidy rooms, smooth English service — a good fallback when one of the two is full.",
+        "de": "Business-Hotel der Shilla-Kette an derselben Station wie das Lotte City Guro. Ordentliche Zimmer, guter englischsprachiger Service — gute Alternative, wenn eines ausgebucht ist."
+      },
+      "url": "https://www.shillahotels.com/en/shillastay/guro/introduction/about.do"
+    },
+    {
       "id": "ramada-sindorim",
       "name": "Ramada by Wyndham Seoul Sindorim",
       "nameLocal": "라마다 바이 윈덤 서울 신도림",
@@ -78,7 +114,7 @@
         "en": "About 10 min by subway from Sinpung (Line 7 → Line 2)",
         "de": "ca. 10 min mit der U-Bahn von Sinpung (Linie 7 → Linie 2)"
       },
-      "price": "₩140,000~170,000",
+      "price": "₩120,000~200,000",
       "note": {
         "ko": "윈덤 브랜드 4성 호텔. 영문 응대 가능, 비즈니스 센터·피트니스 시설 보유.",
         "en": "Wyndham brand. English-speaking front desk, business center, fitness.",
@@ -92,35 +128,17 @@
       "nameLocal": "페어필드 바이 메리어트 서울",
       "stars": 4,
       "distance": {
-        "ko": "신풍역에서 지하철 약 10분 (문래역 인근, 7호선 → 2호선 환승)",
-        "en": "About 10 min by subway from Sinpung (near Mullae Stn, Line 2)",
-        "de": "ca. 10 min mit der U-Bahn von Sinpung (Mullae-Station, Linie 2)"
+        "ko": "영등포역(1호선) 도보 1분. 타임스퀘어·신세계백화점 인근. 신풍역에서 택시 약 10분.",
+        "en": "1-min walk from Yeongdeungpo Stn (Line 1), right by Times Square. About 10 min by taxi from Sinpung.",
+        "de": "1 Minute zu Fuß von Yeongdeungpo (Linie 1), direkt am Times Square. ca. 10 Min. mit dem Taxi von Sinpung."
       },
-      "price": "₩120,000~160,000",
+      "price": "₩110,000~160,000",
       "note": {
-        "ko": "메리어트 브랜드 4성 호텔. 무료 조식과 Wi-Fi, 모던한 객실.",
-        "en": "Marriott brand. Free breakfast, free Wi-Fi, contemporary rooms.",
-        "de": "Marriott-Marke. Frühstück und WLAN inklusive, moderne Zimmer."
+        "ko": "메리어트 브랜드. 영등포역 바로 앞이라 접근성이 가장 좋고 객실은 컴팩트합니다. 조식은 기본 미포함(성인 약 ₩20,000)이니 조식 포함 요금제와 비교해 보세요.",
+        "en": "Marriott brand. Best station access, right at Yeongdeungpo Stn, with compact rooms. Breakfast is not included by default (~₩20,000 per adult) — compare breakfast-inclusive rates.",
+        "de": "Marriott-Marke. Beste Bahnhofslage direkt an der Station Yeongdeungpo, kompakte Zimmer. Frühstück nicht standardmäßig inklusive (ca. 20.000 ₩) — Raten mit Frühstück vergleichen."
       },
       "url": "https://www.marriott.com/en-us/hotels/selfi-fairfield-seoul/overview/"
-    },
-    {
-      "id": "courtyard-times-square",
-      "name": "Courtyard by Marriott Seoul Times Square",
-      "nameLocal": "코트야드 메리어트 서울 타임스퀘어",
-      "stars": 4,
-      "distance": {
-        "ko": "신풍역에서 약 1km. 영등포역(1호선) 도보 5분, 타임스퀘어몰과 직결.",
-        "en": "About 1 km from Sinpung. 5-min walk from Yeongdeungpo Stn (Line 1). Connected to Times Square Mall.",
-        "de": "ca. 1 km von Sinpung. 5 Minuten zu Fuß von Yeongdeungpo (Linie 1). Direkt mit Times Square Mall verbunden."
-      },
-      "price": "₩180,000~220,000",
-      "note": {
-        "ko": "메리어트 브랜드 4성 호텔. 쇼핑·식당가가 직결되어 외국인 친화적.",
-        "en": "Marriott brand. Mall and dining attached — easy for international guests.",
-        "de": "Marriott-Marke. Direkt am Einkaufszentrum mit Restaurants — bequem für internationale Gäste."
-      },
-      "url": "https://www.marriott.com/en-us/hotels/selcy-courtyard-seoul-times-square/overview/"
     },
     {
       "id": "toyoko-inn-yeongdeungpo",
@@ -128,11 +146,11 @@
       "nameLocal": "토요코인 서울 영등포",
       "stars": 3,
       "distance": {
-        "ko": "신풍역에서 지하철 약 10~15분 (영등포역 도보 5분).",
-        "en": "About 10–15 min by subway from Sinpung. 5-min walk from Yeongdeungpo Stn (Line 1).",
-        "de": "ca. 10–15 min mit der U-Bahn von Sinpung. 5 Minuten zu Fuß von Yeongdeungpo (Linie 1)."
+        "ko": "영등포역(1호선) 5번 출구 도보 약 10분, 신길역(5호선) 3번 출구 도보 약 5분.",
+        "en": "About 10 min on foot from Yeongdeungpo Stn Exit 5 (Line 1), or 5 min from Singil Stn Exit 3 (Line 5).",
+        "de": "ca. 10 Min. zu Fuß von Yeongdeungpo Ausgang 5 (Linie 1) oder 5 Min. von Singil Ausgang 3 (Linie 5)."
       },
-      "price": "₩70,000~95,000",
+      "price": "₩65,000~100,000",
       "note": {
         "ko": "일본계 비즈니스호텔 체인. 무료 조식 제공, 가성비 좋음.",
         "en": "Reliable Japanese business-hotel chain. Free breakfast, great value.",

@@ -163,9 +163,9 @@ export const travelGuide: TravelGuideData = {
               de: 'Im Bus zeigt eine digitale Anzeige die nächsten Haltestellen auf Koreanisch und Englisch. Bei „Sinpung Station / 신풍역" den roten Halteknopf an Sitz oder Säule drücken.',
             },
             {
-              ko: '내린 곳에서 약 50m 거리에 신풍역 1번 출구가 있습니다. 베뉴비안은 신풍역 바로 옆이라 도보 5분.',
-              en: 'You alight roughly 50 m from Exit 1 of Sinpung Station. Venuevian is a 5-minute walk from there.',
-              de: 'Du steigst etwa 50 m vom Ausgang 1 der Sinpung-Station aus. Das Venuevian ist von dort 5 Minuten zu Fuß.',
+              ko: '내리면 바로 신풍역 4번 출구 앞입니다. 베뉴비안은 출구에서 도보 1~3분.',
+              en: 'You alight right at Exit 4 of Sinpung Station. Venuevian is a 1–3 minute walk from the exit.',
+              de: 'Du steigst direkt am Ausgang 4 der Sinpung-Station aus. Das Venuevian ist 1–3 Minuten zu Fuß entfernt.',
             },
             {
               ko: '실수로 한 정류장 더 가셔도 괜찮아요 — 다음 정류장(래미안에스티움)에서 내려 신풍역 방향으로 도보 약 5분.',
@@ -247,19 +247,19 @@ export const travelGuide: TravelGuideData = {
           type: 'ul',
           items: [
             {
-              ko: '중형 (4인까지): ₩55,000',
-              en: 'Standard (up to 4 passengers): ₩55,000',
-              de: 'Standard (bis 4 Personen): 55.000 ₩',
+              ko: '중형 (4인까지): ₩75,000',
+              en: 'Standard (up to 4 passengers): ₩75,000',
+              de: 'Standard (bis 4 Personen): 75.000 ₩',
             },
             {
-              ko: '대형/럭셔리 (짐 많거나 5인 이상): ₩80,000',
-              en: 'Large / luxury (lots of luggage, 5+ passengers): ₩80,000',
-              de: 'Großraum / Luxus (viel Gepäck, ab 5 Personen): 80.000 ₩',
+              ko: '대형·모범 (짐 많거나 5인 이상): ₩110,000',
+              en: 'Large / deluxe (lots of luggage, 5+ passengers): ₩110,000',
+              de: 'Großraum / Deluxe (viel Gepäck, ab 5 Personen): 110.000 ₩',
             },
             {
-              ko: '통행료, 야간할증, 인천 시외 추가요금이 모두 포함되어 추가 청구 없음.',
-              en: 'All tolls, late-night surcharge, and out-of-Incheon fees are already included — no surprises.',
-              de: 'Mautgebühren, Nachtzuschlag und Außerorts-Aufschlag sind enthalten — keine Überraschungen.',
+              ko: '공항고속도로·인천대교 통행료가 포함된 구간 정액 요금입니다. 심야 할증 적용 여부는 예약 시 확인해 주세요.',
+              en: 'Zone flat fare with expressway tolls included. Late-night surcharge may apply — confirm when booking.',
+              de: 'Zonen-Pauschale inklusive Mautgebühren. Ein Nachtzuschlag kann anfallen — bei der Buchung bestätigen lassen.',
             },
           ],
         },
@@ -440,9 +440,9 @@ export const travelGuide: TravelGuideData = {
               de: 'Den „All-stop"-Zug nehmen: 4.750 ₩, 53–66 Min., Takt alle 5–8 Min.',
             },
             {
-              ko: '직통열차(₩9,500, T1 약 43분 / T2 약 51분)도 있지만 가격 차이가 커서 일반열차가 더 가성비 좋음',
-              en: 'There is also an Express train (₩9,500, ~43 min from T1 / ~51 min from T2) but the all-stop train is the better value.',
-              de: 'Es gibt auch einen Expresszug (9.500 ₩, ca. 43 Min. ab T1 / ca. 51 Min. ab T2), aber der Bummelzug bietet das bessere Preis-Leistungs-Verhältnis.',
+              ko: '직통열차(성인 ₩13,000, T1 약 43분 / T2 약 51분)도 있지만 가격 차이가 커서 일반열차가 더 가성비 좋음',
+              en: 'There is also an Express train (adult ₩13,000, ~43 min from T1 / ~51 min from T2) but the all-stop train is the better value.',
+              de: 'Es gibt auch einen Expresszug (Erwachsene 13.000 ₩, ca. 43 Min. ab T1 / ca. 51 Min. ab T2), aber der Bummelzug bietet das bessere Preis-Leistungs-Verhältnis.',
             },
             {
               ko: '서울역에서 하차',
@@ -552,14 +552,14 @@ export const travelGuide: TravelGuideData = {
           type: 'ul',
           items: [
             {
-              ko: '신풍역 1번 출구로 나가기 (출구 번호는 Naver Map에서 미리 확인 권장)',
-              en: 'Take Exit 1 (you can verify the exact exit on Naver Map ahead of time).',
-              de: 'Ausgang 1 nehmen (genauen Ausgang vorher in Naver Map prüfen).',
+              ko: '신풍역 4번 출구로 나가기 (출구 번호는 카카오맵에서 미리 확인 권장)',
+              en: 'Take Exit 4 (you can verify the exact exit on KakaoMap ahead of time).',
+              de: 'Ausgang 4 nehmen (genauen Ausgang vorher in KakaoMap prüfen).',
             },
             {
-              ko: 'Naver Map에서 "베뉴비안" 또는 "Venuevian" 검색 → 도보 약 5분',
-              en: 'Search "Venuevian" in Naver Map — about a 5-minute walk.',
-              de: '„Venuevian" in Naver Map eingeben — ca. 5 Minuten zu Fuß.',
+              ko: '카카오맵에서 "베뉴비안" 또는 "Venuevian" 검색 → 도보 약 5분',
+              en: 'Search "Venuevian" in KakaoMap — about a 5-minute walk.',
+              de: '„Venuevian" in KakaoMap eingeben — ca. 5 Minuten zu Fuß.',
             },
           ],
         },
@@ -599,14 +599,14 @@ export const travelGuide: TravelGuideData = {
           type: 'ul',
           items: [
             {
-              ko: '네이버 지도 (Naver Map): 한국 1위 지도 앱. 영문 UI 지원. 지하철·버스·도보 경로가 가장 정확합니다.',
-              en: 'Naver Map (네이버 지도): the dominant Korean maps app, with English UI. The most reliable for subway, bus, and walking directions.',
-              de: 'Naver Map (네이버 지도): die führende koreanische Karten-App, englische Oberfläche. Am verlässlichsten für U-Bahn, Bus und Fußwege.',
+              ko: '카카오맵 (KakaoMap): 가장 먼저 추천하는 지도 앱. 영문 UI 지원. 지하철·버스·도보 길찾기가 정확하고 식당·카페 정보도 풍부합니다.',
+              en: 'KakaoMap (카카오맵): our first recommendation. English UI, accurate subway, bus, and walking directions, plus rich restaurant and cafe info.',
+              de: 'KakaoMap (카카오맵): unsere erste Empfehlung. Englische Oberfläche, genaue U-Bahn-, Bus- und Fußwegeplanung, dazu viele Restaurant- und Café-Infos.',
             },
             {
-              ko: '카카오맵 (KakaoMap): 대안 지도. 영문 UI 지원. 식당·카페 정보가 풍부합니다.',
-              en: 'KakaoMap (카카오맵): an alternative maps app with English UI — better for restaurant and cafe info.',
-              de: 'KakaoMap (카카오맵): alternative Karten-App mit englischer Oberfläche — besonders gut für Restaurants und Cafés.',
+              ko: '네이버 지도 (Naver Map): 대안 지도 앱. 영문 UI 지원. 대중교통 노선 정보가 정확합니다.',
+              en: 'Naver Map (네이버 지도): an alternative maps app with English UI and reliable public-transit routing.',
+              de: 'Naver Map (네이버 지도): eine alternative Karten-App mit englischer Oberfläche und zuverlässigen ÖPNV-Routen.',
             },
             {
               ko: 'Kakao T: 택시 호출 앱, 영문 UI 지원. 자동 결제는 한국 휴대폰 번호 등록이 필요해서, 외국 손님은 차량에서 카드/현금 직접 결제가 더 간단합니다. 외국인 전용 "k.ride" 앱은 한국 번호 없이도 해외카드 등록 가능.',
@@ -624,9 +624,9 @@ export const travelGuide: TravelGuideData = {
           type: 'callout',
           tone: 'warn',
           text: {
-            ko: 'Google Maps는 한국에서 지하철·도보 길찾기가 거의 작동하지 않습니다(국내 지도 데이터 반출 제한). 반드시 Naver나 KakaoMap을 사용하세요.',
-            en: 'Google Maps does not give working subway or walking directions in Korea (legal export restrictions on map data). Use Naver Map or KakaoMap instead.',
-            de: 'Google Maps liefert in Korea keine zuverlässigen U-Bahn- oder Fußwegrouten (Exportbeschränkungen für Kartendaten). Bitte Naver Map oder KakaoMap verwenden.',
+            ko: 'Google Maps는 한국에서 지하철·도보 길찾기가 거의 작동하지 않습니다(국내 지도 데이터 반출 제한). 반드시 카카오맵이나 네이버 지도를 사용하세요.',
+            en: 'Google Maps does not give working subway or walking directions in Korea (legal export restrictions on map data). Use KakaoMap or Naver Map instead.',
+            de: 'Google Maps liefert in Korea keine zuverlässigen U-Bahn- oder Fußwegerouten (Exportbeschränkungen für Kartendaten). Bitte KakaoMap oder Naver Map verwenden.',
           },
         },
         {
