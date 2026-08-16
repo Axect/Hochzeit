@@ -506,7 +506,7 @@ export const travelGuide: TravelGuideData = {
               de: 'Bahnsteig in Richtung Seongsu (Innenring), eine Station bis „대림 / Daerim".',
             },
             {
-              ko: '신도림과 대림은 같은 7호선이 아니라는 점 주의',
+              ko: '신도림에서 대림까지는 7호선이 아니라 2호선으로 이동합니다.',
               en: 'Sindorim and Daerim are connected by Line 2, not Line 7.',
               de: 'Sindorim und Daerim verbindet die Linie 2, nicht die Linie 7.',
             },
