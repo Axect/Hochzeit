@@ -53,6 +53,9 @@ interface MapPaths {
 const W = 960;
 const H = 540;
 
+/** Story-card scrim: near-opaque so the zoomed map never bleeds into the text. */
+const SCRIM = 'oklch(0.12 0.04 150 / 0.94)';
+
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' &&
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -644,13 +647,23 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
             <rect width={W} height={H} fill="url(#journey-vignette)" pointerEvents="none" />
           </svg>
 
-          {/* Bottom text overlay with its own scrim. The gradient wrapper is
-              sized to its content (minimum 62% of the viewport) so long story
-              cards stay covered by the scrim instead of rising past a
-              fixed-height gradient into the bright route line and markers.
-              If a card ever outgrows the viewport it scrolls internally. */}
-          <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-full min-h-[62%] flex-col justify-end bg-gradient-to-t from-[oklch(0.12_0.04_150)] via-[oklch(0.12_0.04_150)]/85 to-transparent">
-            <div className="mx-auto min-h-0 w-full max-w-2xl overflow-y-auto px-6 pb-12 pt-24 sm:px-12 sm:pb-16 sm:pt-32">
+          {/* Bottom text overlay with its own scrim, in two pieces:
+              a fixed-height fade strip, then a near-opaque panel that holds the
+              card. A single `bg-gradient-to-t` across the whole overlay ramps
+              proportionally to its height, so on tall story cards the text
+              started at ~75% transparency and the glowing dashed route line and
+              markers showed straight through the headline and first body lines.
+              Splitting the fade off keeps text legibility independent of card
+              length, of where the camera put the route, and of scroll position
+              if a card ever outgrows the viewport. */}
+          <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-full min-h-[62%] flex-col justify-end">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none h-20 shrink-0"
+              style={{ backgroundImage: `linear-gradient(to top, ${SCRIM}, transparent)` }}
+            />
+            <div className="min-h-0 overflow-y-auto" style={{ backgroundColor: SCRIM }}>
+              <div className="mx-auto w-full max-w-2xl px-6 pb-12 pt-6 sm:px-12 sm:pb-16 sm:pt-10">
               <div key={activeEvent.id} className="journey-card-fade space-y-3 text-left">
                 <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.32em] text-white/55">
                   <span aria-hidden="true" className="text-base text-[oklch(0.84_0.13_80)]">
@@ -741,6 +754,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </ModalShell>
       {lightbox &&
