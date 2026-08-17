@@ -26,50 +26,28 @@ const kakaoMapUrl = `https://map.kakao.com/link/to/${venueQuery},${lat},${lon}`;
 const naverMapUrl = `https://map.naver.com/v5/search/${venueQuery}`;
 const googleMapUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
 
-// Korean speakers see KakaoMap (familiar to them); everyone else gets Google
-// Maps embedded directly so they don't need a Korean app installed.
-// Kakao uses the "지도 퍼가기" (roughmap) embed — no SDK key or domain
-// registration required. Google uses the official `/maps/embed?pb=...` URL
-// from "Share → Embed a map" — that includes the venue's place ID, so the
-// pin and label are correct without us composing query params.
-const useKakaoEmbed = locale === 'ko';
-const kakaoRoughmap = (venue as { kakaoRoughmap?: { timestamp: string; key: string } })
-  .kakaoRoughmap;
+// Every locale gets the same Google Maps embed. Kakao's "지도 퍼가기" (roughmap)
+// embed kept rendering blank on mobile: its loader relies on document.write,
+// which mobile Chrome blocks on slow connections, and it had to live inside a
+// srcdoc iframe (its bundled React nulls our islands' dispatcher otherwise),
+// which several mobile WebKit builds never load. Google's embed is a real
+// `src` URL, so `loading="lazy"` is safe. The URL comes from "Share → Embed a
+// map" and carries the venue's place ID, so the pin and label are correct
+// without composing query params. Korean visitors still get the KakaoMap link
+// button below.
 const googleEmbedSrc =
   (venue as { googleEmbed?: string }).googleEmbed ??
-  `https://maps.google.com/maps?q=${lat},${lon}&hl=${locale === 'de' ? 'de' : 'en'}&z=16&output=embed`;
-
-// Kakao's roughmap loader injects `roughmapLander.js` via document.write and
-// bundles its own React. Run inline on the main page, that synchronous inject
-// runs *during* our React islands' hydration and nulls React's dispatcher,
-// crashing the JourneyMap island (React #423). We therefore keep the whole
-// embed inside an iframe (srcdoc) so Kakao's document.write + React stay in
-// their own document. The iframe itself is injected by the script below when
-// the mount nears the viewport — `loading="lazy"` on a srcdoc iframe renders
-// blank on several mobile WebKit builds.
+  `https://maps.google.com/maps?q=${lat},${lon}&hl=${locale}&z=16&output=embed`;
 ---
 
 <Section id="directions" title={title}>
-  {
-    useKakaoEmbed && kakaoRoughmap ? (
-      <div
-        id="kakao-map-mount"
-        class="aspect-[16/9] w-full overflow-hidden rounded-md border border-[var(--color-line)] bg-[var(--color-accent-soft)]"
-        data-title={`${venueName} on KakaoMap`}
-        data-ts={kakaoRoughmap.timestamp}
-        data-key={kakaoRoughmap.key}
-      >
-      </div>
-    ) : (
-      <iframe
-        title={`${venueName} on Google Maps`}
-        src={googleEmbedSrc}
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        class="aspect-[4/3] w-full overflow-hidden rounded-md border border-[var(--color-line)] bg-[var(--color-accent-soft)]"
-      />
-    )
-  }
+  <iframe
+    title={`${venueName} on Google Maps`}
+    src={googleEmbedSrc}
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    class="aspect-[4/3] w-full overflow-hidden rounded-md border border-[var(--color-line)] bg-[var(--color-accent-soft)]"
+  />
 
   <dl class="mt-6 space-y-3 text-sm">
     <div>
@@ -220,63 +198,3 @@ const googleEmbedSrc =
     }
   </ul>
 </Section>
-
-<script>
-  // Kakao roughmap embed, injected only when the mount scrolls near the
-  // viewport. We deliberately avoid `loading="lazy"` + `srcdoc` on the iframe:
-  // that combination renders blank on several mobile WebKit builds (the srcdoc
-  // never fires), and Kakao's loader also relies on document.write, which some
-  // mobile browsers block on slow networks. IntersectionObserver keeps the
-  // bandwidth win of lazy loading while sidestepping both problems, and a
-  // 7-second probe inside the iframe swaps in a fallback notice if the map
-  // never arrives.
-  (function () {
-    const mount = document.getElementById('kakao-map-mount');
-    if (!mount) return;
-    const title = mount.getAttribute('data-title') || 'Kakao Map';
-    const ts = mount.getAttribute('data-ts');
-    const key = mount.getAttribute('data-key');
-    if (!ts || !key) return;
-    // Script open/close tag sequences must never appear literally in this
-    // inline module: the HTML parser would switch to script-data-escaped state
-    // and truncate it (Kakao's loader then leaks into the page as a real tag).
-    // Plain string concatenation is not enough, because the bundler folds the
-    // constants back together, so the angle bracket comes from fromCharCode.
-    const LT = String.fromCharCode(60);
-    const srcdoc =
-      '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
-      '<style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}.root_daum_roughmap{width:100%!important;margin:0!important}.root_daum_roughmap .wrap_map{width:100%!important}</style></head><body>' +
-      '<div id="daumRoughmapContainer' + ts + '" class="root_daum_roughmap root_daum_roughmap_landing"></div>' +
-      LT + 'script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js">' + LT + '/script>' +
-      LT + 'script charset="UTF-8">(function(){var w=Math.max(280,Math.min(640,window.innerWidth||360));var h=Math.round((w*9)/16);' +
-      'new daum.roughmap.Lander({timestamp:"' + ts + '",key:"' + key + '",mapWidth:String(w),mapHeight:String(h)}).render();' +
-      'setTimeout(function(){var c=document.getElementById("daumRoughmapContainer' + ts + '");' +
-      'if(c&&c.children.length===0){document.body.innerHTML=' +
-      '"<div style=\\"font:14px/1.6 -apple-system,BlinkMacSystemFont,sans-serif;color:#6b5b47;display:flex;align-items:center;justify-content:center;height:100vh;text-align:center;margin:0 16px\\">지도를 불러오지 못했습니다.<br>아래 버튼으로 카카오맵을 열어 주세요.</div>";}},7000);})();' + LT + '/script></body></html>';
-    function inject() {
-      if (mount.querySelector('iframe')) return;
-      const f = document.createElement('iframe');
-      f.title = title;
-      f.setAttribute('srcdoc', srcdoc);
-      f.className = 'h-full w-full border-0';
-      mount.appendChild(f);
-    }
-    if (!('IntersectionObserver' in window)) {
-      inject();
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            io.disconnect();
-            inject();
-            break;
-          }
-        }
-      },
-      { rootMargin: '400px 0px' },
-    );
-    io.observe(mount);
-  })();
-</script>

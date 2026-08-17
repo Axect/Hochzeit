@@ -17,10 +17,6 @@
   "lat": 37.500731,
   "lon": 126.905953,
   "kakaoPlaceId": "0",
-  "kakaoRoughmap": {
-    "timestamp": "1777786540868",
-    "key": "mr3s3na4bqh"
-  },
   "googleEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3046874664365!2d126.90595347587062!3d37.50073137205581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9e52f67703df%3A0xbe9a4e5b64cb59df!2z67Kg64m067mE7JWI!5e0!3m2!1sko!2sjp!4v1777786590418!5m2!1sko!2sjp",
   "transit": {
     "subway": {
