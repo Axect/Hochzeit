@@ -28,15 +28,6 @@ jobs:
 
       - run: npm ci
 
-      - name: Inject letters secret (or use empty)
-        env:
-          LETTERS_PRIVATE_JSON: ${{ secrets.LETTERS_PRIVATE_JSON }}
-        run: |
-          if [ -n "$LETTERS_PRIVATE_JSON" ]; then
-            mkdir -p data
-            printf '%s' "$LETTERS_PRIVATE_JSON" > data/letters.private.json
-          fi
-
       - run: CI=false npm run build
 
       - name: Run Lighthouse
