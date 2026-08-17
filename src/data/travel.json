@@ -67,6 +67,52 @@
       "url": "https://www.arex.or.kr/main.do"
     }
   ],
+  "fromSeoulStation": [
+    {
+      "id": "subway-from-seoul-station",
+      "title": {
+        "ko": "지하철 1·2·7호선",
+        "en": "Subway (Lines 1, 2, 7)",
+        "de": "U-Bahn (Linien 1, 2, 7)"
+      },
+      "recommended": true,
+      "summary": {
+        "ko": "1호선으로 신도림 → 2호선 대림 → 7호선 신풍역. 환승을 한 번만 하고 싶으시면 1호선 가산디지털단지에서 7호선으로 갈아타셔도 됩니다.",
+        "en": "Line 1 to Sindorim, Line 2 to Daerim, then Line 7 to Sinpung. Prefer a single transfer? Change to Line 7 at Gasan Digital Complex instead.",
+        "de": "Linie 1 bis Sindorim, Linie 2 bis Daerim, dann Linie 7 bis Sinpung. Wer nur einmal umsteigen möchte, wechselt stattdessen am Gasan Digital Complex zur Linie 7."
+      },
+      "fare": "₩1,650",
+      "duration": {
+        "ko": "약 25~35분",
+        "en": "~25–35 min",
+        "de": "ca. 25–35 min"
+      },
+      "boarding": {
+        "ko": "서울역 1호선 인천·천안 방면",
+        "en": "Seoul Stn, Line 1 toward Incheon/Cheonan",
+        "de": "Seoul Station, Linie 1 Richtung Incheon/Cheonan"
+      }
+    },
+    {
+      "id": "taxi-from-seoul-station",
+      "title": {
+        "ko": "택시",
+        "en": "Taxi",
+        "de": "Taxi"
+      },
+      "summary": {
+        "ko": "약 7km 거리로 환승 없이 예식장 앞까지 갑니다. 심야에는 할증이 붙습니다.",
+        "en": "About 7 km straight to the venue entrance, with no transfers. A late-night surcharge applies.",
+        "de": "Rund 7 km direkt bis zum Eingang, ohne Umsteigen. Nachts gilt ein Zuschlag."
+      },
+      "fare": "₩9,000~13,000",
+      "duration": {
+        "ko": "약 15~20분 (혼잡 시 25~40분)",
+        "en": "~15–20 min (25–40 in traffic)",
+        "de": "ca. 15–20 min (25–40 bei Verkehr)"
+      }
+    }
+  ],
   "hotels": [
     {
       "id": "lotte-city-guro",
