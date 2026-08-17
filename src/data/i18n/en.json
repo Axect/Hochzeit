@@ -91,20 +91,6 @@
     "reducedMotionNote": "Animations are reduced. Showing every moment at once.",
     "missingCoords": "This event has no coordinates."
   },
-  "secretLetter": {
-    "title": "A letter for you",
-    "discloseTrigger": "Did you receive a code?",
-    "intro": "Enter the 12-character code we sent you to unfold a personal note.",
-    "placeholder": "e.g. a3kp9z2x7m4n",
-    "submit": "Open the letter",
-    "loading": "Unfolding your letter…",
-    "invalid": "We couldn't find that code. Please double-check it.",
-    "lockedTitle": "Please wait a moment",
-    "lockedBody": "You can try again in {seconds} seconds.",
-    "missingTranslation": "Showing the original Korean text. An English version is on the way.",
-    "letterPrefix": "Dear ",
-    "close": "Close letter"
-  },
   "directions": {
     "title": "Getting there",
     "addressLabel": "Address",
@@ -134,7 +120,6 @@
     "intro": "For those who can't be there in person — your kindness means a lot.",
     "groomSide": "Groom's family",
     "brideSide": "Bride's family",
-    "comingSoon": "Bride-side bank details will be added soon.",
     "copyAria": "Copy {holder}'s account number",
     "copied": "Account number copied",
     "copyFailed": "Copy failed. Please long-press to copy manually."

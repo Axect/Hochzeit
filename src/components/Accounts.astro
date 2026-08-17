@@ -28,7 +28,6 @@ type Account = {
 
 const groomAccounts = (venue.accounts.groom as Account[]) ?? [];
 const brideAccounts = (venue.accounts.bride as Account[]) ?? [];
-const comingSoonMsg = t('accounts.comingSoon', locale);
 
 const renderRow = (acc: Account) => ({
   id: acc.id,
@@ -78,66 +77,60 @@ const renderRow = (acc: Account) => ({
       </ul>
     </div>
 
-    <div>
-      <h3 class="mb-3 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
-        {brideLabel}
-      </h3>
-      {
-        brideAccounts.length === 0 ? (
-          <div class="rounded-md border border-dashed border-[var(--color-line)] bg-white/30 px-4 py-5 text-center text-sm text-[var(--color-muted)]">
-            {comingSoonMsg}
-          </div>
-        ) : (
-      <ul class="space-y-2">
-        {
-          brideAccounts.map(renderRow).map((row) => (
-            <li class="rounded-md border border-[var(--color-line)] bg-white/40 px-4 py-3">
-              <div class="flex items-center justify-between gap-3">
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center gap-2 text-sm">
-                    <span class="text-[var(--color-muted)]">{row.role}</span>
-                    <span class="text-[var(--color-fg)]">{row.holder}</span>
-                  </div>
-                  <div class="mt-0.5 truncate font-mono text-sm text-[var(--color-fg)]">
-                    {row.bank} {row.number}
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="tap-target shrink-0 rounded-md bg-[var(--color-accent-soft)] px-3 py-1.5 text-xs font-medium text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white"
-                  aria-label={row.copyAria}
-                  data-account-copy
-                  data-value={row.number}
-                >
-                  {locale === 'ko' ? '복사' : locale === 'en' ? 'Copy' : 'Kopieren'}
-                </button>
-              </div>
-              {row.iban && (
-                <div class="mt-2 border-t border-[var(--color-line)] pt-2">
-                  <div class="flex items-center justify-between gap-3">
-                    <div class="flex-1 min-w-0 font-mono text-xs text-[var(--color-muted)]">
-                      IBAN {row.iban}
-                      {row.bic && <span class="ml-2">· BIC {row.bic}</span>}
+    {brideAccounts.length > 0 && (
+      <div>
+        <h3 class="mb-3 text-xs uppercase tracking-[var(--tracking-wedding)] text-[var(--color-muted)]">
+          {brideLabel}
+        </h3>
+        <ul class="space-y-2">
+          {
+            brideAccounts.map(renderRow).map((row) => (
+              <li class="rounded-md border border-[var(--color-line)] bg-white/40 px-4 py-3">
+                <div class="flex items-center justify-between gap-3">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-[var(--color-muted)]">{row.role}</span>
+                      <span class="text-[var(--color-fg)]">{row.holder}</span>
                     </div>
-                    <button
-                      type="button"
-                      class="tap-target shrink-0 rounded-md bg-[var(--color-accent-soft)] px-3 py-1.5 text-xs font-medium text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white"
-                      aria-label={`Copy IBAN ${row.iban}`}
-                      data-account-copy
-                      data-value={row.iban}
-                    >
-                      {locale === 'ko' ? '복사' : locale === 'en' ? 'Copy' : 'Kopieren'}
-                    </button>
+                    <div class="mt-0.5 truncate font-mono text-sm text-[var(--color-fg)]">
+                      {row.bank} {row.number}
+                    </div>
                   </div>
+                  <button
+                    type="button"
+                    class="tap-target shrink-0 rounded-md bg-[var(--color-accent-soft)] px-3 py-1.5 text-xs font-medium text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white"
+                    aria-label={row.copyAria}
+                    data-account-copy
+                    data-value={row.number}
+                  >
+                    {locale === 'ko' ? '복사' : locale === 'en' ? 'Copy' : 'Kopieren'}
+                  </button>
                 </div>
-              )}
-            </li>
-          ))
-        }
-      </ul>
-        )
-      }
-    </div>
+                {row.iban && (
+                  <div class="mt-2 border-t border-[var(--color-line)] pt-2">
+                    <div class="flex items-center justify-between gap-3">
+                      <div class="flex-1 min-w-0 font-mono text-xs text-[var(--color-muted)]">
+                        IBAN {row.iban}
+                        {row.bic && <span class="ml-2">· BIC {row.bic}</span>}
+                      </div>
+                      <button
+                        type="button"
+                        class="tap-target shrink-0 rounded-md bg-[var(--color-accent-soft)] px-3 py-1.5 text-xs font-medium text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white"
+                        aria-label={`Copy IBAN ${row.iban}`}
+                        data-account-copy
+                        data-value={row.iban}
+                      >
+                        {locale === 'ko' ? '복사' : locale === 'en' ? 'Copy' : 'Kopieren'}
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    )}
   </div>
 
   <div

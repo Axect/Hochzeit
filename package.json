@@ -8,9 +8,8 @@
     "dev": "astro dev --host",
     "dev:lan": "astro dev --host",
     "start": "astro dev --host",
-    "build:letters": "tsx scripts/build-letters.ts",
     "validate:content": "tsx scripts/validate-content.ts",
-    "prebuild": "npm run validate:content && npm run build:letters",
+    "prebuild": "npm run validate:content",
     "build": "astro build",
     "postbuild": "tsx scripts/clean-originals.ts",
     "preview": "astro preview",
@@ -18,11 +17,7 @@
     "lint": "eslint . --ext .js,.mjs,.ts,.tsx,.astro",
     "format": "prettier --write \"**/*.{js,mjs,ts,tsx,astro,md,json,css}\"",
     "format:check": "prettier --check \"**/*.{js,mjs,ts,tsx,astro,md,json,css}\"",
-    "typecheck": "tsc --noEmit",
-    "generate:codes": "tsx scripts/generate-codes.ts",
-    "derive:code": "tsx scripts/derive-codes.ts",
-    "derive:codes": "tsx scripts/derive-codes.ts",
-    "verify:no-plaintext": "tsx scripts/verify-no-plaintext.ts"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@fontsource-variable/cormorant-garamond": "^5.2.6",

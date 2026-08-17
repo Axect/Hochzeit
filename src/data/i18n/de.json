@@ -91,20 +91,6 @@
     "reducedMotionNote": "Du hast Animationen ausgeschaltet — wir zeigen Dir alle Momente auf einmal.",
     "missingCoords": "Für dieses Ereignis liegen keine Koordinaten vor."
   },
-  "secretLetter": {
-    "title": "Ein Brief für Dich",
-    "discloseTrigger": "Hast Du einen Code bekommen?",
-    "intro": "Gib den 12-stelligen Code ein, den wir Dir geschickt haben, um Deinen persönlichen Brief zu öffnen.",
-    "placeholder": "z. B. a3kp9z2x7m4n",
-    "submit": "Brief öffnen",
-    "loading": "Dein Brief wird geöffnet…",
-    "invalid": "Wir konnten diesen Code nicht finden. Bitte prüfe ihn noch einmal.",
-    "lockedTitle": "Bitte einen Moment Geduld",
-    "lockedBody": "Du kannst es in {seconds} Sekunden erneut versuchen.",
-    "missingTranslation": "Wir zeigen den koreanischen Originaltext. Eine Übersetzung folgt in Kürze.",
-    "letterPrefix": "Liebe(r) ",
-    "close": "Brief schließen"
-  },
   "directions": {
     "title": "Anfahrt",
     "addressLabel": "Adresse",
@@ -134,7 +120,6 @@
     "intro": "Für alle, die nicht persönlich da sein können — Eure Gedanken bedeuten uns viel.",
     "groomSide": "Familie des Bräutigams",
     "brideSide": "Familie der Braut",
-    "comingSoon": "Bankdaten der Brautseite folgen in Kürze.",
     "copyAria": "Kontonummer von {holder} kopieren",
     "copied": "Kontonummer kopiert",
     "copyFailed": "Kopieren fehlgeschlagen. Bitte lange drücken und manuell kopieren."
