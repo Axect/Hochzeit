@@ -53,8 +53,8 @@ interface MapPaths {
 const W = 960;
 const H = 540;
 
-/** Story-card scrim: near-opaque so the zoomed map never bleeds into the text. */
-const SCRIM = 'oklch(0.12 0.04 150 / 0.94)';
+/** Opaque sRGB story-card panel, including browsers without OKLCH support. */
+const SCRIM = '#000901';
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' &&
@@ -435,14 +435,14 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
       {Preview}
       <ModalShell labels={labels} onClose={() => setOpen(false)}>
         <div
-          className="relative h-full w-full"
+          className="relative h-full w-full overflow-hidden"
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
           <svg
             viewBox={`0 0 ${W} ${H}`}
             preserveAspectRatio="xMidYMid slice"
-            className="absolute inset-0 h-full w-full"
+            className="pointer-events-none absolute inset-0 z-0 h-full w-full"
             role="img"
             aria-label={activeEvent.title}
           >
@@ -451,22 +451,9 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                 <stop offset="55%" stopColor="black" stopOpacity="0" />
                 <stop offset="100%" stopColor="black" stopOpacity="0.65" />
               </radialGradient>
-              <filter id="journey-glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="2.4" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
             </defs>
 
-            <g
-              style={{
-                transform: `translate(${tx}px, ${ty}px) scale(${zoom})`,
-                transformOrigin: '0 0',
-                transition: 'transform 1.6s cubic-bezier(0.22, 0.61, 0.36, 1)',
-              }}
-            >
+            <g transform={`matrix(${zoom} 0 0 ${zoom} ${tx} ${ty})`}>
               <path d={paths.outline} fill="oklch(0.20 0.05 150)" />
               <path
                 d={paths.graticule}
@@ -496,16 +483,27 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
               ))}
 
               {linePath && (
-                <path
-                  d={linePath}
-                  fill="none"
-                  stroke="oklch(0.84 0.13 80)"
-                  strokeWidth={1.6}
-                  strokeDasharray="3.5 4.5"
-                  strokeLinecap="round"
-                  vectorEffect="non-scaling-stroke"
-                  filter="url(#journey-glow)"
-                />
+                <g>
+                  <path
+                    d={linePath}
+                    fill="none"
+                    stroke="oklch(0.84 0.13 80)"
+                    strokeOpacity={0.18}
+                    strokeWidth={4.8}
+                    strokeDasharray="3.5 4.5"
+                    strokeLinecap="round"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d={linePath}
+                    fill="none"
+                    stroke="oklch(0.84 0.13 80)"
+                    strokeWidth={1.6}
+                    strokeDasharray="3.5 4.5"
+                    strokeLinecap="round"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                </g>
               )}
 
               {points.map(([cx, cy], idx) => {
@@ -521,18 +519,10 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                         r={9}
                         fill="none"
                         stroke="oklch(0.86 0.13 80)"
-                        strokeOpacity={0.5}
+                        strokeOpacity={0.35}
                         strokeWidth={0.8}
                         vectorEffect="non-scaling-stroke"
-                      >
-                        <animate attributeName="r" values="6;14;6" dur="2.4s" repeatCount="indefinite" />
-                        <animate
-                          attributeName="stroke-opacity"
-                          values="0.6;0;0.6"
-                          dur="2.4s"
-                          repeatCount="indefinite"
-                        />
-                      </circle>
+                      />
                     )}
                     <circle
                       r={isActive ? 3.6 : visited ? 2.4 : 1.8}
@@ -543,7 +533,6 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                             ? 'oklch(0.78 0.13 80)'
                             : 'oklch(0.55 0.04 150)'
                       }
-                      filter={isActive ? 'url(#journey-glow)' : undefined}
                       vectorEffect="non-scaling-stroke"
                     />
                   </g>
@@ -647,15 +636,9 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
             <rect width={W} height={H} fill="url(#journey-vignette)" pointerEvents="none" />
           </svg>
 
-          {/* Bottom text overlay with its own scrim, in two pieces:
-              a fixed-height fade strip, then a near-opaque panel that holds the
-              card. A single `bg-gradient-to-t` across the whole overlay ramps
-              proportionally to its height, so on tall story cards the text
-              started at ~75% transparency and the glowing dashed route line and
-              markers showed straight through the headline and first body lines.
-              Splitting the fade off keeps text legibility independent of card
-              length, of where the camera put the route, and of scroll position
-              if a card ever outgrows the viewport. */}
+          {/* Keep the fixed-height fade separate from the opaque content panel.
+              The panel must not blend with the SVG. This prevents route bleed
+              and avoids mobile GPU texture corruption across text and photos. */}
           <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-full min-h-[62%] flex-col justify-end">
             <div
               aria-hidden="true"
@@ -664,7 +647,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
             />
             <div className="min-h-0 overflow-y-auto" style={{ backgroundColor: SCRIM }}>
               <div className="mx-auto w-full max-w-2xl px-6 pb-12 pt-6 sm:px-12 sm:pb-16 sm:pt-10">
-              <div key={activeEvent.id} className="journey-card-fade space-y-3 text-left">
+              <div className="space-y-3 text-left">
                 <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.32em] text-white/55">
                   <span aria-hidden="true" className="text-base text-[oklch(0.84_0.13_80)]">
                     {KIND_GLYPH[activeEvent.kind]}
@@ -673,10 +656,10 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   <span className="text-white/30">·</span>
                   <time>{activeEvent.dateFormatted}</time>
                 </p>
-                <h3 className="font-serif text-[clamp(2rem,7vw,3.75rem)] leading-[1.05] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)]">
+                <h3 className="font-serif text-[clamp(2rem,7vw,3.75rem)] leading-[1.05] text-white">
                   {activeEvent.title}
                 </h3>
-                <p className="max-w-xl text-base leading-relaxed text-white/80 drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] sm:text-lg">
+                <p className="max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
                   {activeEvent.body}
                 </p>
                 {previewPhotos.length > 0 && (
@@ -696,7 +679,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                             height={p.height}
                             loading="lazy"
                             decoding="async"
-                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="h-full w-full object-cover"
                           />
                           {idx === previewPhotos.length - 1 &&
                             activeEvent.photos.length > previewPhotos.length && (
@@ -720,7 +703,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   onClick={goPrev}
                   disabled={active === 0}
                   aria-label={labels.prev}
-                  className="tap-target inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white/90 backdrop-blur-md transition-colors hover:border-white/50 hover:bg-white/20 disabled:opacity-25 sm:h-12 sm:w-12"
+                  className="tap-target inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white/90 transition-colors hover:border-white/50 hover:bg-white/20 disabled:opacity-25 sm:h-12 sm:w-12"
                 >
                   <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.25" aria-hidden="true">
                     <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -745,7 +728,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   onClick={goNext}
                   disabled={active === sortedEvents.length - 1}
                   aria-label={labels.next}
-                  className="tap-target inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white/90 backdrop-blur-md transition-colors hover:border-white/50 hover:bg-white/20 disabled:opacity-25 sm:h-12 sm:w-12"
+                  className="tap-target inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white/90 transition-colors hover:border-white/50 hover:bg-white/20 disabled:opacity-25 sm:h-12 sm:w-12"
                 >
                   <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.25" aria-hidden="true">
                     <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -877,7 +860,7 @@ function ModalShell({
         type="button"
         onClick={onClose}
         aria-label={labels.close}
-        className="tap-target absolute right-3 top-3 z-20 flex items-center gap-1 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur-md hover:bg-white/15 sm:right-6 sm:top-6"
+        className="tap-target absolute right-3 top-3 z-20 flex items-center gap-1 rounded-full border border-white/20 bg-[oklch(0.12_0.04_150)]/90 px-3 py-1.5 text-xs text-white/80 hover:bg-[oklch(0.12_0.04_150)] sm:right-6 sm:top-6"
       >
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
