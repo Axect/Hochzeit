@@ -95,6 +95,83 @@ const MISSING_ISLETS: IsletShape[] = [
   },
 ];
 
+interface CameraTransform {
+  zoom: number;
+  tx: number;
+  ty: number;
+}
+
+interface AnimatedCameraGroupProps extends CameraTransform {
+  children: React.ReactNode;
+}
+
+const CAMERA_ANIMATION_MS = 1600;
+
+const cameraMatrix = (zoom: number, tx: number, ty: number) =>
+  `matrix(${zoom} 0 0 ${zoom} ${tx} ${ty})`;
+
+/**
+ * Animates the SVG transform attribute without promoting the full map to a CSS compositor layer.
+ * The card panel remains independent from the moving map.
+ */
+function AnimatedCameraGroup({ zoom, tx, ty, children }: AnimatedCameraGroupProps) {
+  const groupRef = useRef<SVGGElement>(null);
+  const cameraRef = useRef<CameraTransform>({ zoom, tx, ty });
+  const frameRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const group = groupRef.current;
+    if (!group) return;
+
+    if (frameRef.current !== null) {
+      cancelAnimationFrame(frameRef.current);
+      frameRef.current = null;
+    }
+
+    const startZoom = cameraRef.current.zoom;
+    const startTx = cameraRef.current.tx;
+    const startTy = cameraRef.current.ty;
+
+    if (startZoom === zoom && startTx === tx && startTy === ty) {
+      group.setAttribute('transform', cameraMatrix(zoom, tx, ty));
+      return;
+    }
+
+    const startedAt = performance.now();
+    const tick = (now: number) => {
+      const progress = Math.min((now - startedAt) / CAMERA_ANIMATION_MS, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      cameraRef.current.zoom = startZoom + (zoom - startZoom) * eased;
+      cameraRef.current.tx = startTx + (tx - startTx) * eased;
+      cameraRef.current.ty = startTy + (ty - startTy) * eased;
+      group.setAttribute(
+        'transform',
+        cameraMatrix(cameraRef.current.zoom, cameraRef.current.tx, cameraRef.current.ty),
+      );
+
+      if (progress < 1) frameRef.current = requestAnimationFrame(tick);
+      else frameRef.current = null;
+    };
+
+    frameRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
+      frameRef.current = null;
+    };
+  }, [zoom, tx, ty]);
+
+  return (
+    <g
+      ref={groupRef}
+      data-journey-camera="true"
+      transform={cameraMatrix(cameraRef.current.zoom, cameraRef.current.tx, cameraRef.current.ty)}
+    >
+      {children}
+    </g>
+  );
+}
+
 export default function JourneyMap({ events, labels, title, intro }: Props) {
   const sortedEvents = useMemo(
     () => [...events].sort((a, b) => a.date.localeCompare(b.date)),
@@ -453,7 +530,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
               </radialGradient>
             </defs>
 
-            <g transform={`matrix(${zoom} 0 0 ${zoom} ${tx} ${ty})`}>
+            <AnimatedCameraGroup zoom={zoom} tx={tx} ty={ty}>
               <path d={paths.outline} fill="oklch(0.20 0.05 150)" />
               <path
                 d={paths.graticule}
@@ -631,7 +708,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   </g>
                 </g>
               )}
-            </g>
+            </AnimatedCameraGroup>
 
             <rect width={W} height={H} fill="url(#journey-vignette)" pointerEvents="none" />
           </svg>
