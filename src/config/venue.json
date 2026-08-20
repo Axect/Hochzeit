@@ -58,6 +58,21 @@
         "number": "650302-04-039579"
       },
       {
+        "id": "groom-father",
+        "role": {
+          "ko": "신랑 아버지",
+          "en": "Groom's father",
+          "de": "Vater des Bräutigams"
+        },
+        "holder": "김일하",
+        "bank": {
+          "ko": "국민은행",
+          "en": "Kookmin Bank",
+          "de": "Kookmin Bank"
+        },
+        "number": "499402-01-052529"
+      },
+      {
         "id": "groom-mother",
         "role": {
           "ko": "신랑 어머니",
