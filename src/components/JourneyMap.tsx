@@ -53,6 +53,9 @@ interface MapPaths {
 const W = 960;
 const H = 540;
 
+/** Places the active location in the map area above the 62% story sheet. */
+const CAMERA_FOCUS_Y = H * 0.24;
+
 /** Opaque sRGB story-card panel, including browsers without OKLCH support. */
 const SCRIM = '#000901';
 
@@ -476,8 +479,8 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
   const isFirstLetter = activeEvent?.id === 'first-letter' && activeOrigin !== null;
   const isWedding = activeEvent?.kind === 'wedding';
 
-  // For first-letter we centre the camera on the midpoint of the two cities
-  // and back the zoom out so both fit comfortably; otherwise standard zoom.
+  // The first-letter scene backs the zoom out so both cities fit comfortably.
+  // Every camera target sits in the map area above the story sheet.
   const zoom = isFirstLetter ? 1.5 : isWedding ? 3.6 : 2.4;
   const camX = isFirstLetter && activeOrigin
     ? (activePoint[0] + activeOrigin[0]) / 2
@@ -486,7 +489,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
     ? (activePoint[1] + activeOrigin[1]) / 2
     : activePoint[1];
   const tx = W / 2 - camX * zoom;
-  const ty = H / 2 - camY * zoom;
+  const ty = CAMERA_FOCUS_Y - camY * zoom;
 
   // Connection line: usually visited points in chronological order. For the
   // first-letter scene we draw a single arc from Seoul → Leimen instead.
@@ -713,10 +716,10 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
             <rect width={W} height={H} fill="url(#journey-vignette)" pointerEvents="none" />
           </svg>
 
-          {/* Keep the fixed-height fade separate from the opaque content panel.
-              The panel must not blend with the SVG. This prevents route bleed
-              and avoids mobile GPU texture corruption across text and photos. */}
-          <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-full min-h-[62%] flex-col justify-end">
+          {/* The fixed fade stays separate from the opaque content panel.
+              The sheet is capped at 62% so the map remains visible while long cards scroll.
+              The panel stays independent from the SVG to avoid mobile texture corruption. */}
+          <div className="absolute inset-x-0 bottom-0 z-10 flex h-[62%] flex-col justify-end">
             <div
               aria-hidden="true"
               className="pointer-events-none h-20 shrink-0"
