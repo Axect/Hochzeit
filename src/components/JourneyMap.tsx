@@ -4,6 +4,9 @@ import { withBase } from '@lib/i18n';
 
 interface Photo {
   src: string;
+  thumbSrc: string;
+  thumbWidth: number;
+  thumbHeight: number;
   width: number;
   height: number;
   alt?: string;
@@ -304,6 +307,17 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
+  }, [lightbox, sortedEvents]);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const event = sortedEvents.find((candidate) => candidate.id === lightbox.eventId);
+    const nextPhoto = event?.photos[lightbox.index + 1];
+    if (!nextPhoto) return;
+    const preload = new Image();
+    preload.decoding = 'async';
+    preload.fetchPriority = 'low';
+    preload.src = withBase(nextPhoto.src);
   }, [lightbox, sortedEvents]);
 
   const goPrev = useCallback(() => setActive((i) => Math.max(0, i - 1)), []);
@@ -701,7 +715,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                       vectorEffect="non-scaling-stroke"
                     />
                     <image
-                      href={withBase('/journey/first-letter.png')}
+                      href={withBase('/journey/first-letter.jpg')}
                       x={-18}
                       y={-12.5}
                       width={36}
@@ -753,10 +767,10 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                           className="tap-target group relative block h-20 w-20 overflow-hidden rounded-md border border-white/15 bg-white/5 focus:outline-none focus:ring-2 focus:ring-[oklch(0.84_0.13_80)] sm:h-24 sm:w-24"
                         >
                           <img
-                            src={withBase(p.src)}
+                            src={withBase(p.thumbSrc)}
                             alt={p.alt ?? activeEvent.title}
-                            width={p.width}
-                            height={p.height}
+                            width={p.thumbWidth}
+                            height={p.thumbHeight}
                             loading="lazy"
                             decoding="async"
                             className="h-full w-full object-cover"
@@ -895,6 +909,7 @@ export default function JourneyMap({ events, labels, title, intro }: Props) {
                   alt={photo.alt ?? ev?.title ?? ''}
                   width={photo.width}
                   height={photo.height}
+                  decoding="async"
                   className="h-auto max-h-[85vh] w-auto max-w-full rounded-md object-contain"
                 />
                 <figcaption className="mt-3 text-center text-sm text-white/80">

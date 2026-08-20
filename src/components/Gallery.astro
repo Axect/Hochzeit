@@ -14,6 +14,9 @@ const title = t('gallery.title', locale);
 const items = gallery.items.map((item) => ({
   id: item.id,
   src: item.src,
+  thumbSrc: item.thumbSrc,
+  thumbWidth: item.thumbWidth,
+  thumbHeight: item.thumbHeight,
   width: item.width,
   height: item.height,
   alt: tField(item.alt, locale) ?? '',

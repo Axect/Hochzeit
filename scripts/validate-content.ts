@@ -112,8 +112,17 @@ if (gallery && isObj(gallery)) {
     gallery.items.forEach((item, idx) => {
       if (!isObj(item)) return;
       if (typeof item.src !== 'string') fail(`gallery.items[${idx}].src: expected string`);
+      if (typeof item.thumbSrc !== 'string') {
+        fail(`gallery.items[${idx}].thumbSrc: expected string`);
+      }
       if (typeof item.width !== 'number') fail(`gallery.items[${idx}].width: expected number`);
       if (typeof item.height !== 'number') fail(`gallery.items[${idx}].height: expected number`);
+      if (typeof item.thumbWidth !== 'number') {
+        fail(`gallery.items[${idx}].thumbWidth: expected number`);
+      }
+      if (typeof item.thumbHeight !== 'number') {
+        fail(`gallery.items[${idx}].thumbHeight: expected number`);
+      }
     });
   }
 }
@@ -155,7 +164,7 @@ if (journey && isObj(journey)) {
           fail(`journey.events[${id}].from.lon: not in [-180, 180]`);
         }
       }
-      // photos: optional. If present, must be an array of {src, width, height, alt?}.
+      // photos: optional. If present, each photo carries lightbox and thumbnail sources with dimensions.
       if (ev.photos !== undefined) {
         if (!Array.isArray(ev.photos)) {
           fail(`journey.events[${id}].photos: must be an array (or omit)`);
@@ -165,11 +174,20 @@ if (journey && isObj(journey)) {
             if (typeof p.src !== 'string') {
               fail(`journey.events[${id}].photos[${pi}].src: expected string`);
             }
+            if (typeof p.thumbSrc !== 'string') {
+              fail(`journey.events[${id}].photos[${pi}].thumbSrc: expected string`);
+            }
             if (typeof p.width !== 'number') {
               fail(`journey.events[${id}].photos[${pi}].width: expected number`);
             }
             if (typeof p.height !== 'number') {
               fail(`journey.events[${id}].photos[${pi}].height: expected number`);
+            }
+            if (typeof p.thumbWidth !== 'number') {
+              fail(`journey.events[${id}].photos[${pi}].thumbWidth: expected number`);
+            }
+            if (typeof p.thumbHeight !== 'number') {
+              fail(`journey.events[${id}].photos[${pi}].thumbHeight: expected number`);
             }
             if (p.alt !== undefined && typeof p.alt !== 'string') {
               fail(`journey.events[${id}].photos[${pi}].alt: must be string when present`);

@@ -21,11 +21,7 @@
         "de": "Ein Brief von Tae-Geun aus Südkorea erreichte Andrea in Deutschland und war der Beginn unserer gemeinsamen Geschichte."
       },
       "photos": [
-        {
-          "src": "/journey/first-letter.png",
-          "width": 1200,
-          "height": 900
-        }
+        { "src": "/journey/first-letter.jpg", "thumbSrc": "/journey/thumbs/first-letter.jpg", "width": 1200, "height": 900, "thumbWidth": 640, "thumbHeight": 480 }
       ]
     },
     {
@@ -45,19 +41,19 @@
         "de": "Über Seoul, Ulsan und Busan: Der Moment, in dem aus zwei entfernten Welten ein gemeinsamer Atemzug wurde."
       },
       "photos": [
-        { "src": "/journey/first-visit-korea-1.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/first-visit-korea-2.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/first-visit-korea-3.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/first-visit-korea-4.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/first-visit-korea-7.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/phd-3.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/phd-4.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/phd-6.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/phd-8.jpg", "width": 2736, "height": 3648 },
-        { "src": "/journey/phd-9.jpg", "width": 3648, "height": 2736 },
-        { "src": "/journey/phd-10.jpg", "width": 4032, "height": 3024 },
-        { "src": "/journey/first-visit-korea-5.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/first-visit-korea-6.jpg", "width": 1200, "height": 1600 }
+        { "src": "/journey/first-visit-korea-1.jpg", "thumbSrc": "/journey/thumbs/first-visit-korea-1.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/first-visit-korea-2.jpg", "thumbSrc": "/journey/thumbs/first-visit-korea-2.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/first-visit-korea-3.jpg", "thumbSrc": "/journey/thumbs/first-visit-korea-3.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/first-visit-korea-4.jpg", "thumbSrc": "/journey/thumbs/first-visit-korea-4.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/first-visit-korea-7.jpg", "thumbSrc": "/journey/thumbs/first-visit-korea-7.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/phd-3.jpg", "thumbSrc": "/journey/thumbs/phd-3.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-4.jpg", "thumbSrc": "/journey/thumbs/phd-4.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-6.jpg", "thumbSrc": "/journey/thumbs/phd-6.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-8.jpg", "thumbSrc": "/journey/thumbs/phd-8.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-9.jpg", "thumbSrc": "/journey/thumbs/phd-9.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/phd-10.jpg", "thumbSrc": "/journey/thumbs/phd-10.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/first-visit-korea-5.jpg", "thumbSrc": "/journey/thumbs/first-visit-korea-5.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/first-visit-korea-6.jpg", "thumbSrc": "/journey/thumbs/first-visit-korea-6.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 }
       ]
     },
     {
@@ -77,14 +73,14 @@
         "de": "Tae-Geuns Promotionsfeier. Am Ende des längsten Weges stand Andrea an seiner Seite. Dort lernte sie auch direkt die Familie kennen und wir reisten gemeinsam weiter."
       },
       "photos": [
-        { "src": "/journey/phd-graduation-3.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/phd-1.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/phd-2.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/phd-graduation-1.jpg", "width": 1257, "height": 1600 },
-        { "src": "/journey/phd-graduation-2.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/phd-graduation-4.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/phd-5.jpg", "width": 4032, "height": 3024 },
-        { "src": "/journey/phd-7.jpg", "width": 4032, "height": 3024 }
+        { "src": "/journey/phd-graduation-3.jpg", "thumbSrc": "/journey/thumbs/phd-graduation-3.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-1.jpg", "thumbSrc": "/journey/thumbs/phd-1.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-2.jpg", "thumbSrc": "/journey/thumbs/phd-2.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-graduation-1.jpg", "thumbSrc": "/journey/thumbs/phd-graduation-1.jpg", "width": 1257, "height": 1600, "thumbWidth": 503, "thumbHeight": 640 },
+        { "src": "/journey/phd-graduation-2.jpg", "thumbSrc": "/journey/thumbs/phd-graduation-2.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-graduation-4.jpg", "thumbSrc": "/journey/thumbs/phd-graduation-4.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/phd-5.jpg", "thumbSrc": "/journey/thumbs/phd-5.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/phd-7.jpg", "thumbSrc": "/journey/thumbs/phd-7.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 }
       ]
     },
     {
@@ -104,22 +100,22 @@
         "de": "Ein Monat, vier Stationen und unendlich viele schöne Momente. Von Frankfurt über München, Trier und Bensheim – unser erstes großes Abenteuer zu zweit."
       },
       "photos": [
-        { "src": "/journey/germany-tour-1.jpg", "width": 1600, "height": 1200, "alt": "München" },
-        { "src": "/journey/germany-tour-7.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/germany-tour-6.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/germany-tour-15.jpg", "width": 1824, "height": 1368 },
-        { "src": "/journey/germany-tour-3.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-10.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-5.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-9.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/germany-tour-8.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/germany-tour-4.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-17.jpg", "width": 1368, "height": 1824 },
-        { "src": "/journey/germany-tour-2.jpg", "width": 1600, "height": 1200, "alt": "Trier" },
-        { "src": "/journey/germany-tour-16.jpg", "width": 1824, "height": 1368 },
-        { "src": "/journey/germany-tour-11.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-12.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/germany-tour-14.jpg", "width": 1600, "height": 1200 }
+        { "src": "/journey/germany-tour-1.jpg", "thumbSrc": "/journey/thumbs/germany-tour-1.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480, "alt": "München" },
+        { "src": "/journey/germany-tour-7.jpg", "thumbSrc": "/journey/thumbs/germany-tour-7.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/germany-tour-6.jpg", "thumbSrc": "/journey/thumbs/germany-tour-6.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/germany-tour-15.jpg", "thumbSrc": "/journey/thumbs/germany-tour-15.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/germany-tour-3.jpg", "thumbSrc": "/journey/thumbs/germany-tour-3.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/germany-tour-10.jpg", "thumbSrc": "/journey/thumbs/germany-tour-10.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/germany-tour-5.jpg", "thumbSrc": "/journey/thumbs/germany-tour-5.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/germany-tour-9.jpg", "thumbSrc": "/journey/thumbs/germany-tour-9.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/germany-tour-8.jpg", "thumbSrc": "/journey/thumbs/germany-tour-8.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/germany-tour-4.jpg", "thumbSrc": "/journey/thumbs/germany-tour-4.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/germany-tour-17.jpg", "thumbSrc": "/journey/thumbs/germany-tour-17.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/germany-tour-2.jpg", "thumbSrc": "/journey/thumbs/germany-tour-2.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480, "alt": "Trier" },
+        { "src": "/journey/germany-tour-16.jpg", "thumbSrc": "/journey/thumbs/germany-tour-16.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/germany-tour-11.jpg", "thumbSrc": "/journey/thumbs/germany-tour-11.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/germany-tour-12.jpg", "thumbSrc": "/journey/thumbs/germany-tour-12.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/germany-tour-14.jpg", "thumbSrc": "/journey/thumbs/germany-tour-14.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 }
       ]
     },
     {
@@ -139,54 +135,15 @@
         "de": "Von Seoul über Daejeon, Seoraksan und Jeonju bis Hwaseong. Gemeinsam durch einen koreanischen Herbst."
       },
       "photos": [
-        {
-          "src": "/journey/chuseok-2.jpg",
-          "width": 1200,
-          "height": 1600,
-          "alt": "설악산"
-        },
-        {
-          "src": "/journey/chuseok-3.jpg",
-          "width": 1200,
-          "height": 1600,
-          "alt": "전주"
-        },
-        {
-          "src": "/journey/chuseok-4.jpg",
-          "width": 2736,
-          "height": 3648
-        },
-        {
-          "src": "/journey/chuseok-5.jpg",
-          "width": 3648,
-          "height": 2736
-        },
-        {
-          "src": "/journey/chuseok-6.jpg",
-          "width": 3648,
-          "height": 2736
-        },
-        {
-          "src": "/journey/chuseok-7.jpg",
-          "width": 3648,
-          "height": 2736
-        },
-        {
-          "src": "/journey/chuseok-8.jpg",
-          "width": 3024,
-          "height": 4032
-        },
-        {
-          "src": "/journey/chuseok-9.jpg",
-          "width": 3024,
-          "height": 4032
-        },
-        {
-          "src": "/journey/chuseok-1.jpg",
-          "width": 1600,
-          "height": 1200,
-          "alt": "대전"
-        }
+        { "src": "/journey/chuseok-2.jpg", "thumbSrc": "/journey/thumbs/chuseok-2.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640, "alt": "설악산" },
+        { "src": "/journey/chuseok-3.jpg", "thumbSrc": "/journey/thumbs/chuseok-3.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640, "alt": "전주" },
+        { "src": "/journey/chuseok-4.jpg", "thumbSrc": "/journey/thumbs/chuseok-4.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/chuseok-5.jpg", "thumbSrc": "/journey/thumbs/chuseok-5.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/chuseok-6.jpg", "thumbSrc": "/journey/thumbs/chuseok-6.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/chuseok-7.jpg", "thumbSrc": "/journey/thumbs/chuseok-7.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/chuseok-8.jpg", "thumbSrc": "/journey/thumbs/chuseok-8.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/chuseok-9.jpg", "thumbSrc": "/journey/thumbs/chuseok-9.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/chuseok-1.jpg", "thumbSrc": "/journey/thumbs/chuseok-1.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480, "alt": "대전" }
       ]
     },
     {
@@ -206,23 +163,23 @@
         "de": "Neuanfang in Shanghai: Mit zwei Koffern im Gepäck und unserer Zukunft vor uns. Der Moment, in dem wir zum ersten Mal dieselbe Adresse teilten."
       },
       "photos": [
-        { "src": "/journey/shanghai-move-12.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/shanghai-move-14.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/shanghai-move-3.jpg", "width": 1600, "height": 1200, "alt": "Fudan University" },
-        { "src": "/journey/shanghai-move-4.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/shanghai-move-5.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/shanghai-move-9.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/shanghai-move-6.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/shanghai-move-7.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/shanghai-move-10.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/shanghai-move-8.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/shanghai-move-11.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/shanghai-move-1.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/shanghai-move-2.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/shanghai-move-13.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/shanghai-move-16.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/shanghai-move-17.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/shanghai-move-15.jpg", "width": 4000, "height": 3000 }
+        { "src": "/journey/shanghai-move-12.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-12.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-14.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-14.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-3.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-3.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480, "alt": "Fudan University" },
+        { "src": "/journey/shanghai-move-4.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-4.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-5.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-5.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/shanghai-move-9.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-9.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/shanghai-move-6.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-6.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/shanghai-move-7.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-7.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-10.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-10.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-8.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-8.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-11.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-11.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-1.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-1.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-2.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-2.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-13.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-13.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/shanghai-move-16.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-16.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/shanghai-move-17.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-17.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/shanghai-move-15.jpg", "thumbSrc": "/journey/thumbs/shanghai-move-15.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 }
       ]
     },
     {
@@ -242,17 +199,17 @@
         "de": "Unser erstes gemeinsames Weihnachten feierten wir auf ganz besondere Weise mit einer abendlichen Flusskreuzfahrt durch das funkelnde Shanghai. Nach einem unvergesslichen Dinner in einem Sternerestaurant ließen wir den Abend gemütlich im Hotel ausklingen. Nur ein paar Tage später begrüßten wir in derselben Stadt gemeinsam das neue Jahr."
       },
       "photos": [
-        { "src": "/journey/christmas-1.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/christmas-2.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/christmas-3.jpg", "width": 1600, "height": 900 },
-        { "src": "/journey/christmas-4.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/christmas-5.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/christmas-11.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/christmas-6.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/christmas-7.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/christmas-8.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/christmas-9.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/christmas-10.jpg", "width": 1600, "height": 1200 }
+        { "src": "/journey/christmas-1.jpg", "thumbSrc": "/journey/thumbs/christmas-1.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/christmas-2.jpg", "thumbSrc": "/journey/thumbs/christmas-2.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/christmas-3.jpg", "thumbSrc": "/journey/thumbs/christmas-3.jpg", "width": 1600, "height": 900, "thumbWidth": 640, "thumbHeight": 360 },
+        { "src": "/journey/christmas-4.jpg", "thumbSrc": "/journey/thumbs/christmas-4.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/christmas-5.jpg", "thumbSrc": "/journey/thumbs/christmas-5.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/christmas-11.jpg", "thumbSrc": "/journey/thumbs/christmas-11.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/christmas-6.jpg", "thumbSrc": "/journey/thumbs/christmas-6.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/christmas-7.jpg", "thumbSrc": "/journey/thumbs/christmas-7.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/christmas-8.jpg", "thumbSrc": "/journey/thumbs/christmas-8.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/christmas-9.jpg", "thumbSrc": "/journey/thumbs/christmas-9.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/christmas-10.jpg", "thumbSrc": "/journey/thumbs/christmas-10.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 }
       ]
     },
     {
@@ -272,56 +229,16 @@
         "de": "Ganz ungeplant: Ein paar Tage inmitten von Landschaften wie aus Tuschezeichnungen."
       },
       "photos": [
-        {
-          "src": "/journey/guilin-1.jpg",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/journey/guilin-10.jpg",
-          "width": 4000,
-          "height": 3000
-        },
-        {
-          "src": "/journey/guilin-12.jpg",
-          "width": 3000,
-          "height": 4000
-        },
-        {
-          "src": "/journey/guilin-3.jpg",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/journey/guilin-5.jpg",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/journey/guilin-4.jpg",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/journey/guilin-7.jpg",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/journey/guilin-6.jpg",
-          "width": 1200,
-          "height": 1600
-        },
-        {
-          "src": "/journey/guilin-2.jpg",
-          "width": 1600,
-          "height": 1200
-        },
-        {
-          "src": "/journey/guilin-9.jpg",
-          "width": 3000,
-          "height": 4000
-        }
+        { "src": "/journey/guilin-1.jpg", "thumbSrc": "/journey/thumbs/guilin-1.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/guilin-10.jpg", "thumbSrc": "/journey/thumbs/guilin-10.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/guilin-12.jpg", "thumbSrc": "/journey/thumbs/guilin-12.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/guilin-3.jpg", "thumbSrc": "/journey/thumbs/guilin-3.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/guilin-5.jpg", "thumbSrc": "/journey/thumbs/guilin-5.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/guilin-4.jpg", "thumbSrc": "/journey/thumbs/guilin-4.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/guilin-7.jpg", "thumbSrc": "/journey/thumbs/guilin-7.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/guilin-6.jpg", "thumbSrc": "/journey/thumbs/guilin-6.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/guilin-2.jpg", "thumbSrc": "/journey/thumbs/guilin-2.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/guilin-9.jpg", "thumbSrc": "/journey/thumbs/guilin-9.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 }
       ]
     },
     {
@@ -341,14 +258,14 @@
         "de": "Skyline, enge Gassen und eine Tasse Tee."
       },
       "photos": [
-        { "src": "/journey/hongkong-7.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/hongkong-2.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/hongkong-5.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/hongkong-3.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/hongkong-6.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/hongkong-8.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/hongkong-4.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/hongkong-1.jpg", "width": 1600, "height": 1200 }
+        { "src": "/journey/hongkong-7.jpg", "thumbSrc": "/journey/thumbs/hongkong-7.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/hongkong-2.jpg", "thumbSrc": "/journey/thumbs/hongkong-2.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/hongkong-5.jpg", "thumbSrc": "/journey/thumbs/hongkong-5.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/hongkong-3.jpg", "thumbSrc": "/journey/thumbs/hongkong-3.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/hongkong-6.jpg", "thumbSrc": "/journey/thumbs/hongkong-6.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/hongkong-8.jpg", "thumbSrc": "/journey/thumbs/hongkong-8.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/hongkong-4.jpg", "thumbSrc": "/journey/thumbs/hongkong-4.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/hongkong-1.jpg", "thumbSrc": "/journey/thumbs/hongkong-1.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 }
       ]
     },
     {
@@ -368,10 +285,10 @@
         "de": "Eine Reise zu einer von Tae-Geuns Konferenzen. Jeden Abend, wenn die Vorträge zu Ende waren, saßen wir mit seinen Freunden aus der Forschung beim Abendessen."
       },
       "photos": [
-        { "src": "/journey/tsukuba-1.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/tsukuba-2.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/tsukuba-3.jpg", "width": 1600, "height": 1200 },
-        { "src": "/journey/tsukuba-4.jpg", "width": 1600, "height": 1200 }
+        { "src": "/journey/tsukuba-1.jpg", "thumbSrc": "/journey/thumbs/tsukuba-1.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/tsukuba-2.jpg", "thumbSrc": "/journey/thumbs/tsukuba-2.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/tsukuba-3.jpg", "thumbSrc": "/journey/thumbs/tsukuba-3.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/tsukuba-4.jpg", "thumbSrc": "/journey/thumbs/tsukuba-4.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480 }
       ]
     },
     {
@@ -391,11 +308,11 @@
         "de": "Das erste gemeinsam begrüßte Seollal in Dongtan. Und zwei Tage später der besondere Moment, an dem wir auch Andreas Geburtstag zusammen feierten."
       },
       "photos": [
-        { "src": "/journey/seollal-5.jpg", "width": 1600, "height": 1200, "alt": "Seoul" },
-        { "src": "/journey/seollal-1.jpg", "width": 1600, "height": 1200, "alt": "Dongtan" },
-        { "src": "/journey/seollal-3.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/seollal-4.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/seollal-2.jpg", "width": 1600, "height": 1200, "alt": "Dongtan" }
+        { "src": "/journey/seollal-5.jpg", "thumbSrc": "/journey/thumbs/seollal-5.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480, "alt": "Seoul" },
+        { "src": "/journey/seollal-1.jpg", "thumbSrc": "/journey/thumbs/seollal-1.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480, "alt": "Dongtan" },
+        { "src": "/journey/seollal-3.jpg", "thumbSrc": "/journey/thumbs/seollal-3.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/seollal-4.jpg", "thumbSrc": "/journey/thumbs/seollal-4.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/seollal-2.jpg", "thumbSrc": "/journey/thumbs/seollal-2.jpg", "width": 1600, "height": 1200, "thumbWidth": 640, "thumbHeight": 480, "alt": "Dongtan" }
       ]
     },
     {
@@ -415,21 +332,21 @@
         "de": "Bei einem gemeinsamen Wochenende krönten wir unsere Geschichte mit zwei gegenseitigen Anträgen. Sie überraschte ihn mit handgehäkelten Molangs und einem handgeschriebenen Brief, in dem sie die bisherigen Kapitel ihrer Liebesgeschichte rekapitulierte und ihre gemeinsamen Momente aus ihrer Perspektive erzählte. Er überreichte ihr ein 1000-Teile-Puzzle von ihnen beiden, dessen letztes Teil fehlte. Um dieses zu erhalten, durfte sie sich in einem eigens für sie kreierten Computerspiel durch Rätsel zu ihrem Kennenlernen und Korea den Weg freispielen."
       },
       "photos": [
-        { "src": "/journey/proposal-1.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/proposal-2.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/proposal-3.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/proposal-4.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/proposal-5.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/proposal-6.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/proposal-7.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/proposal-8.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/proposal-9.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/proposal-10.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/proposal-11.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/proposal-12.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/proposal-13.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/proposal-14.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/proposal-15.jpg", "width": 4000, "height": 3000 }
+        { "src": "/journey/proposal-1.jpg", "thumbSrc": "/journey/thumbs/proposal-1.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/proposal-2.jpg", "thumbSrc": "/journey/thumbs/proposal-2.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/proposal-3.jpg", "thumbSrc": "/journey/thumbs/proposal-3.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/proposal-4.jpg", "thumbSrc": "/journey/thumbs/proposal-4.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/proposal-5.jpg", "thumbSrc": "/journey/thumbs/proposal-5.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/proposal-6.jpg", "thumbSrc": "/journey/thumbs/proposal-6.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/proposal-7.jpg", "thumbSrc": "/journey/thumbs/proposal-7.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/proposal-8.jpg", "thumbSrc": "/journey/thumbs/proposal-8.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/proposal-9.jpg", "thumbSrc": "/journey/thumbs/proposal-9.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/proposal-10.jpg", "thumbSrc": "/journey/thumbs/proposal-10.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/proposal-11.jpg", "thumbSrc": "/journey/thumbs/proposal-11.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/proposal-12.jpg", "thumbSrc": "/journey/thumbs/proposal-12.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/proposal-13.jpg", "thumbSrc": "/journey/thumbs/proposal-13.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/proposal-14.jpg", "thumbSrc": "/journey/thumbs/proposal-14.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/proposal-15.jpg", "thumbSrc": "/journey/thumbs/proposal-15.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 }
       ]
     },
     {
@@ -449,26 +366,26 @@
         "de": "Für Andreas Eltern war es das erste Mal in Asien – und dann gleich ein ganz besonderer Meilenstein. Zwischen Seoul, Gyeongju und Ulsan trafen unsere Familien zum ersten Mal aufeinander. Bei bestem Essen und unvergesslichen Momenten wuchsen wir sofort zusammen."
       },
       "photos": [
-        { "src": "/journey/parents-in-korea-1.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-2.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-3.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-4.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/parents-in-korea-5.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/parents-in-korea-6.jpg", "width": 1200, "height": 900 },
-        { "src": "/journey/parents-in-korea-7.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/parents-in-korea-8.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-9.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-10.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/parents-in-korea-11.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/parents-in-korea-12.jpg", "width": 1200, "height": 1600 },
-        { "src": "/journey/parents-in-korea-13.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-14.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/parents-in-korea-15.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-16.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-17.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-18.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/parents-in-korea-19.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/parents-in-korea-20.jpg", "width": 1200, "height": 1600 }
+        { "src": "/journey/parents-in-korea-1.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-1.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-2.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-2.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-3.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-3.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-4.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-4.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/parents-in-korea-5.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-5.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/parents-in-korea-6.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-6.jpg", "width": 1200, "height": 900, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-7.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-7.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/parents-in-korea-8.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-8.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-9.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-9.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-10.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-10.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/parents-in-korea-11.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-11.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/parents-in-korea-12.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-12.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/parents-in-korea-13.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-13.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-14.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-14.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/parents-in-korea-15.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-15.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-16.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-16.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-17.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-17.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-18.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-18.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/parents-in-korea-19.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-19.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/parents-in-korea-20.jpg", "thumbSrc": "/journey/thumbs/parents-in-korea-20.jpg", "width": 1200, "height": 1600, "thumbWidth": 480, "thumbHeight": 640 }
       ]
     },
     {
@@ -488,30 +405,30 @@
         "de": "Zu Besuch bei Freunden in Wuhan. Neue Straßen entdecken, vertraute Gesichter wiedersehen und wunderschöne Erinnerungen sammeln."
       },
       "photos": [
-        { "src": "/journey/wuhan-1.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-2.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-3.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/wuhan-5.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-8.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/wuhan-9.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/wuhan-7.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/wuhan-14.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/wuhan-18.jpg", "width": 1279, "height": 1706 },
-        { "src": "/journey/wuhan-16.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/wuhan-20.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-22.jpg", "width": 3000, "height": 4000 },
-        { "src": "/journey/wuhan-4.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-6.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-12.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-15.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-21.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-23.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-10.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-13.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-11.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-17.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-19.jpg", "width": 4000, "height": 3000 },
-        { "src": "/journey/wuhan-24.jpg", "width": 4000, "height": 3000 }
+        { "src": "/journey/wuhan-1.jpg", "thumbSrc": "/journey/thumbs/wuhan-1.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-2.jpg", "thumbSrc": "/journey/thumbs/wuhan-2.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-3.jpg", "thumbSrc": "/journey/thumbs/wuhan-3.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-5.jpg", "thumbSrc": "/journey/thumbs/wuhan-5.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-8.jpg", "thumbSrc": "/journey/thumbs/wuhan-8.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-9.jpg", "thumbSrc": "/journey/thumbs/wuhan-9.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-7.jpg", "thumbSrc": "/journey/thumbs/wuhan-7.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-14.jpg", "thumbSrc": "/journey/thumbs/wuhan-14.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-18.jpg", "thumbSrc": "/journey/thumbs/wuhan-18.jpg", "width": 1279, "height": 1706, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-16.jpg", "thumbSrc": "/journey/thumbs/wuhan-16.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-20.jpg", "thumbSrc": "/journey/thumbs/wuhan-20.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-22.jpg", "thumbSrc": "/journey/thumbs/wuhan-22.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-4.jpg", "thumbSrc": "/journey/thumbs/wuhan-4.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-6.jpg", "thumbSrc": "/journey/thumbs/wuhan-6.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-12.jpg", "thumbSrc": "/journey/thumbs/wuhan-12.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-15.jpg", "thumbSrc": "/journey/thumbs/wuhan-15.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-21.jpg", "thumbSrc": "/journey/thumbs/wuhan-21.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-23.jpg", "thumbSrc": "/journey/thumbs/wuhan-23.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-10.jpg", "thumbSrc": "/journey/thumbs/wuhan-10.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-13.jpg", "thumbSrc": "/journey/thumbs/wuhan-13.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-11.jpg", "thumbSrc": "/journey/thumbs/wuhan-11.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-17.jpg", "thumbSrc": "/journey/thumbs/wuhan-17.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 },
+        { "src": "/journey/wuhan-19.jpg", "thumbSrc": "/journey/thumbs/wuhan-19.jpg", "width": 1500, "height": 2000, "thumbWidth": 480, "thumbHeight": 640 },
+        { "src": "/journey/wuhan-24.jpg", "thumbSrc": "/journey/thumbs/wuhan-24.jpg", "width": 2000, "height": 1500, "thumbWidth": 640, "thumbHeight": 480 }
       ]
     },
     {

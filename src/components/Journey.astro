@@ -17,6 +17,9 @@ const momentCount = fmt(t('journey.momentCount', locale), { count: journey.event
 
 interface RawPhoto {
   src: string;
+  thumbSrc: string;
+  thumbWidth: number;
+  thumbHeight: number;
   width: number;
   height: number;
   alt?: string;
@@ -60,7 +63,7 @@ const labels = {
     wedding: t('journey.kindLabel.wedding', locale),
   },
 };
-const backgroundImage = withBase('/journey/first-letter-bg.png');
+const backgroundImage = withBase('/journey/first-letter.jpg');
 ---
 
 <section

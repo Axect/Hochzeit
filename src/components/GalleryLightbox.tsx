@@ -4,6 +4,9 @@ import { withBase } from '@lib/i18n';
 interface GalleryItem {
   id: string;
   src: string;
+  thumbSrc: string;
+  thumbWidth: number;
+  thumbHeight: number;
   width: number;
   height: number;
   alt: string;
@@ -52,6 +55,15 @@ export default function GalleryLightbox({
     };
   }, [openIndex, close, goPrev, goNext]);
 
+  useEffect(() => {
+    if (openIndex === null || items.length < 2) return;
+    const next = items[(openIndex + 1) % items.length];
+    const preload = new Image();
+    preload.decoding = 'async';
+    preload.fetchPriority = 'low';
+    preload.src = withBase(next.src);
+  }, [openIndex, items]);
+
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0]?.clientX ?? null;
   };
@@ -87,11 +99,12 @@ export default function GalleryLightbox({
               aria-label={`${labels.open}: ${item.alt}`}
             >
               <img
-                src={withBase(item.src)}
+                src={withBase(item.thumbSrc)}
                 alt={item.alt}
-                width={item.width}
-                height={item.height}
+                width={item.thumbWidth}
+                height={item.thumbHeight}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                loading="lazy"
                 decoding="async"
               />
             </button>
@@ -147,6 +160,7 @@ export default function GalleryLightbox({
               alt={active.alt}
               width={active.width}
               height={active.height}
+              decoding="async"
               className="h-auto max-h-[85vh] w-auto max-w-full rounded-md object-contain"
             />
             <figcaption className="mt-3 text-center text-sm text-white/80">{active.alt}</figcaption>
